@@ -42,8 +42,8 @@ fb_EM2K0_XGMD_VRC_20 : FB_VRC;
 fb_EM2K0_XGMD_VRC_30 : FB_VRC;
 {attribute 'pytmc' := ' pv: EM2K0_XGMD_VRC_40 '}
 fb_EM2K0_XGMD_VRC_40 : FB_VRC;
-{attribute 'pytmc' := ' pv: EM2K0_XGMD_VRC_50 '}
-fb_EM2K0_XGMD_VRC_50 : FB_VRC;
+//{attribute 'pytmc' := ' pv: EM2K0_XGMD_VRC_50 '}
+//fb_EM2K0_XGMD_VRC_50 : FB_VRC;
 {attribute 'pytmc' := ' pv: EM2K0_XGMD_VRC_60 '}
 fb_EM2K0_XGMD_VRC_60 : FB_VRC;
 {attribute 'pytmc' := ' pv: EM2K0_XGMD_VRC_70 '}
