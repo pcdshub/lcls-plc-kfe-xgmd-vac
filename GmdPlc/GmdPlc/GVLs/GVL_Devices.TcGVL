@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <GVL Name="GVL_Devices" Id="{49019085-0c45-46f1-a256-56d701fd306c}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	
+{attribute 'pytmc' :=' pv: EM2K0:XGMD:OVERRIDE_INJ '}
+	xOverrideMode : BOOL:= false;
+		
+	
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VCN:50 '}
+	VCN_50 : FB_VCN;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VGP:50 '}
+	VGP_50 : FB_VGP;
+
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:GCM:80 '}
+	GCM_80 : FB_GCM;
+
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:80 '}
+	VVC_80:FB_VVC;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:81 '}
+	VVC_81:FB_VVC;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:82 '}
+	VVC_82:FB_VVC;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:83 '}
+	VVC_83 : FB_VVC;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:84 '}
+	VVC_84 : FB_VVC;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:85 '}
+	VVC_85 : FB_VVC;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:86 '}
+	VVC_86 : FB_VVC;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
