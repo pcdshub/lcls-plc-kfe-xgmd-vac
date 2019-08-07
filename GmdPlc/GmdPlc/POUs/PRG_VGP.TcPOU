@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_VGP" Id="{8930a62c-e5aa-41cb-8f40-588ee8e873ab}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_VGP
 VAR
@@ -21,19 +21,19 @@ THEN
 	(* init array with the interpolation points  *)
 	(* 	fIn					 |		fOut		*)
 	arrTable[1,1] := 0;			arrTable[1,2] := 0;
-	arrTable[2,1] := 5;		    arrTable[2,2] := 135;
-	arrTable[3,1] := 10;		arrTable[3,2] := 245;
-	arrTable[4,1] :=  20;	    arrTable[4,2] := 405;
-	arrTable[5,1] :=  30;	    arrTable[5,2] := 535;
-	arrTable[6,1] := 40;		arrTable[6,2] := 689;
-	arrTable[7,1] := 50;		arrTable[7,2] := 830;
-	arrTable[8,1] := 60;	    arrTable[8,2] := 960;
-	arrTable[9,1] := 70;	    arrTable[9,2] := 1095;
-	arrTable[10,1] := 80;		arrTable[10,2] := 1225;
-	arrTable[11,1] := 90;		arrTable[11,2] := 1415;
-	arrTable[12,1] := 95;		arrTable[12,2] := 1495;
-	arrTable[13,1] := 98;		arrTable[13,2] := 1559;
-	arrTable[14,1] := 100;		arrTable[14,2] := 1645;
+	arrTable[2,1] := 5;		    arrTable[2,2] := 170;
+	arrTable[3,1] := 10;		arrTable[3,2] := 280;
+	arrTable[4,1] :=  20;	    arrTable[4,2] := 445;
+	arrTable[5,1] :=  30;	    arrTable[5,2] := 575;
+	arrTable[6,1] := 40;		arrTable[6,2] := 725;
+	arrTable[7,1] := 50;		arrTable[7,2] := 860;
+	arrTable[8,1] := 60;	    arrTable[8,2] := 980;
+	arrTable[9,1] := 70;	    arrTable[9,2] := 1120;
+	arrTable[10,1] := 80;		arrTable[10,2] := 1250;
+	arrTable[11,1] := 90;		arrTable[11,2] := 1420;
+	arrTable[12,1] := 95;		arrTable[12,2] := 1550;
+	arrTable[13,1] := 98;		arrTable[13,2] := 1600;
+	arrTable[14,1] := 100;		arrTable[14,2] := 1660;
 	
 	
 	(* reset the init flag *)
