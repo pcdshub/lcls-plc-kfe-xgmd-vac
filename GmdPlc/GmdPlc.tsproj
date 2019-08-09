@@ -1743,13 +1743,6 @@ External Setpoint Generation:
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Devices.VGP_50.Axis.NcToPlc</Name>
 							<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 							<SubVar>
@@ -1803,34 +1796,6 @@ External Setpoint Generation:
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.GCM_80.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_50.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_90.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xAtSpd</Name>
 							<Comment>
 								<![CDATA[ Normaml operation when true]]>
@@ -1840,7 +1805,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1854,7 +1819,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_20.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1868,7 +1833,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_30.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1882,7 +1847,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_40.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1896,7 +1861,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_50.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1910,7 +1875,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_60.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1924,7 +1889,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_70.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1938,7 +1903,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_80.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1952,7 +1917,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_90.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error]]>
+								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -2045,6 +2010,55 @@ External Setpoint Generation:
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK</Name>
+							<Comment>
+								<![CDATA[ Normally closed Alarm bit]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun</Name>
+							<Comment>
+								<![CDATA[ Input status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GCM_80.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_90.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.i_iPRESS_R</Name>
 							<Comment>
 								<![CDATA[ Controls and I/Os]]>
@@ -2107,32 +2121,9 @@ External Setpoint Generation:
 							</Comment>
 							<Type>INT</Type>
 						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK</Name>
-							<Comment>
-								<![CDATA[ Normally closed Alarm bit]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun</Name>
-							<Comment>
-								<![CDATA[ Input status]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
-						<Var>
-							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
-							<Comment>
-								<![CDATA[iResolution: INT :=16;
- 
-IO]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
 						<Var>
 							<Name>GVL_Devices.VGP_50.Axis.PlcToNc</Name>
 							<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
@@ -2282,6 +2273,36 @@ IO]]>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[ Output signal]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
+							<Comment>
+								<![CDATA[iResolution: INT :=16;
+ 
+IO]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.q_xHV_DIS</Name>
 							<Comment>
 								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
@@ -2341,27 +2362,6 @@ IO]]>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_90.q_xHV_DIS</Name>
 							<Comment>
 								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo</Name>
-							<Comment>
-								<![CDATA[ Output signal]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote</Name>
-							<Comment>
-								<![CDATA[ Remote/Local Control]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
-							<Comment>
-								<![CDATA[ Remote/Local Control]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -6986,10 +6986,10 @@ Bit1: Value bigger/equal Limit2]]>
 							</Pdo>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="57">
-						<Name>EL1004_02_10</Name>
+					<Box BoxType="9099" Id="3">
+						<Name>EL1088_02_10</Name>
 						<ImageId>7</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x01000038">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04403052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1088 8Ch. Dig. Input 24V, 3ms, negative" Desc="EL1088" PortABoxInfo="#x01000038">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
@@ -7012,12 +7012,32 @@ Bit1: Value bigger/equal Limit2]]>
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="58">
 						<Name>EL2004_02_11</Name>
 						<ImageId>1001</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x01000039">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x01000003">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
@@ -7043,7 +7063,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="59">
-						<Name>EL1004_02_12</Name>
+						<Name>EL1004_02_13</Name>
 						<ImageId>7</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x0100003a">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
@@ -7071,7 +7091,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="60">
-						<Name>EL2004_02_13</Name>
+						<Name>EL2004_02_14</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x0100003b">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
@@ -7098,10 +7118,10 @@ Bit1: Value bigger/equal Limit2]]>
 							</Pdo>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="61">
-						<Name>EL1004_02_14</Name>
+					<Box BoxType="9099" Id="12">
+						<Name>EL1088_02_15</Name>
 						<ImageId>7</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x0100003c">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04403052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1088 8Ch. Dig. Input 24V, 3ms, negative" Desc="EL1088" PortABoxInfo="#x0100003c">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
@@ -7124,12 +7144,32 @@ Bit1: Value bigger/equal Limit2]]>
 									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="62">
-						<Name>EL2004_02_15</Name>
+						<Name>EL2004_02_16</Name>
 						<ImageId>1001</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x0100003d">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x0100000c">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
@@ -7155,7 +7195,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="63">
-						<Name>EL1004_02_16</Name>
+						<Name>EL1004_02_17</Name>
 						<ImageId>7</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x0100003e">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
@@ -7183,7 +7223,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" BoxFlags="#x00000020" Id="64">
-						<Name>EL3064_02_17</Name>
+						<Name>EL3064_02_18</Name>
 						<ImageId>1002</ImageId>
 						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0bf83052" RevisionNo="#x00140000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3064 4Ch. Ana. Input 0-10V" Desc="EL3064" PortABoxInfo="#x0100003f">
 							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
@@ -7448,7 +7488,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="65">
-						<Name>EL1008_02_18</Name>
+						<Name>EL1008_02_20</Name>
 						<ImageId>7</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03f03052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1008 8Ch. Dig. Input 24V, 3ms" Desc="EL1008" PortABoxInfo="#x01000040">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
@@ -7496,7 +7536,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="66">
-						<Name>EL2008_02_19</Name>
+						<Name>EL2008_02_22</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d83052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2008 8Ch. Dig. Output 24V, 0.5A" Desc="EL2008" PortABoxInfo="#x01000041">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
@@ -7544,7 +7584,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="67">
-						<Name>EL2794_02_20</Name>
+						<Name>EL2794_02_23</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0aea3052" RevisionNo="#x00100000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof" Desc="EL2794" PortABoxInfo="#x01000042">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
@@ -7572,7 +7612,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="68">
-						<Name>EL1004_02_21</Name>
+						<Name>EL1004_02_24</Name>
 						<ImageId>7</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x01000043">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
@@ -7600,7 +7640,7 @@ Bit1: Value bigger/equal Limit2]]>
 						</EtherCAT>
 					</Box>
 					<Box BoxType="9099" Id="69">
-						<Name>EL2794_02_22</Name>
+						<Name>EL2794_02_25</Name>
 						<ImageId>1001</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0aea3052" RevisionNo="#x00100000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof" Desc="EL2794" PortABoxInfo="#x01000044">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
@@ -8957,19 +8997,19 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_40.i_xClsLS" VarB="Channel 4^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_40.i_xOpnLS" VarB="Channel 3^Input"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_12">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_13">
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_60.i_xClsLS" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_60.i_xOpnLS" VarB="Channel 1^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_70.i_xClsLS" VarB="Channel 4^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_70.i_xOpnLS" VarB="Channel 3^Input"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_16">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_17">
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_80.i_xClsLS" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_80.i_xOpnLS" VarB="Channel 1^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xClsLS" VarB="Channel 4^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xOpnLS" VarB="Channel 3^Input"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_21">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_24">
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun" VarB="Channel 1^Input"/>
 			</OwnerB>
@@ -9001,15 +9041,15 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_60.q_xOPN_DO" VarB="Channel 1^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_70.q_xOPN_DO" VarB="Channel 3^Output"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_13">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_14">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PTM_80.q_RunDO" VarB="Channel 1^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PTM_90.q_RunDO" VarB="Channel 2^Output"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_15">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_16">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_80.q_xOPN_DO" VarB="Channel 1^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.q_xOPN_DO" VarB="Channel 3^Output"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_22">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_25">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote" VarB="Channel 2^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo" VarB="Channel 1^Output"/>
 			</OwnerB>
