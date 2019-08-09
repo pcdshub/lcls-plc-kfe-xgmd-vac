@@ -9016,6 +9016,18 @@ Bit1: Value smaller than Limit2]]>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_04">
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xAtSpd" VarB="Channel 1^Input"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_10">
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_60.i_xAtSpd" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_60.i_xFault" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_70.i_xAtSpd" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_70.i_xFault" VarB="Channel 4^Input"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_15">
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_80.i_xAtSpd" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_80.i_xFault" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_90.i_xAtSpd" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_90.i_xFault" VarB="Channel 4^Input"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_01">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_10.q_xOPN_DO" VarB="Channel 1^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_20.q_xOPN_DO" VarB="Channel 3^Output"/>
