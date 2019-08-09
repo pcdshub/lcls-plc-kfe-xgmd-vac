@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="MAIN" Id="{80634dbc-d649-47af-a183-d3f1342ca1c9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
@@ -13,7 +13,7 @@ PRG_GMD();
 //MG
 PRG_INJ();
 PRG_PressureControl();
-//PRG_VGP(); // Keep commented out, test VGP  through axis until positions are verfified
+PRG_VGP(); // Keep commented out, test VGP  through axis until positions are verfified
 ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">

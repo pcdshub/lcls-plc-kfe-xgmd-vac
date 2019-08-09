@@ -42,7 +42,7 @@ END_IF
 
  
 VGP_50(
-	i_xExtIlkOK:= true(*GCC_40.IG.xAT_VAC*), 
+	i_xExtIlkOK:= true(*GPI_50.IG.xAT_VAC*), 
 	i_ReqPos:= , 
 	arrTable:= arrTable , 
 	(*arrTable_ENC:= arrTable_ENC , *)
