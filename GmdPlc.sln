@@ -64,6 +64,7 @@ Global
 		{DC13CF13-96D9-4602-AE14-580A603776E8}.Release|TwinCAT RT (x64).ActiveCfg = Release|TwinCAT RT (x64)
 		{DC13CF13-96D9-4602-AE14-580A603776E8}.Release|TwinCAT RT (x64).Build.0 = Release|TwinCAT RT (x64)
 		{DC13CF13-96D9-4602-AE14-580A603776E8}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT RT (x86)
+		{DC13CF13-96D9-4602-AE14-580A603776E8}.Release|TwinCAT RT (x86).Build.0 = Release|TwinCAT RT (x86)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

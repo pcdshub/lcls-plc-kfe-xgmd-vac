@@ -1375,7 +1375,7 @@ External Setpoint Generation:
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
 			<BitSize>2</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -1384,7 +1384,7 @@ External Setpoint Generation:
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000003}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..2] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000003}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..2] OF BIT</Name>
 			<BitSize>3</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -1420,7 +1420,7 @@ External Setpoint Generation:
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-00200000000D}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..12] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-00200000000D}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..12] OF BIT</Name>
 			<BitSize>13</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -2371,7 +2371,7 @@ IO]]>
 					</TaskPouOids>
 				</Instance>
 			</Project>
-			<Project Disabled="true" GUID="{DC13CF13-96D9-4602-AE14-580A603776E8}" Name="GmdSim" PrjFilePath="GmdSim\GmdSim.plcproj" TmcFilePath="GmdSim\GmdSim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e">
+			<Project GUID="{DC13CF13-96D9-4602-AE14-580A603776E8}" Name="GmdSim" PrjFilePath="GmdSim\GmdSim.plcproj" TmcFilePath="GmdSim\GmdSim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e">
 				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="GmdSim\GmdSim.tmc">
 					<Name>GmdSim Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
@@ -9015,6 +9015,17 @@ Bit1: Value smaller than Limit2]]>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_04">
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xAtSpd" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xFault" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_20.i_xAtSpd" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_20.i_xFault" VarB="Channel 4^Input"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_06">
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_30.i_xAtSpd" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_30.i_xFault" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_40.i_xAtSpd" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_40.i_xFault" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_50.i_xAtSpd" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_50.i_xFault" VarB="Channel 6^Input"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_10">
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_60.i_xAtSpd" VarB="Channel 1^Input"/>
