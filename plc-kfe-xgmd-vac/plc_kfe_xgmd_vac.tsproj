@@ -1450,7 +1450,7 @@ External Setpoint Generation:
 		<ImageData Id="1008">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ff808080808080808080808080808080808080808080808080808080808080808080808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0000000000000000000000000000000000000000000c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c00000000000000000000000000000000000000000000000ffc0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0000000000000000000000000000000000000000000c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0000000000000000000000000c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080</ImageData>
 		<ImageData Id="1009">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000000000ff00ffff00ffff00ff000000ff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ff000000ff00ff000000ff00ff000000ff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff000000000000ff00ff000000000000ff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{D4424090-5E46-488E-8322-A6D7BDBB2B0F}" TargetNetId="5.62.5.76.1.1" ShowHideConfigurations="#x306">
+	<Project ProjectGUID="{B1281B23-6ACE-402F-BAAC-F3BB7BD6AB55}" TargetNetId="5.62.5.76.1.1" ShowHideConfigurations="#x306">
 		<System>
 			<Licenses>
 				<Target>
@@ -1718,9 +1718,9 @@ External Setpoint Generation:
 			</NC>
 		</Motion>
 		<Plc>
-			<Project GUID="{26233849-D73B-4D19-97F7-4E2F23309781}" Name="GmdPlc" PrjFilePath="GmdPlc\GmdPlc.plcproj" TmcFilePath="GmdPlc\GmdPlc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e">
+			<Project GUID="{26233849-D73B-4D19-97F7-4E2F23309781}" Name="plc_kfe_xgmd_vac" PrjFilePath="plc_kfe_xgmd_vac\plc_kfe_xgmd_vac.plcproj" TmcFilePath="plc_kfe_xgmd_vac\plc_kfe_xgmd_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e">
 				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="GmdPlc\GmdPlc.tmc">
-					<Name>GmdPlc Instance</Name>
+					<Name>plc_kfe_xgmd_vac Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
@@ -1741,6 +1741,13 @@ External Setpoint Generation:
 						<Var>
 							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.VGP_50.Axis.NcToPlc</Name>
@@ -1794,6 +1801,34 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_Devices.VGP_50.InfoData_State</Name>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GCM_80.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_90.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xAtSpd</Name>
@@ -2010,55 +2045,6 @@ External Setpoint Generation:
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK</Name>
-							<Comment>
-								<![CDATA[ Normally closed Alarm bit]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun</Name>
-							<Comment>
-								<![CDATA[ Input status]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GCM_80.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_50.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_90.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.i_iPRESS_R</Name>
 							<Comment>
 								<![CDATA[ Controls and I/Os]]>
@@ -2121,9 +2107,32 @@ External Setpoint Generation:
 							</Comment>
 							<Type>INT</Type>
 						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK</Name>
+							<Comment>
+								<![CDATA[ Normally closed Alarm bit]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun</Name>
+							<Comment>
+								<![CDATA[ Input status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
+							<Comment>
+								<![CDATA[iResolution: INT :=16;
+ 
+IO]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
 						<Var>
 							<Name>GVL_Devices.VGP_50.Axis.PlcToNc</Name>
 							<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
@@ -2273,36 +2282,6 @@ External Setpoint Generation:
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo</Name>
-							<Comment>
-								<![CDATA[ Output signal]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote</Name>
-							<Comment>
-								<![CDATA[ Remote/Local Control]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
-							<Comment>
-								<![CDATA[ Remote/Local Control]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
-							<Comment>
-								<![CDATA[iResolution: INT :=16;
- 
-IO]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.q_xHV_DIS</Name>
 							<Comment>
 								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
@@ -2365,13 +2344,34 @@ IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[ Output signal]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
 					</Vars>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
-			<Project Disabled="true" GUID="{DC13CF13-96D9-4602-AE14-580A603776E8}" Name="GmdSim" PrjFilePath="GmdSim\GmdSim.plcproj" TmcFilePath="GmdSim\GmdSim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e">
+			<Project GUID="{DC13CF13-96D9-4602-AE14-580A603776E8}" Name="GmdSim" PrjFilePath="GmdSim\GmdSim.plcproj" TmcFilePath="GmdSim\GmdSim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e">
 				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="GmdSim\GmdSim.tmc">
 					<Name>GmdSim Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
@@ -8947,7 +8947,7 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="STM Velocity^Velocity"/>
 			</OwnerB>
 		</OwnerA>
-		<OwnerA Name="TIPC^GmdPlc^GmdPlc Instance">
+		<OwnerA Name="TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_01_00^EL2794_01_02">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_GCC_10.q_xHV_DIS" VarB="Channel 1^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_GCC_20.q_xHV_DIS" VarB="Channel 2^Output"/>
