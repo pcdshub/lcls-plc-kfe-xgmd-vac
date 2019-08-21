@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "GmdPlc", "GmdPlc\GmdPlc.tsproj", "{9CA4413F-5F6C-44C5-A904-11C2FD1C061B}"
+Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "plc_kfe_xgmd", "GmdPlc\plc_kfe_xgmd.tsproj", "{9CA4413F-5F6C-44C5-A904-11C2FD1C061B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
