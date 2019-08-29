@@ -1455,6 +1455,7 @@ External Setpoint Generation:
 			<Licenses>
 				<Target>
 					<ManualSelect>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</ManualSelect>
+					<ManualSelect>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -1492,6 +1493,8 @@ External Setpoint Generation:
 					</AxisPara>
 					<Encoder Name="Enc" EncType="4">
 						<EncPara ScaleFactorNumerator="0.0390625" Inverse="true" MaxCount="#x0000ffff">
+							<SoftEndMinControl Enable="true" Range="-15"/>
+							<SoftEndMaxControl Enable="true" Range="1670"/>
 							<Inc RefSoftSyncMask="#x0000ffff"/>
 						</EncPara>
 						<Vars VarGrpType="1">
