@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
   <POU Name="PRG_PressureControl" Id="{8ef02f00-e542-4b0e-902f-3d7061b2691f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PressureControl
 VAR CONSTANT
@@ -46,10 +46,10 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-
+VCN_50.i_xExtIlkOK := (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
 
 //VCN
-VCN_50(i_xExtIlkOK := true(*GCC_40.IG.xAT_VAC*), i_ReqPos:= );
+VCN_50(i_xExtIlkOK := , i_ReqPos:= );
 
 f_Rep_POS := VCN_50.iq_stVCN.rReqPosition;
 

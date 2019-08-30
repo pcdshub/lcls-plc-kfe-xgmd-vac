@@ -159,7 +159,7 @@ q_stVGP.rEnoder_Position := LREAL_TO_REAL(Axis.NcToPlc.ActPos); // encoder posit
 			q_stVGP.state := MOVESTATE_ENABLE; // Check homing first
 
 		MOVESTATE_ENABLE :
-			fbPowerAxis.Enable :=  bEnable;
+			fbPowerAxis.Enable :=  TRUE;
 			fbPowerAxis.Enable_Positive := TRUE;
 			fbPowerAxis.Enable_Negative := TRUE;
 			IF fbPowerAxis.Status THEN
@@ -172,11 +172,12 @@ q_stVGP.rEnoder_Position := LREAL_TO_REAL(Axis.NcToPlc.ActPos); // encoder posit
 			IF (HomeState = READY) AND (q_stVGP.pv_xHome_SW) THEN
 					HomeState:= INIT;
 					q_stVGP.pv_xHome_SW:=false;
+					bHome := false;
 					q_stVGP.state := MOVESTATE_HOME;
 					ELSE 
 					q_stVGP.state := MOVESTATE_READY;
 				END_IF
-			IF (q_stVGP.pv_xGo_SW)(* AND( rOldTargetPosition <> rTargetPosition) *) THEN
+			IF (q_stVGP.pv_xGo_SW) AND i_xExtIlkOK(* AND( rOldTargetPosition <> rTargetPosition) *) THEN
 				q_stVGP.pv_xGo_SW := false;
 				q_stVGP.state := MOVESTATE_NEWTARGETPOSITION;	
 			END_IF
@@ -702,6 +703,16 @@ END_VAR
 	stCTRL_LIN_INTERPOLATION_PARAMS_ENC.nDataTable_SIZEOF		:= SIZEOF(arrTable_ENC);]]></ST>
       </Implementation>
     </Method>
+    <Method Name="M_ValveControl" Id="{d751bf76-146a-4941-88f4-7263885a64c0}">
+      <Declaration><![CDATA[METHOD M_ValveControl : BOOL
+VAR_INPUT
+	state:E_VCN; // Close, Open, Pressure, Manual
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[q_stVGP.eValveControl := state;]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="SetEncoderMax" Id="{61fb5926-5bff-4b7f-8268-e746a917813f}">
       <Declaration><![CDATA[METHOD PUBLIC SetEncoderMax : BOOL
 VAR_INPUT
@@ -758,6 +769,7 @@ END_VAR
       <LineId Id="102" Count="0" />
       <LineId Id="285" Count="1" />
       <LineId Id="307" Count="0" />
+      <LineId Id="323" Count="0" />
       <LineId Id="287" Count="2" />
       <LineId Id="159" Count="0" />
       <LineId Id="284" Count="0" />
@@ -938,6 +950,9 @@ END_VAR
     </LineIds>
     <LineIds Name="FB_VGP.M_INIT">
       <LineId Id="8" Count="55" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_VGP.M_ValveControl">
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="FB_VGP.SetEncoderMax">
