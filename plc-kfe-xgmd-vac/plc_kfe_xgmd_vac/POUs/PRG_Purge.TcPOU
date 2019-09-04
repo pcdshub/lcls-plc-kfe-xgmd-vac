@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
   <POU Name="PRG_Purge" Id="{a79f4482-bdf5-4b0d-9d35-039b4e6b3713}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Purge
 VAR
@@ -14,14 +14,13 @@ VAR
 	WatchdogPeriod 		: TIME;
 
 	NeedleVlvPurgeTmr	: TON;	(* Declaration for the needle valve Purge timer *)
-	NeedlePurgeTime		: TIME:=T#30S;
+	tNeedlePurgeTime		: TIME:=T#30S;
 	BurpET				: TIME;
 	NeedlePurgeRun		: BOOL;
 	NeedlePurgeDone		: BOOL;
 	NeedlePurgeRepeat	: INT:= 2;
 	VCN_Timer	:TON;
-	//PRAGMA
-	NeedleBurpTime		: TIME;
+	
 
 
 	//PRAGMA
@@ -38,11 +37,7 @@ VAR
 	VVC_81_Time			: TIME:=T#60S;
 	VVC_82_Time			: TIME:=T#120S;
 	
-	// cOMMANDS FROM epics
-	//pragma
-	bStartPurge_sw : BOOL :=false;
-	bPurgeActive : BOOL:=false;
-	bPurgeDone : BOOL :=false;
+	
 	
 
 END_VAR
@@ -62,14 +57,14 @@ END_VAR
 	9. Release VGP:40
 
 *)
-
+tNeedlePurgeTime := INT_TO_TIME(iNeedleBurpTIME);
 
 CASE step OF
 		0: // READY STATE
 		IF (bStartPurge_sw) Then
-			step:=100;
-			bPurgeActive := true;
-			bPurgeDone := false;
+			step:=10;
+			bPurgeActive := TRUE;
+			bPurgeDone := FALSE;
 		END_IF
 
 10: // start purge sequence by closing all gas valves
@@ -184,7 +179,15 @@ CASE step OF
 	bPurgeDone := TRUE;
 	
 900: //Error
-	
+	VVC_80.M_Set_OPN_SW(false);
+	VVC_81.M_Set_OPN_SW(false);
+	VVC_82.M_Set_OPN_SW(false);
+	VVC_83.M_Set_OPN_SW(false);
+	VVC_84.M_Set_OPN_SW(false);
+	VVC_85.M_Set_OPN_SW(false);
+	VVC_86.M_Set_OPN_SW(false);
+	VCN_50.M_ValveControl(E_VCN.CloseValve);
+	//VGP_50.M_ValveControl(E_VCN.CloseValve); // CLOSE or OPEN to pump down
 
 END_CASE
 
@@ -204,8 +207,8 @@ END_IF
 
 //Timers
 VVC_81_Timer(IN:= (step = 50), PT:=VVC_81_Time);
-VVC_82_Timer(IN:= (step = 40), PT:=VVC_82_Time);
-VCN_Timer(IN:= (step = 20) OR (step = 60) OR (step = 70), PT:=T#60S);
+VVC_82_Timer(IN:= (step = 41), PT:=VVC_82_Time);
+VCN_Timer(IN:= (step = 20) OR (step = 60) OR (step = 70), PT:=tNeedlePurgeTime);
 
 
 /// vcn and vgp on manual or auto?? manual, until the Go or auto button is pressed??]]></ST>
@@ -236,7 +239,13 @@ VCN_Timer(IN:= (step = 20) OR (step = 60) OR (step = 70), PT:=T#60S);
       <LineId Id="257" Count="0" />
       <LineId Id="253" Count="0" />
       <LineId Id="138" Count="22" />
-      <LineId Id="184" Count="2" />
+      <LineId Id="184" Count="1" />
+      <LineId Id="313" Count="0" />
+      <LineId Id="317" Count="1" />
+      <LineId Id="314" Count="2" />
+      <LineId Id="312" Count="0" />
+      <LineId Id="186" Count="0" />
+      <LineId Id="319" Count="0" />
       <LineId Id="161" Count="22" />
       <LineId Id="5" Count="0" />
     </LineIds>

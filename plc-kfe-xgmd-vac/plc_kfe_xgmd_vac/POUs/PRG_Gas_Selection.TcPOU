@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
   <POU Name="PRG_Gas_Selection" Id="{7286873a-eeab-49a1-80e4-b57c23d91e0f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Gas_Selection
 VAR
@@ -20,7 +20,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* Gas selection includes a purge and checks interlocks*)
-
+//fix
 if ( VVC_83.iq_stValve.q_xOPN_DO) then
 	CurrentGas := E_GasType.Neon;
 	elsif ( VVC_84.iq_stValve.q_xOPN_DO) then
@@ -29,14 +29,15 @@ if ( VVC_83.iq_stValve.q_xOPN_DO) then
 		CurrentGas := E_GasType.Krypton;
 			elsif ( VVC_86.iq_stValve.q_xOPN_DO) then
 			CurrentGas := E_GasType.Xenon;
+				else CurrentGas := E_GasType.none;
 END_IF
 
 
 If( CurrentGas <> SelectedGas) then
-	PRG_Purge.bStartPurge_sw := true;
+	bStartPurge_sw := true;
 END_IF
 
-if NOT(PRG_Purge.bStartPurge_sw) AND(PRG_Purge.bPurgeDone) then
+if NOT(bStartPurge_sw) AND NOT(bPurgeActive)AND(bPurgeDone) then
 	case SelectedGas of
 	E_GasType.none: // all valves closed
 		VVC_83.iq_stValve.pv_xOPN_SW:= false;
@@ -70,7 +71,9 @@ END_IF
 /// vcn and vgp on manual or auto??]]></ST>
     </Implementation>
     <LineIds Name="PRG_Gas_Selection">
-      <LineId Id="12" Count="47" />
+      <LineId Id="12" Count="9" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="22" Count="37" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
