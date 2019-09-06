@@ -1,8 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
   <GVL Name="GVL_VARIABLES" Id="{f5eb425e-877f-4a98-b4fc-8b7970a753e9}">
     <Declaration><![CDATA[VAR_GLOBAL
+	
+{attribute 'pytmc' :=' pv: EM2K0:XGMD:OVERRIDE_VAC '}
 	xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
+	
+	
+	
+	//PRAGMA
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:NeedleBurpTime '}
+	iNeedleBurpTIME		: INT; // milliseconds
+	
+	// Purge COMMANDS FROM epics
+	//pragma
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:Purge_SW'}
+	bStartPurge_sw : BOOL :=false;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:Purge_Active'}
+	bPurgeActive : BOOL:=false;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PurgeDone'}
+	bPurgeDone : BOOL :=false;
+	
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

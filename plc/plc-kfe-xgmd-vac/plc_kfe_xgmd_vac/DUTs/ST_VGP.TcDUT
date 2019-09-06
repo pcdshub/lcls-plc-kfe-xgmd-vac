@@ -75,12 +75,17 @@ STRUCT
 	q_iRawPosition	:	INT; //Position control 
 	{attribute 'pytmc' := '
 	pv: STATE;
+	type: mbbi ;
+	field: ZRST CLOSE ;
+	field: ONST OPEN;
+	field: TWST PRESS CNTRL ;
+	field: THST MANUAL CNTRL ;
 	io: io;
 	'}
 	eValveControl	:	E_VCN := CloseValve; // Valve control state
 	/// state machine state 
 	{attribute 'pytmc' := '
-	pv: STATE;
+	pv: Axis_STATE;
 	io: io;
 	'}
 	state: E_MoveState; //Axis Move state
