@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.29">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.27">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-000000000035}" TcBaseType="true" HideType="true">UINTARR2</Name>
@@ -1722,7 +1722,7 @@ External Setpoint Generation:
 		</Motion>
 		<Plc>
 			<Project GUID="{26233849-D73B-4D19-97F7-4E2F23309781}" Name="plc_kfe_xgmd_vac" PrjFilePath="plc_kfe_xgmd_vac\plc_kfe_xgmd_vac.plcproj" TmcFilePath="plc_kfe_xgmd_vac\plc_kfe_xgmd_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="GmdPlc\GmdPlc.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_kfe_xgmd_vac\plc_kfe_xgmd_vac.tmc">
 					<Name>plc_kfe_xgmd_vac Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -2128,6 +2128,10 @@ External Setpoint Generation:
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
+							<Name>L2SI_Vacuum_Library.LCLS_PMPS.GVL.g_FastFaultOutput1.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
 							<Comment>
 								<![CDATA[iResolution: INT :=16;
@@ -2186,6 +2190,20 @@ IO]]>
 							<Name>GVL_Devices.VVC_86.q_xOPN_DO</Name>
 							<Comment>
 								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.hv1.q_HV_DO</Name>
+							<Comment>
+								<![CDATA[outputs]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.hv2.q_HV_DO</Name>
+							<Comment>
+								<![CDATA[outputs]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -2375,7 +2393,7 @@ IO]]>
 				</Instance>
 			</Project>
 			<Project GUID="{DC13CF13-96D9-4602-AE14-580A603776E8}" Name="plc_kfe_xgmd_vac_sim" PrjFilePath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.plcproj" TmcFilePath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e">
-				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="GmdSim\GmdSim.tmc">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.tmc">
 					<Name>plc_kfe_xgmd_vac_sim Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
