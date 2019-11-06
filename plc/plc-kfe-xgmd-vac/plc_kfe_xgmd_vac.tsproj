@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.27">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.29">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-000000000035}" TcBaseType="true" HideType="true">UINTARR2</Name>
@@ -1843,7 +1843,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1857,7 +1857,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_20.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1871,7 +1871,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_30.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1885,7 +1885,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_40.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1899,7 +1899,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_50.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1913,7 +1913,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_60.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1927,7 +1927,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_70.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1941,7 +1941,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_80.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1955,7 +1955,7 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_90.i_xFault</Name>
 							<Comment>
-								<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
+								<![CDATA[ Error]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -2128,14 +2128,9 @@ External Setpoint Generation:
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>L2SI_Vacuum_Library.LCLS_PMPS.GVL.g_FastFaultOutput1.q_xFastFaultOut</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
 							<Comment>
-								<![CDATA[iResolution: INT :=16;
- 
+								<![CDATA[ 
 IO]]>
 							</Comment>
 							<Type>INT</Type>
@@ -2379,20 +2374,13 @@ IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
-							<Comment>
-								<![CDATA[ Remote/Local Control]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
 					</Vars>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
-			<Project GUID="{DC13CF13-96D9-4602-AE14-580A603776E8}" Name="plc_kfe_xgmd_vac_sim" PrjFilePath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.plcproj" TmcFilePath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e">
+			<Project Disabled="true" GUID="{DC13CF13-96D9-4602-AE14-580A603776E8}" Name="plc_kfe_xgmd_vac_sim" PrjFilePath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.plcproj" TmcFilePath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e">
 				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_kfe_xgmd_vac_sim\plc_kfe_xgmd_vac_sim.tmc">
 					<Name>plc_kfe_xgmd_vac_sim Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
@@ -2504,6 +2492,20 @@ IO]]>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_GMD.st_EM1K0_GMD_VRC_10.q_xOpnLS</Name>
+							<Comment>
+								<![CDATA[readback whether open]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.st_EM1K0_GMD_VRC_10.q_xClsLS</Name>
+							<Comment>
+								<![CDATA[readback whether closed]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_GMD.st_EM1K0_GMD_GPI_10.q_iRawPress</Name>
 							<Comment>
 								<![CDATA[ The transformed integer from real pressure to an integer encoded signal to be passed to the PLC ]]>
@@ -2523,20 +2525,6 @@ IO]]>
 								<![CDATA[ The transformed integer from real pressure to an integer encoded signal to be passed to the PLC ]]>
 							</Comment>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.st_EM1K0_GMD_VRC_10.q_xOpnLS</Name>
-							<Comment>
-								<![CDATA[readback whether open]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.st_EM1K0_GMD_VRC_10.q_xClsLS</Name>
-							<Comment>
-								<![CDATA[readback whether closed]]>
-							</Comment>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_GMD.st_EM1K0_GMD_VRC_20.q_xOpnLS</Name>
