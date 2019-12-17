@@ -118,7 +118,7 @@ CASE step OF
 50:// Open VIC:81 and keep it open while the manifold pumps down to pressure set point
 	VVC_81.M_Set_OPN_SW(TRUE);
 	IF (VVC_81.iq_stValve.q_xOPN_DO ) AND (VVC_81_Timer.Q) THEN // or a certain pressure reading and check timeouts
-		step:=60;
+		step:=51;
 	END_IF
 
 51://Close VIC:80 VIC:81 and VIC:82

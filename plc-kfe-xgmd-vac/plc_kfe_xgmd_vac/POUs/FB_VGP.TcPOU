@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
   <POU Name="FB_VGP" Id="{7843698b-889d-4cb9-a659-0a84e4308c25}" SpecialFunc="None">
     <Declaration><![CDATA[(* This function implements the Basic functions for the Vat Motorized valve*)
 FUNCTION_BLOCK FB_VGP
 VAR_INPUT
 	i_xExtIlkOK	:	BOOL; //External Interlock, SET to TRUE if not used
+	i_xOpenIlkOK: BOOL; //Interlock Bit that allows the valve to open
+	i_xCloseIlkOK: BOOL; //Interlock Bit that allows the valve to Close
+	
 	i_ReqPos	:	REAL; //Requested position
 	
 	arrTable	: ARRAY[1..14,1..2] OF FLOAT;
@@ -273,7 +276,7 @@ q_stVGP.rEnoder_Position := LREAL_TO_REAL(Axis.NcToPlc.ActPos); // encoder posit
 fbPowerAxis(
 	Axis:= Axis, 
 	Enable:= , 
-	Enable_Positive:= , 
+	Enable_Positive:= i_xOpenIlkOK, 
 	Enable_Negative:= , 
 	Override:= rOverride, 
 	BufferMode:= , 
