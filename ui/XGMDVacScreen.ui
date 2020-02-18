@@ -420,7 +420,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:30&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:30&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:30&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:30&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:30&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:30&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -533,7 +533,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Right</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://EM1K0:GMD:PR:40</string>
+        <string>ca://EM2K0:XGMD:PR:50</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -565,7 +565,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:20&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:20&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:20&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:20&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:20&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:20&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -677,7 +677,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://EM1K0:GMD:GPI:70</string>
+        <string>ca://EM2K0:XGMD:GPI:90</string>
        </property>
       </widget>
       <widget class="Line" name="BeamLine_7">
@@ -757,44 +757,6 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_5">
        <property name="geometry">
         <rect>
-         <x>1410</x>
-         <y>10</y>
-         <width>151</width>
-         <height>381</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:60&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:60&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:60&quot;}</string>
-       </property>
-       <property name="filename" stdset="0">
-        <string>DiffPump.ui</string>
-       </property>
-      </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_6">
-       <property name="geometry">
-        <rect>
-         <x>1560</x>
-         <y>10</y>
-         <width>151</width>
-         <height>381</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:70&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:70&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:70&quot;}</string>
-       </property>
-       <property name="filename" stdset="0">
-        <string>DiffPump.ui</string>
-       </property>
-      </widget>
-      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_4">
-       <property name="geometry">
-        <rect>
          <x>1260</x>
          <y>10</y>
          <width>151</width>
@@ -805,7 +767,26 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:50&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:50&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:50&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:60&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:60&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:60&quot;}</string>
+       </property>
+       <property name="filename" stdset="0">
+        <string>DiffPump.ui</string>
+       </property>
+      </widget>
+      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_6">
+       <property name="geometry">
+        <rect>
+         <x>1410</x>
+         <y>10</y>
+         <width>151</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="macros" stdset="0">
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:70&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:70&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:70&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -824,7 +805,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="text">
-        <string>SD-375-402-89</string>
+        <string>SD-375-403-89</string>
        </property>
       </widget>
       <widget class="PyDMLabel" name="PyDMLabel_2">
@@ -889,7 +870,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://EM1K0:GMD:GPI:10</string>
+        <string>ca://EM2K0:XGMD:GPI:10</string>
        </property>
       </widget>
       <widget class="Line" name="line_8">
@@ -921,7 +902,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:10&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:10&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:10&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:10&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:10&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:10&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -978,7 +959,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:40&quot;, &quot;GPI&quot;: &quot;EM1K0:GMD:GPI:40&quot;, &quot;VCN&quot;: &quot;EM1K0:GMD:VCN:40&quot;, &quot;VGP&quot;: &quot;EM1K0:GMD:VGP:40&quot;, &quot;PTM&quot;: &quot;EM1K0:GMD:PTM:40&quot;, &quot;NA&quot;: &quot;EM1K0:GMD:NA:40&quot;, &quot;GHC&quot;: &quot;EM1K0:GMD:GHC:40&quot;}</string>
+        <string>{&quot;GMC&quot;: &quot;EM2K0:XGMD:GMC:50&quot;, &quot;VCN&quot;: &quot;EM2K0:XGMD:VCN:50&quot;, &quot;VGP&quot;: &quot;EM2K0:XGMD:VGP:50&quot;, &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:50&quot;, &quot;NA&quot;: &quot;EM2K0:XGMD:NA:50&quot;, &quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:50&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>GasInjectorInterface.ui</string>
@@ -1035,7 +1016,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://EM1K0:GMD:VGC:1</string>
+        <string>ca://EM2K0:XGMD:VGC:1</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -1134,7 +1115,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="text">
-        <string>SD-375-402-89</string>
+        <string>SD-375-403-89</string>
        </property>
       </widget>
       <widget class="Line" name="line_4">
@@ -1230,7 +1211,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="text">
-        <string>EM1K0:GMD Vacuum System</string>
+        <string>EM2K0:XGMD Vacuum System</string>
        </property>
       </widget>
       <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_8">
@@ -1246,7 +1227,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:30&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:30&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:30&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:40&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:40&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:40&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1303,7 +1284,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM1K0:GMD:GCC:70&quot; , &quot;VRC&quot;:&quot;EM1K0:GMD:VRC:70&quot; , &quot;PTM&quot;: &quot;EMIK0:GMD:PTM:70&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:90&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:90&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:90&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1322,7 +1303,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://EM1K0:GMD:VGC:1</string>
+        <string>ca://EM2K0:XGMD:VGC:2</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
@@ -1371,6 +1352,25 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_10">
+       <property name="geometry">
+        <rect>
+         <x>1560</x>
+         <y>10</y>
+         <width>151</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="macros" stdset="0">
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:80&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:80&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:80&quot;}</string>
+       </property>
+       <property name="filename" stdset="0">
+        <string>DiffPump.ui</string>
        </property>
       </widget>
      </widget>
