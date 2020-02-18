@@ -98,7 +98,7 @@
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${GPI}</string>
+    <string>ca://${GMC}</string>
    </property>
   </widget>
   <widget class="NeedleValve" name="NeedleValve_2">
@@ -251,6 +251,9 @@
    </property>
    <property name="toolTip">
     <string/>
+   </property>
+   <property name="channelsPrefix" stdset="0">
+    <string>ca://${GCC}</string>
    </property>
    <property name="controlButtonHorizontal" stdset="0">
     <bool>false</bool>
