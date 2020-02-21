@@ -1,2 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo"><LicenseInfo><SystemId>{A763DCF2-A783-ABB5-4B07-884869356469}</SystemId><IssueTime>2019-08-20T17:38:00</IssueTime><ExpireTime>2019-08-28T00:00:00</ExpireTime><LicenseKey>fb5b83c61ff1051880d80c7b2f3efa5b2296d859d912bf3d482415c031b9db4e2faf4142e6213307c0cb88ad665195794f4005f73ebf6a176fc329f73eb6daa29d1523d327f4eae486129720863dcb4385c3ad6daf689d78e2cc1e8dea9342dd4758c7a8075334d73a6642017609f389ac167f4d2bd3b0b7561483e8603c341d49f41dd29ff53194b7acd234a2e2fd182a46e7fb28d7012de0f181baa4074e6a3f3da62be02b44d9351eb5aaafda6108310171a1c931e74e3063258d3dab36df3dd941c22fa4331708035abab3aa19a76942c6778965677f09d95b8ae3cd6bdaffea8b27573519c08d395ed2ea647b1f20e3139ca6d09e2af9e40450829475b6</LicenseKey><License><LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId><Name>TC3 ADS</Name><OrderNo>TC1000</OrderNo></License><License><LicenseId>{3FF18E97-7754-401B-93FB-70544DE28A13}</LicenseId><Name>TC3 IO</Name><OrderNo>TC1100</OrderNo></License><License><LicenseId>{66689887-CCBD-452C-AC9A-039D997C6E66}</LicenseId><Name>TC3 PLC</Name><OrderNo>TC1200</OrderNo></License><License><LicenseId>{A19036CF-A53B-4E3A-99FF-023EF5C4798B}</LicenseId><Name>TC3 NC PTP Axis</Name><Instances>10</Instances></License><License><LicenseId>{520DE751-9DB6-47CB-8240-BD5C466E7E64}</LicenseId><Name>TC3 NC PTP</Name><OrderNo>TF5000</OrderNo></License><License><LicenseId>{777F1598-583B-4503-99BB-7C02E0ABD97E}</LicenseId><Name>TC3 Controller Toolbox</Name><OrderNo>TF4100</OrderNo></License><License><LicenseId>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</LicenseId><Name>TC3 XCAD Interface</Name><OrderNo>TE1120</OrderNo></License><License><LicenseId>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</LicenseId><Name>TC3 Scope View Professional</Name><OrderNo>TE1300</OrderNo></License></LicenseInfo></TcLicenseInfo>
+<?xml version="1.0"?>
+<TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
+	<LicenseInfo>
+		<SystemId>{A763DCF2-A783-ABB5-4B07-884869356469}</SystemId>
+		<IssueTime>2020-02-21T02:14:00</IssueTime>
+		<ExpireTime>2020-02-29T00:00:00</ExpireTime>
+		<LicenseKey>8bb1bcb4444f6b546e2d814252c4e021cbf59176e7d7f7a0a3ea4186ff28b5dd1f3c27a596a97dbfa1c39ceb42dba31a7438905697a222cb4f2dc286c431a4498806cda87a6a848aa4209d97a2b1b9ce376705d3b52c19d046ca43d73a490a756833516fb5367978b43a3d8c9844edcee09c1a6f7bfb1b7f8f13e2e89802e19a69579dd364ad0474bbbd740073d6b54df241fa9c6560bda4bdac7f2c857e9fbc8f273e85ce7066047a06dc76fae69fef7b79d3d62806b109273c4c988c2d9e315b4a0384640d6b1e3c537a7a6dd5c9249b5ee7cf78aa9c69192ae1e4e3ac8ec2c72488db33081c61d7901289a3072fa426bf318caa18be5b639a9005b32610d3</LicenseKey>
+		<License>
+			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
+			<Name>TC3 ADS</Name>
+			<OrderNo>TC1000</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{3FF18E97-7754-401B-93FB-70544DE28A13}</LicenseId>
+			<Name>TC3 IO</Name>
+			<OrderNo>TC1100</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{66689887-CCBD-452C-AC9A-039D997C6E66}</LicenseId>
+			<Name>TC3 PLC</Name>
+			<OrderNo>TC1200</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{A19036CF-A53B-4E3A-99FF-023EF5C4798B}</LicenseId>
+			<Name>TC3 NC PTP Axis</Name>
+			<Instances>10</Instances>
+		</License>
+		<License>
+			<LicenseId>{520DE751-9DB6-47CB-8240-BD5C466E7E64}</LicenseId>
+			<Name>TC3 NC PTP</Name>
+			<OrderNo>TF5000</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</LicenseId>
+			<Name>TC3 Serial-Communication</Name>
+			<OrderNo>TF6340</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{B27B051A-CA6A-42EA-833E-82CC92903D83}</LicenseId>
+			<Name>TC3 UML</Name>
+			<OrderNo>TF1910</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{777F1598-583B-4503-99BB-7C02E0ABD97E}</LicenseId>
+			<Name>TC3 Controller Toolbox</Name>
+			<OrderNo>TF4100</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</LicenseId>
+			<Name>TC3 XCAD Interface</Name>
+			<OrderNo>TE1120</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</LicenseId>
+			<Name>TC3 Scope View Professional</Name>
+			<OrderNo>TE1300</OrderNo>
+		</License>
+	</LicenseInfo>
+</TcLicenseInfo>
