@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="MAIN" Id="{80634dbc-d649-47af-a183-d3f1342ca1c9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	
+	vgp_debug_mode : BOOL;
 END_VAR
 
     ]]></Declaration>
@@ -13,8 +15,9 @@ PRG_GMD();
 //MG
 PRG_INJ();
 PRG_PressureControl();
-PRG_VGP(); // Keep commented out, test VGP  through axis until positions are verfified
-
+IF NOT vgp_debug_mode THEN
+	PRG_VGP(); // Keep commented out, test VGP  through axis until positions are verfified
+END_IF
 
 //TODO
 //PRG_Purge();
@@ -28,6 +31,7 @@ PRG_VGP(); // Keep commented out, test VGP  through axis until positions are ver
       <LineId Id="19" Count="0" />
       <LineId Id="18" Count="0" />
       <LineId Id="21" Count="1" />
+      <LineId Id="39" Count="0" />
       <LineId Id="20" Count="0" />
       <LineId Id="27" Count="1" />
       <LineId Id="8" Count="0" />
