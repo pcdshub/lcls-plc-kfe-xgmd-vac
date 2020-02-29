@@ -1,4 +1,4 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.1.6/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics-dev/zlentz/ads-ioc//bin/rhel7-x86_64/adsIoc
 
 < envPaths
 
@@ -6,7 +6,7 @@ epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
 epicsEnvSet("IOCNAME", "ioc-plc-kfe-xgmd-vac" )
 epicsEnvSet("ENGINEER", "nwbrown" )
-epicsEnvSet("LOCATION", "PREFIX:" )
+epicsEnvSet("LOCATION", "IOC:PLC:KFE:XGMD:VAC" )
 epicsEnvSet("IOCSH_PS1", "$(IOCNAME)> " )
 
 # Run common startup commands for linux soft IOC's
@@ -20,7 +20,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.92.60")
 epicsEnvSet("AMSID",            "172.21.92.60.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "2000")
+epicsEnvSet("ADS_MAX_PARAMS",   "10000")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -52,27 +52,33 @@ epicsEnvSet("ADS_TIME_SOURCE",  "0")
 adsAsynPortDriverConfigure("$(ASYN_PORT)", "$(IPADDR)", "$(AMSID)", "$(AMS_PORT)", "$(ADS_MAX_PARAMS)", 0, 0, "$(ADS_SAMPLE_MS)", "$(ADS_MAX_DELAY_MS)", "$(ADS_TIMEOUT_MS)", "$(ADS_TIME_SOURCE)")
 
 cd "$(IOC_TOP)"
-dbLoadRecords("plc_kfe_xgmd_vac.db", "PORT=ASYN_PLC,PREFIX=PREFIX::,IOCNAME=$(IOCNAME),")
+dbLoadRecords("plc_kfe_xgmd_vac.db", "PORT=ASYN_PLC,PREFIX=IOC:PLC:KFE:XGMD:VAC,IOCNAME=$(IOCNAME),")
 
 cd "$(IOC_TOP)"
 
-dbLoadRecords("db/iocSoft.db", "IOC=PREFIX:")
-dbLoadRecords("db/save_restoreStatus.db", "P=PREFIX::")
+dbLoadRecords("db/iocSoft.db", "IOC=IOC:PLC:KFE:XGMD:VAC")
+dbLoadRecords("db/save_restoreStatus.db", "P=IOC:PLC:KFE:XGMD:VAC")
 
 # Setup autosave
 set_savefile_path( "$(IOC_DATA)/$(IOC)/autosave" )
 set_requestfile_path( "$(IOC_TOP)/autosave" )
-save_restoreSet_status_prefix( "PREFIX::" )
+
+save_restoreSet_status_prefix( "IOC:PLC:KFE:XGMD:VAC" )
 save_restoreSet_IncompleteSetsOk( 1 )
 save_restoreSet_DatedBackupFiles( 1 )
-set_pass0_restoreFile( "$(IOC).sav" )
-set_pass1_restoreFile( "$(IOC).sav" )
+set_pass0_restoreFile( "info_positions.sav" )
+set_pass1_restoreFile( "info_settings.sav" )
+
+cd "$(IOC_TOP)/autosave"
+makeAutosaveFiles()
+cd "$(IOC_TOP)"
 
 # Initialize the IOC and start processing records
 iocInit()
 
 # Start autosave backups
-create_monitor_set( "$(IOC).req", 5, "" )
+create_monitor_set( "info_positions.req", 10, "" )
+create_monitor_set( "info_settings.req", 60, "" )
 
 # All IOCs should dump some common info after initial startup.
 < /reg/d/iocCommon/All/post_linux.cmd
