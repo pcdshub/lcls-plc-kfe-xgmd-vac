@@ -2475,11 +2475,6 @@ External Setpoint Generation:
 							<Comment><![CDATA[ Input status]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
-						<Var>
-							<Name>L2SI_Vacuum_Library.PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
-							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
@@ -2525,11 +2520,6 @@ IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.VVC_86.q_xOPN_DO</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Devices.hv1.q_HV_DO</Name>
 							<Comment><![CDATA[outputs]]></Comment>
 							<Type>BOOL</Type>
@@ -2537,6 +2527,11 @@ IO]]></Comment>
 						<Var>
 							<Name>GVL_Devices.hv2.q_HV_DO</Name>
 							<Comment><![CDATA[outputs]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_86.q_xOPN_DO</Name>
+							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2550,22 +2545,22 @@ IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_30.q_RunDO</Name>
-							<Comment><![CDATA[ Start/Stop]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_40.q_RunDO</Name>
 							<Comment><![CDATA[ Start/Stop]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_50.q_RunDO</Name>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_60.q_RunDO</Name>
 							<Comment><![CDATA[ Start/Stop]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_60.q_RunDO</Name>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_30.q_RunDO</Name>
+							<Comment><![CDATA[ Start/Stop]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_50.q_RunDO</Name>
 							<Comment><![CDATA[ Start/Stop]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
