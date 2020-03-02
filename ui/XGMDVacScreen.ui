@@ -533,7 +533,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>PCDSSymbolBase::Right</enum>
        </property>
        <property name="channelsPrefix" stdset="0">
-        <string>ca://EM2K0:XGMD:PR:50</string>
+        <string>ca://EM2K0:XGMD:PRT:50</string>
        </property>
        <property name="controlButtonHorizontal" stdset="0">
         <bool>false</bool>
