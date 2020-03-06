@@ -98,7 +98,7 @@
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${GMC}</string>
+    <string>ca://${GPI}</string>
    </property>
   </widget>
   <widget class="NeedleValve" name="NeedleValve_2">
