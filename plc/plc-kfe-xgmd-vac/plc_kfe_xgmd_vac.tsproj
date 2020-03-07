@@ -2008,8 +2008,8 @@ External Setpoint Generation:
 		<System>
 			<Licenses>
 				<Target>
-					<ManualSelect>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</ManualSelect>
 					<ManualSelect>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</ManualSelect>
+					<ManualSelect>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -2226,78 +2226,6 @@ External Setpoint Generation:
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_10.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_10.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_20.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_20.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_30.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_30.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_40.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_40.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_60.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_60.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_70.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_70.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_80.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_80.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xOpnLS</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xClsLS</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
 							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 							<Type>INT</Type>
@@ -2421,6 +2349,78 @@ External Setpoint Generation:
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_10.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_20.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_30.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_40.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_40.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_60.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_70.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_70.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_80.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_80.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.i_iPRESS_R</Name>
 							<Comment><![CDATA[ Controls and I/Os]]></Comment>
 							<Type>INT</Type>
@@ -2466,60 +2466,18 @@ External Setpoint Generation:
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK</Name>
-							<Comment><![CDATA[ Normally closed Alarm bit]]></Comment>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun</Name>
+							<Comment><![CDATA[ Input status]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun</Name>
-							<Comment><![CDATA[ Input status]]></Comment>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK</Name>
+							<Comment><![CDATA[ Normally closed Alarm bit]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
-						<Var>
-							<Name>GVL_Devices.hv1.q_HV_DO</Name>
-							<Comment><![CDATA[outputs]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.hv2.q_HV_DO</Name>
-							<Comment><![CDATA[outputs]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_10.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_20.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_30.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_40.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_60.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_70.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_80.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_90.q_xOPN_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
 						<Var>
 							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
 							<Comment><![CDATA[iResolution: INT :=16;
@@ -2564,6 +2522,16 @@ IO]]></Comment>
 						<Var>
 							<Name>GVL_Devices.VVC_86.q_xOPN_DO</Name>
 							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.hv1.q_HV_DO</Name>
+							<Comment><![CDATA[outputs]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.hv2.q_HV_DO</Name>
+							<Comment><![CDATA[outputs]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -2612,6 +2580,38 @@ IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_70.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_80.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VRC_90.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
@@ -2637,6 +2637,11 @@ IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_60.q_xHV_DIS</Name>
+							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_70.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
@@ -2648,11 +2653,6 @@ IO]]></Comment>
 						</Var>
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_90.q_xHV_DIS</Name>
-							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_60.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -2669,6 +2669,11 @@ IO]]></Comment>
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
 							<Comment><![CDATA[ Remote/Local Control]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO</Name>
+							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -9298,6 +9303,9 @@ Bit1: Value smaller than Limit2]]></Comment>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_16">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_80.q_xOPN_DO" VarB="Channel 1^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.q_xOPN_DO" VarB="Channel 3^Output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2212_02_19">
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO" VarB="DOX Control Channel 1^Control^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote" VarB="Channel 2^Output"/>

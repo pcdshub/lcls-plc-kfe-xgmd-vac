@@ -159,6 +159,20 @@ fb_EM2K0_XGMD_GCC_90(PG := fb_EM2K0_XGMD_GPI_50.PG);
 
 // FB_EbaraEVA
 fb_EM2K0_XGMD_PRT_50(i_xExtIlkOK := TRUE);
+
+// FB_VVC
+IF bAutoVVC50 THEN
+	IF fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING THEN
+		fb_EM2K0_XGMD_VVC_50.M_Open(True);
+	ELSE 
+		fb_EM2K0_XGMD_VVC_50.M_Open(False);
+	END_IF
+END_IF
+
+fb_EM2K0_XGMD_VVC_50(
+	i_xExtILK_OK := F_TURBO_PROT_SLND_ILK(fb_EM2K0_XGMD_PRT_50.stPump),
+	i_xOverrideMode := xSystemOverrideMode,
+);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GMD">
@@ -206,6 +220,15 @@ fb_EM2K0_XGMD_PRT_50(i_xExtIlkOK := TRUE);
       <LineId Id="66" Count="0" />
       <LineId Id="42" Count="0" />
       <LineId Id="44" Count="0" />
+      <LineId Id="185" Count="0" />
+      <LineId Id="184" Count="0" />
+      <LineId Id="196" Count="0" />
+      <LineId Id="191" Count="0" />
+      <LineId Id="194" Count="1" />
+      <LineId Id="192" Count="1" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="190" Count="0" />
+      <LineId Id="186" Count="3" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
