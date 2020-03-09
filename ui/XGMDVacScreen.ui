@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1964</width>
-    <height>765</height>
+    <height>785</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -379,10 +379,10 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
      <widget class="QWidget" name="scrollAreaWidgetContents">
       <property name="geometry">
        <rect>
-        <x>-36</x>
+        <x>0</x>
         <y>0</y>
         <width>1980</width>
-        <height>673</height>
+        <height>693</height>
        </rect>
       </property>
       <property name="autoFillBackground">
@@ -542,7 +542,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_10">
        <property name="geometry">
         <rect>
-         <x>460</x>
+         <x>630</x>
          <y>580</y>
          <width>3</width>
          <height>61</height>
@@ -779,7 +779,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMLabel" name="PyDMLabel_4">
        <property name="geometry">
         <rect>
-         <x>310</x>
+         <x>480</x>
          <y>650</y>
          <width>121</width>
          <height>16</height>
@@ -844,7 +844,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="RoughGauge" name="RoughGauge">
        <property name="geometry">
         <rect>
-         <x>680</x>
+         <x>765</x>
          <y>610</y>
          <width>70</width>
          <height>60</height>
@@ -1041,7 +1041,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMLabel" name="PyDMLabel_3">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>460</x>
          <y>620</y>
          <width>181</width>
          <height>16</height>
@@ -1137,7 +1137,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_11">
        <property name="geometry">
         <rect>
-         <x>260</x>
+         <x>430</x>
          <y>640</y>
          <width>200</width>
          <height>3</height>
@@ -1150,7 +1150,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMDrawingTriangle" name="PyDMDrawingTriangle_2">
        <property name="geometry">
         <rect>
-         <x>250</x>
+         <x>420</x>
          <y>630</y>
          <width>21</width>
          <height>21</height>
@@ -1315,7 +1315,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="Line" name="line_18">
        <property name="geometry">
         <rect>
-         <x>715</x>
+         <x>800</x>
          <y>580</y>
          <width>3</width>
          <height>33</height>
@@ -1347,8 +1347,8 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMByteIndicator" name="PyDMByteIndicator">
        <property name="geometry">
         <rect>
-         <x>1620</x>
-         <y>600</y>
+         <x>90</x>
+         <y>590</y>
          <width>221</width>
          <height>20</height>
         </rect>
@@ -1372,6 +1372,13 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
          <blue>0</blue>
         </color>
        </property>
+       <property name="offColor" stdset="0">
+        <color>
+         <red>0</red>
+         <green>255</green>
+         <blue>0</blue>
+        </color>
+       </property>
        <property name="showLabels" stdset="0">
         <bool>true</bool>
        </property>
@@ -1386,8 +1393,8 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <widget class="PyDMCheckbox" name="PyDMCheckbox">
        <property name="geometry">
         <rect>
-         <x>1640</x>
-         <y>630</y>
+         <x>110</x>
+         <y>620</y>
          <width>14</width>
          <height>15</height>
         </rect>
@@ -1406,6 +1413,70 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
        </property>
        <property name="channel" stdset="0">
         <string>ca://EM2K0:XGMD:OVERRIDE_VAC</string>
+       </property>
+      </widget>
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_2">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>640</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="rules" stdset="0">
+        <string>[]</string>
+       </property>
+       <property name="alarmSensitiveContent" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://EM2K0:XGMD:AUTO_VVC_50_RBV</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>0</red>
+         <green>255</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>VVC-50 automation disabled</string>
+         <string>VVC-50 automation enabled</string>
+         <string></string>
+        </stringlist>
+       </property>
+      </widget>
+      <widget class="PyDMCheckbox" name="PyDMCheckbox_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>670</y>
+         <width>14</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveContent" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://EM2K0:XGMD:AUTO_VVC_50</string>
        </property>
       </widget>
       <zorder>PyDMEmbeddedDisplay_7</zorder>
@@ -1464,6 +1535,8 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>PyDMEmbeddedDisplay_10</zorder>
       <zorder>PyDMByteIndicator</zorder>
       <zorder>PyDMCheckbox</zorder>
+      <zorder>PyDMByteIndicator_2</zorder>
+      <zorder>PyDMCheckbox_2</zorder>
      </widget>
     </widget>
    </item>
