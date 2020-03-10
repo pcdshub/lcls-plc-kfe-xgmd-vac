@@ -1467,7 +1467,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="checked">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="alarmSensitiveContent" stdset="0">
         <bool>false</bool>
@@ -1479,6 +1479,33 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string>ca://EM2K0:XGMD:AUTO_VVC_50</string>
        </property>
       </widget>
+      <widget class="Line" name="line_17">
+       <property name="geometry">
+        <rect>
+         <x>1822</x>
+         <y>366</y>
+         <width>20</width>
+         <height>214</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line_19">
+       <property name="geometry">
+        <rect>
+         <x>672</x>
+         <y>366</y>
+         <width>20</width>
+         <height>214</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <zorder>line_17</zorder>
       <zorder>PyDMEmbeddedDisplay_7</zorder>
       <zorder>PyDMDrawingArc</zorder>
       <zorder>PyDMEmbeddedDisplay_3</zorder>
@@ -1537,6 +1564,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>PyDMCheckbox</zorder>
       <zorder>PyDMByteIndicator_2</zorder>
       <zorder>PyDMCheckbox_2</zorder>
+      <zorder>line_19</zorder>
      </widget>
     </widget>
    </item>
