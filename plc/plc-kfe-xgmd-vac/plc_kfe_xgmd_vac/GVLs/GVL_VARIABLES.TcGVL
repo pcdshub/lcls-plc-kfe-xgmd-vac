@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_VARIABLES" Id="{f5eb425e-877f-4a98-b4fc-8b7970a753e9}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
-{attribute 'pytmc' :=' pv: EM2K0:XGMD:OVERRIDE_VAC '}
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:OVERRIDE_VAC '}
 	xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
 	
-	
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:AUTO_VVC_50 '}
+	bAutoVVC50 : BOOL := False;
 	
 	//PRAGMA
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:NeedleBurpTime '}

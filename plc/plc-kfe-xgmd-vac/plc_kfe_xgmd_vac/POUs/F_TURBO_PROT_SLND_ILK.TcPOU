@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="F_TURBO_PROT_SLND_ILK" Id="{2cd3cb76-73f3-4300-a3c4-dd435cd2a0c0}" SpecialFunc="None">
+    <Declaration><![CDATA[(*
+	Interlock function for solenoid valve located behind the central turbo pump. 
+*)
+FUNCTION F_TURBO_PROT_SLND_ILK : BOOL
+VAR_INPUT
+	ScrollPump : ST_RoughPump;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_TURBO_PROT_SLND_ILK := ScrollPump.eState = pumpRUNNING;]]></ST>
+    </Implementation>
+    <LineIds Name="F_TURBO_PROT_SLND_ILK">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

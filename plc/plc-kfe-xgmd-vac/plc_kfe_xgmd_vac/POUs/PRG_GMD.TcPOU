@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_GMD" Id="{febc07a9-f1e9-4dc5-b21e-96967800d0f7}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GMD
 VAR
@@ -15,26 +15,135 @@ fb_EM2K0_XGMD_GPI_90(PG=>);
 
 // FB_PTM_TwisTorr
 
-fb_EM2K0_XGMD_PTM_10(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_20(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_30(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_40(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_50(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_60(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_70(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_80(i_xExtILKOk := TRUE);
-fb_EM2K0_XGMD_PTM_90(i_xExtILKOk := TRUE);
+fb_EM2K0_XGMD_PTM_10(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_10.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_20(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_20.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_30(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_30.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_40(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_40.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_50(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_50.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_60(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_60.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_70(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_70.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_80(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_80.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
+fb_EM2K0_XGMD_PTM_90(i_xExtILKOk := F_TurboExtILKLogic_2(
+	Turbo:= fb_EM2K0_XGMD_PTM_90.iq_stPtm, 
+	BackingGauge:= fb_EM2K0_XGMD_GPI_10.PG, 
+	InletGauge:= fb_EM2K0_XGMD_GPI_50.PG, 
+	ScrollPump:= fb_EM2K0_XGMD_PRT_50.stPump)
+);
 
 // FB_VRC
 
-fb_EM2K0_XGMD_VRC_10(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM2K0_XGMD_VRC_20(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM2K0_XGMD_VRC_30(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM2K0_XGMD_VRC_40(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM2K0_XGMD_VRC_60(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM2K0_XGMD_VRC_70(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM2K0_XGMD_VRC_80(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
-fb_EM2K0_XGMD_VRC_90(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_EM2K0_XGMD_VRC_10(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_10.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
+fb_EM2K0_XGMD_VRC_20(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_20.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
+fb_EM2K0_XGMD_VRC_30(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_30.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
+fb_EM2K0_XGMD_VRC_40(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_40.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
+fb_EM2K0_XGMD_VRC_60(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_60.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
+fb_EM2K0_XGMD_VRC_70(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_70.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
+fb_EM2K0_XGMD_VRC_80(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_80.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
+fb_EM2K0_XGMD_VRC_90(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+		i_Turbo := fb_EM2K0_XGMD_PTM_90.iq_stPtm,
+		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+		ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
+	i_xOverrideMode := xSystemOverrideMode
+);
 
 // FB_MKS422
 
@@ -50,14 +159,60 @@ fb_EM2K0_XGMD_GCC_90(PG := fb_EM2K0_XGMD_GPI_50.PG);
 
 // FB_EbaraEVA
 fb_EM2K0_XGMD_PRT_50(i_xExtIlkOK := TRUE);
+
+// FB_VVC
+IF bAutoVVC50 THEN
+	IF fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING THEN
+		fb_EM2K0_XGMD_VVC_50.M_Open(True);
+	ELSE 
+		fb_EM2K0_XGMD_VVC_50.M_Open(False);
+	END_IF
+END_IF
+
+fb_EM2K0_XGMD_VVC_50(
+	i_xExtILK_OK := F_TURBO_PROT_SLND_ILK(fb_EM2K0_XGMD_PRT_50.stPump),
+	i_xOverrideMode := xSystemOverrideMode,
+);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GMD">
-      <LineId Id="6" Count="15" />
-      <LineId Id="52" Count="1" />
-      <LineId Id="22" Count="5" />
+      <LineId Id="6" Count="8" />
+      <LineId Id="71" Count="3" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="75" Count="5" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="81" Count="4" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="86" Count="4" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="91" Count="4" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="96" Count="4" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="101" Count="4" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="106" Count="4" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="111" Count="4" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="22" Count="2" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="122" Count="0" />
+      <LineId Id="118" Count="3" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="123" Count="9" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="133" Count="7" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="141" Count="7" />
       <LineId Id="67" Count="0" />
-      <LineId Id="29" Count="2" />
+      <LineId Id="149" Count="7" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="157" Count="7" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="165" Count="7" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="173" Count="7" />
       <LineId Id="54" Count="1" />
       <LineId Id="32" Count="8" />
       <LineId Id="65" Count="0" />
@@ -65,6 +220,15 @@ fb_EM2K0_XGMD_PRT_50(i_xExtIlkOK := TRUE);
       <LineId Id="66" Count="0" />
       <LineId Id="42" Count="0" />
       <LineId Id="44" Count="0" />
+      <LineId Id="185" Count="0" />
+      <LineId Id="184" Count="0" />
+      <LineId Id="196" Count="0" />
+      <LineId Id="191" Count="0" />
+      <LineId Id="194" Count="1" />
+      <LineId Id="192" Count="1" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="190" Count="0" />
+      <LineId Id="186" Count="3" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>

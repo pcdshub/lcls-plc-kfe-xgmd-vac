@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_GMD" Id="{e07be9ee-1c30-4de2-9fbb-2a29f1e5894a}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -78,6 +78,10 @@ fb_EM2K0_XGMD_GCC_90 : FB_MKS422;
 
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:50 '}
 fb_EM2K0_XGMD_PRT_50 : FB_EbaraEVA;
+
+// FB_VVC
+{attribute 'pytmc' := ' pv: EM2K0:XGMD:VVC:50 '}
+fb_EM2K0_XGMD_VVC_50 : FB_VVC;
 
 END_VAR]]></Declaration>
   </GVL>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>558</width>
-    <height>321</height>
+    <width>567</width>
+    <height>351</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="NeedleValve" name="NeedleValve">
    <property name="geometry">
     <rect>
-     <x>277</x>
+     <x>340</x>
      <y>-4</y>
      <width>180</width>
      <height>121</height>
@@ -41,7 +41,7 @@
   <widget class="TurboPump" name="TurboPump">
    <property name="geometry">
     <rect>
-     <x>275</x>
+     <x>340</x>
      <y>114</y>
      <width>180</width>
      <height>121</height>
@@ -63,7 +63,7 @@
   <widget class="ControlOnlyValveNC" name="ControlOnlyValveNC">
    <property name="geometry">
     <rect>
-     <x>278</x>
+     <x>340</x>
      <y>217</y>
      <width>180</width>
      <height>121</height>
@@ -88,7 +88,7 @@
   <widget class="RoughGauge" name="RoughGauge">
    <property name="geometry">
     <rect>
-     <x>16</x>
+     <x>20</x>
      <y>43</y>
      <width>70</width>
      <height>60</height>
@@ -98,13 +98,13 @@
     <string/>
    </property>
    <property name="channelsPrefix" stdset="0">
-    <string>ca://${GMC}</string>
+    <string>ca://${GPI}</string>
    </property>
   </widget>
   <widget class="NeedleValve" name="NeedleValve_2">
    <property name="geometry">
     <rect>
-     <x>146</x>
+     <x>140</x>
      <y>41</y>
      <width>180</width>
      <height>141</height>
@@ -126,9 +126,9 @@
   <widget class="Line" name="line">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>460</x>
      <y>10</y>
-     <width>3</width>
+     <width>51</width>
      <height>30</height>
     </rect>
    </property>
@@ -141,21 +141,8 @@
     <rect>
      <x>140</x>
      <y>9</y>
-     <width>3</width>
-     <height>52</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
-   </property>
-  </widget>
-  <widget class="Line" name="line_4">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>10</y>
-     <width>3</width>
-     <height>30</height>
+     <width>20</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="orientation">
@@ -166,9 +153,9 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>60</y>
-     <width>161</width>
-     <height>3</height>
+     <y>40</y>
+     <width>251</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="orientation">
@@ -178,10 +165,10 @@
   <widget class="Line" name="line_5">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>10</y>
-     <width>360</width>
-     <height>3</height>
+     <x>150</x>
+     <y>0</y>
+     <width>331</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="orientation">
@@ -191,9 +178,9 @@
   <widget class="Line" name="line_7">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>470</x>
      <y>190</y>
-     <width>3</width>
+     <width>31</width>
      <height>71</height>
     </rect>
    </property>
@@ -204,9 +191,9 @@
   <widget class="Line" name="line_8">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>470</x>
      <y>72</y>
-     <width>3</width>
+     <width>31</width>
      <height>87</height>
     </rect>
    </property>
@@ -214,26 +201,13 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_6">
-   <property name="geometry">
-    <rect>
-     <x>251</x>
-     <y>60</y>
-     <width>39</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
   <widget class="Line" name="line_9">
    <property name="geometry">
     <rect>
      <x>290</x>
      <y>60</y>
-     <width>3</width>
-     <height>190</height>
+     <width>41</width>
+     <height>231</height>
     </rect>
    </property>
    <property name="orientation">
@@ -243,14 +217,17 @@
   <widget class="ColdCathodeGauge" name="ColdCathodeGauge_2">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>40</y>
+     <x>0</x>
+     <y>100</y>
      <width>180</width>
      <height>142</height>
     </rect>
    </property>
    <property name="toolTip">
     <string/>
+   </property>
+   <property name="controlsLocation" stdset="0">
+    <enum>PCDSSymbolBase::Left</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
     <string>ca://${GCC}</string>
@@ -259,6 +236,19 @@
     <bool>false</bool>
    </property>
   </widget>
+  <zorder>NeedleValve</zorder>
+  <zorder>TurboPump</zorder>
+  <zorder>ControlOnlyValveNC</zorder>
+  <zorder>RoughGauge</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>line_3</zorder>
+  <zorder>line_5</zorder>
+  <zorder>line_7</zorder>
+  <zorder>line_8</zorder>
+  <zorder>line_9</zorder>
+  <zorder>ColdCathodeGauge_2</zorder>
+  <zorder>NeedleValve_2</zorder>
  </widget>
  <customwidgets>
   <customwidget>
