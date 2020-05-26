@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="PRG_Purge" Id="{a79f4482-bdf5-4b0d-9d35-039b4e6b3713}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Purge
 VAR
@@ -156,8 +156,8 @@ CASE step OF
 	
 
 90: //Release VGP:40
-	VGP_50.M_ValveControl(E_VCN.ManualControl);
-	VGP_50.q_stVGP.rReqPosition:= 50; //50% open
+	VGP_50.M_ValveControl(E_VCN.PressureControl);
+	VGP_50.i_ReqPos:= 50; //50% open
 	IF NOT(VGP_50.q_stVGP.state = E_MoveState.MOVESTATE_READY ) THEN // wait until the VGP encoder reads Open //use motion ready
 		step:=91;
 	END_IF
@@ -213,41 +213,5 @@ VCN_Timer(IN:= (step = 20) OR (step = 60) OR (step = 70), PT:=tNeedlePurgeTime);
 
 /// vcn and vgp on manual or auto?? manual, until the Go or auto button is pressed??]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Purge">
-      <LineId Id="48" Count="24" />
-      <LineId Id="233" Count="0" />
-      <LineId Id="73" Count="0" />
-      <LineId Id="229" Count="1" />
-      <LineId Id="76" Count="30" />
-      <LineId Id="237" Count="3" />
-      <LineId Id="236" Count="0" />
-      <LineId Id="235" Count="0" />
-      <LineId Id="234" Count="0" />
-      <LineId Id="107" Count="9" />
-      <LineId Id="244" Count="1" />
-      <LineId Id="251" Count="1" />
-      <LineId Id="250" Count="0" />
-      <LineId Id="246" Count="0" />
-      <LineId Id="248" Count="1" />
-      <LineId Id="243" Count="0" />
-      <LineId Id="117" Count="14" />
-      <LineId Id="137" Count="0" />
-      <LineId Id="258" Count="1" />
-      <LineId Id="261" Count="1" />
-      <LineId Id="264" Count="1" />
-      <LineId Id="260" Count="0" />
-      <LineId Id="257" Count="0" />
-      <LineId Id="253" Count="0" />
-      <LineId Id="138" Count="22" />
-      <LineId Id="184" Count="1" />
-      <LineId Id="313" Count="0" />
-      <LineId Id="317" Count="1" />
-      <LineId Id="314" Count="2" />
-      <LineId Id="312" Count="0" />
-      <LineId Id="186" Count="0" />
-      <LineId Id="319" Count="0" />
-      <LineId Id="161" Count="22" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

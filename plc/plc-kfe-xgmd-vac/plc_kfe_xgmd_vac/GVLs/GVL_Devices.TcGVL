@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <GVL Name="GVL_Devices" Id="{49019085-0c45-46f1-a256-56d701fd306c}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -40,6 +40,22 @@
 	hv1 : FB_HighVoltage;
 	{attribute 'pytmc' :=' pv: EM2K0:XGEM:HV:2 '}	
 	hv2 : FB_HighVoltage;
+	
+	(*RTD*)
+	
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:RTD:1 '}
+	{attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202_03_08]^RTD Inputs Channel 1^Value;
+                              .bError := TIIB[EL3202_03_08]^RTD Inputs Channel 1^Status^Error;
+                              .bUnderrange := TIIB[EL3202_03_08]^RTD Inputs Channel 1^Status^Underrange;
+                              .bOverrange := TIIB[EL3202_03_08]^RTD Inputs Channel 1^Status^Overrange'}
+	RTD_1 : FB_TempSensor;
+	
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:RTD:2 '}
+	{attribute 'TcLinkTo' := '.iRaw := TIIB[EL3202_03_08]^RTD Inputs Channel 2^Value;
+                              .bError := TIIB[EL3202_03_08]^RTD Inputs Channel 2^Status^Error;
+                              .bUnderrange := TIIB[EL3202_03_08]^RTD Inputs Channel 2^Status^Underrange;
+                              .bOverrange := TIIB[EL3202_03_08]^RTD Inputs Channel 2^Status^Overrange'}
+	RTD_2 : FB_TempSensor;
 	
 END_VAR]]></Declaration>
   </GVL>
