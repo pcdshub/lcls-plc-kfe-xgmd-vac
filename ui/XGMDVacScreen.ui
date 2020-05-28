@@ -1505,6 +1505,32 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>670</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PRT-50</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>680</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>GPI-10</string>
+       </property>
+      </widget>
       <zorder>line_17</zorder>
       <zorder>PyDMEmbeddedDisplay_7</zorder>
       <zorder>PyDMDrawingArc</zorder>
@@ -1565,6 +1591,8 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>PyDMByteIndicator_2</zorder>
       <zorder>PyDMCheckbox_2</zorder>
       <zorder>line_19</zorder>
+      <zorder>label</zorder>
+      <zorder>label_2</zorder>
      </widget>
     </widget>
    </item>
