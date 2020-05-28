@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="PRG_INJ" Id="{a7512107-4a2f-481f-b4a1-9b9235d00d38}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_INJ
 VAR
@@ -46,16 +46,8 @@ VVC_85(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 VVC_86(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 
 
+
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_INJ">
-      <LineId Id="14" Count="1" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="48" Count="0" />
-      <LineId Id="58" Count="0" />
-      <LineId Id="49" Count="0" />
-      <LineId Id="19" Count="28" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

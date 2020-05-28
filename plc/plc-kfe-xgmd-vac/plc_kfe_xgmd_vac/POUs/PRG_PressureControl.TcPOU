@@ -1,24 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="PRG_PressureControl" Id="{8ef02f00-e542-4b0e-902f-3d7061b2691f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PressureControl
 VAR CONSTANT
 		nDataTable_NumberOfRows : INT:=9;
 END_VAR
 VAR
-
-	fSetpointValue				: FLOAT;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:CNTRL:SP '}
+	fSetpointValue :FLOAT; 
+	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:GO;
+	 field: ZNAM STOP; 
+	 field: ONAM START; 
+	 io: io;
+	'}
+	bGo: BOOL; 
+ 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:CNTRL:RESET;
+	 field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	 '}
+	bReset : BOOL; 
+	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:ERROR;
+    field: ZNAM FALSE; 
+	 field: ONAM TRUE; 
+	 io: io;
+	 '}
+	bError : BOOL; 
+	{attribute 'pytmc' :=' pv:  EM2K0:XGMDCNTRL:Kp1 '}
+	fKp1 : REAL:= 0.04; 
+	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:Tn1 '}
+	fTn1 : REAL:= 1;//0.5; 
+	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:Kp2 '}
+	fKp2 : REAL:= 0.01; 
+	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:Tn2 '}
+	fTn2 : REAL:= 0.5; 
+	
 	fActualValue				: FLOAT;
 	fCtrlOutput						: FLOAT;
 	fBasicCtrlOutput						: FLOAT;
 	f_Rep_POS: Float;
 	
-	
-	
 
-
-
-	
 	fManValue											: FLOAT;
 	bExtrapolate										: BOOL;
 	fManSyncValue			: FLOAT;
@@ -27,21 +49,22 @@ VAR
 	bHold						: BOOL;
 
 	eMode						: E_CTRL_MODE;
-	stCTRL_PI_PARAMS		: ST_CTRL_PI_PARAMS;
+	stCTRL_PID_PARAMS		: ST_CTRL_PID_PARAMS;
 	stCTRL_LIN_INTERPOLATION_PARAMS		: ST_CTRL_LIN_INTERPOLATION_PARAMS;
 
 	eErrorId					: E_CTRL_ERRORCODES;
-	bError						: BOOL;
 	bARWactive				: BOOL;
-	
-	arrTable											: ARRAY[1..nDataTable_NumberOfRows,1..2] OF FLOAT;
+	arrTable	: ARRAY[1..31,1..2] OF FLOAT;
 	(* controller  *)
-	fbCTRL_PI				: FB_CTRL_PI;
+	fbCTRL_PID					: FB_CTRL_PID;
 	fbCTRL_Normalize 	: FB_CTRL_NORMALIZE;
 	fbCTRL_LIN_INTERPOLATION					: FB_CTRL_LIN_INTERPOLATION;
-
+	fbCTRL_DEADBAND						: FB_CTRL_DEADBAND;
+	stCTRL_DEADBAND_PARAMS			: ST_CTRL_DEADBAND_PARAMS;
+	
 	bInit						: BOOL		:= TRUE;
-	BasicPID: FB_BasicPID;
+	wait : time := T#10S;
+	FTrig: F_TRIG;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -49,7 +72,7 @@ END_VAR
 VCN_50.i_xExtIlkOK := (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
 
 //VCN
-VCN_50(i_xExtIlkOK := , i_ReqPos:= );
+VCN_50(i_xExtIlkOK := , i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut );
 
 f_Rep_POS := VCN_50.iq_stVCN.rReqPosition;
 
@@ -60,36 +83,58 @@ f_Rep_POS := VCN_50.iq_stVCN.rReqPosition;
 
 IF bInit
 THEN
+	(*FBCNTRL*)
 	(* init parameter struct *)
-	stCTRL_PI_PARAMS.tCtrlCycleTime		:= T#10ms;
-	stCTRL_PI_PARAMS.tTaskCycleTime	:= T#10ms;
-	stCTRL_PI_PARAMS.tTn					:= T#0S;//T#2s;		(* derivative gain Tv					*)
-	stCTRL_PI_PARAMS.fKp					:= 2;			(* proportional gain Kp				*)
-	stCTRL_PI_PARAMS.fOutMaxLimit		:=  100;  			(* maximum output limit				*)
-	stCTRL_PI_PARAMS.fOutMinLimit		:= 0;			(* minimum output limit				*)
+	stCTRL_PID_PARAMS.tCtrlCycleTime		:= T#10ms;
+	stCTRL_PID_PARAMS.tTaskCycleTime		:= T#10ms;
+	stCTRL_PID_PARAMS.fKp					:= fKp1;			(* proportional gain Kp				*)
+	stCTRL_PID_PARAMS.tTn					:= T#500ms;		(*  Tn									*)
+	stCTRL_PID_PARAMS.tTv					:= T#200ms;	(*  Tv									*)
+	stCTRL_PID_PARAMS.tTd					:= T#100ms;	(*  Td									*)
+	stCTRL_PID_PARAMS.fOutMaxLimit			:=  78;			(* maximum output limit				*)
+	stCTRL_PID_PARAMS.fOutMinLimit			:=  -100;			(* minimum output limit				*)
 
 	
 	(* init array with the interpolation points  *)
 	(* 	fIn					 |		fOut		*)
-	arrTable[1,1] := 0;			arrTable[1,2] := 0;
-	arrTable[2,1] := 0.001;		arrTable[1,2] := 20;
-	arrTable[3,1] := 0.005;		arrTable[3,2] := 30;
-	arrTable[4,1] :=  0.089;	arrTable[4,2] := 40;
-	arrTable[5,1] :=  0.276;	arrTable[5,2] := 50;
-	arrTable[6,1] := 2.299;		arrTable[6,2] := 60;
-	arrTable[7,1] := 9.522;		arrTable[7,2] := 70;
-	arrTable[8,1] := 13.815;	arrTable[8,2] := 75;
-	arrTable[9,1] := 24.019;	arrTable[8,2] := 80;
+(* 	fIn					 |		fOut		*)
+	arrTable[1,1] := 0;		arrTable[1,2] := 0;
+	arrTable[2,1] := 0.0000412;		arrTable[2,2] := 34;
+	arrTable[3,1] := 0.001282;		arrTable[3,2] := 36;
+	arrTable[4,1] :=  0.002136;	    arrTable[4,2] := 38;
+	arrTable[5,1] :=  0.005884;	    arrTable[5,2] := 40;
+	arrTable[6,1] := 0.00907;		arrTable[6,2] := 42;
+	arrTable[7,1] := 0.01183;		arrTable[7,2] := 44;
+	arrTable[8,1] := 0.01799;	    arrTable[8,2] := 46;
+	arrTable[9,1] := 0.0302;	    arrTable[9,2] := 47;
+	arrTable[10,1] := 0.0417;		arrTable[10,2] := 50;
+	arrTable[11,1] := 0.06635;		arrTable[11,2] := 51;
+	arrTable[12,1] := 0.08118;		arrTable[12,2] := 53;
+	arrTable[13,1] := 0.0998;		arrTable[13,2] := 56;
+	arrTable[14,1] := 0.10644;		arrTable[14,2] := 56.5;
+	arrTable[15,1] := 0.1359;		arrTable[15,2] := 58;
+	arrTable[16,1] := 0.1929;		arrTable[16,2] := 60;
+	arrTable[17,1] := 0.2922;		arrTable[17,2] := 62;
+	arrTable[18,1] := 0.3428;	    arrTable[18,2] := 64;
+	arrTable[19,1] :=  0.405;;	    arrTable[19,2] :=66;
+	arrTable[20,1] := 0.481;		arrTable[20,2] := 68;
+	arrTable[21,1] := 0.5542;		arrTable[21,2] := 69;
+	arrTable[22,1] := 0.6333;	    arrTable[22,2] := 70;
+	arrTable[23,1] := 0.7901;	    arrTable[23,2] := 72;
+	arrTable[24,1] := 0.9307;		arrTable[24,2] := 73.04;
+	arrTable[25,1] := 1.0448;		arrTable[25,2] := 73.64;
+	arrTable[26,1] := 1.31919;;		arrTable[26,2] := 74.45;
+	arrTable[27,1] :=  1.324;		arrTable[27,2] :=74.46;
+	arrTable[28,1] := 1.71941;	arrTable[28,2] := 75;
+	arrTable[29,1] :=  1.963194;		arrTable[29,2] :=75.5;
+	arrTable[30,1] := 1.99999;	arrTable[30,2] := 75.505;
+	arrTable[31,1] := 2;	arrTable[31,2] := 75.55;
 	
 	
 	(* init parameter struct *)
 	stCTRL_LIN_INTERPOLATION_PARAMS.tCtrlCycleTime					:= T#10ms;
 	stCTRL_LIN_INTERPOLATION_PARAMS.tTaskCycleTime					:= T#10ms;
-	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_NumberOfRows		:= INT_TO_UINT(nDataTable_NumberOfRows);
-
-	(* set the addresses *)
-	stCTRL_LIN_INTERPOLATION_PARAMS.pDataTable_ADR			:= ADR(arrTable);
-	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_SIZEOF		:= SIZEOF(arrTable);
+	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_NumberOfRows		:= INT_TO_UINT(31);
 
 	
 	(* set the mode to ACTIVE --> normal operation *)
@@ -98,63 +143,76 @@ THEN
 	(* reset the init flag *)
 	bInit							:= FALSE;
 END_IF
+(* set the addresses *)
+	stCTRL_LIN_INTERPOLATION_PARAMS.pDataTable_ADR			:= ADR(arrTable);
+	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_SIZEOF		:= SIZEOF(arrTable);
 
+
+if (bGo) THEN
+	IF (bReset) THEN
+	(* set the mode to RESET*)
+	eMode							:= eCTRL_MODE_RESET   ;
+	VCN_50.M_ValveControl(CloseValve);
+	//bReset := False;
+	ELSE
+		(* set the mode to ACTIVE --> normal operation *)
+	eMode							:= eCTRL_MODE_ACTIVE   ;
+ 	VCN_50.M_ValveControl(PressureControl);
+	END_IF
+END_IF
+If(FTrig.Q)THEN
+		eMode							:= eCTRL_MODE_PASSIVE;
+		VCN_50.M_ValveControl(CloseValve);
+		fSetpointValue :=0;
+END_IF	
+	
+(* call interpolation fb *)
+fbCTRL_LIN_INTERPOLATION(
+	fIn:= fSetpointValue , 
+	fManValue:= fManValue , 
+	bExtrapolate:= bExtrapolate, 
+	eMode:= eMode, 
+	stParams:= stCTRL_LIN_INTERPOLATION_PARAMS,
+	fOut=> , 
+	bInIsGreaterThanMaxElement=> , 
+	bInIsLessThanMinElement=> , 
+	eState=> , 
+	eErrorId=> , 
+	bError=> );	
+	
+	
 
 (* call controller *)
-fbCTRL_PI(		fSetpointValue		:= fSetpointValue,
-					fActualValue		:= fActualValue,
-					fManSyncValue	:= fManSyncValue,
+fbCTRL_PID(		fSetpointValue		:= fSetpointValue,
+					fActualValue		:= GCM_80.VG.rPRESS,
+					fManSyncValue	:= ,
 					bSync				:= bSync,
 					eMode				:= eMode,
 					bHold				:= bHold,
-					stParams			:= stCTRL_PI_PARAMS,
-					fOut				=> fCtrlOutput,
+					stParams			:= stCTRL_PID_PARAMS,
+					fOut				=> ,
 					bARWactive		=> bARWactive,
 					eErrorId			=> eErrorId,
-					bError				=> bError
+					bError				=> 
 				);
-(* call interpolation fb *)
-(*
-fbCTRL_LIN_INTERPOLATION		(	fIn						:= fSetpointValue,
-									fManValue				:= fManValue,
-									bExtrapolate				:= bExtrapolate,
-									stParams				:= stCTRL_LIN_INTERPOLATION_PARAMS,
-									eMode					:= eMode,
+				
+				(*deadband/clipper *)
 
-									fOut						=> ,
-									eErrorId					=> eErrorId,
-									bError					=> bError
-								);
+(* call function block *)
+stCTRL_DEADBAND_PARAMS.fThreshold	:=  fSetpointValue*0.0016 ;
+(*fbCTRL_DEADBAND	(	fIn					:= ,
+					stParams			:= stCTRL_DEADBAND_PARAMS,
+					bInIsUnderThreshold => ,
+					eErrorId			=> ,
+					bError				=> 
+				);*)
 
-fCtrlOutput := fbCTRL_PI.fOut + fbCTRL_LIN_INTERPOLATION.fOut;
-*)BasicPID(
-	fSetpointValue:= fSetpointValue,
-	fActualValue:= fActualValue , 
-	bReset:= FALSE , 
-	fCtrlCycleTime:= 10, 
-	fKp:= stCTRL_PI_PARAMS.fKp, 
-	fTn:= 0, 
-	fTv:= 0, 
-	fTd:= 0, 
-	fCtrlOutput=> fBasicCtrlOutput, 
-	nErrorStatus=> );
+bError := fbCTRL_PID.bError OR fbCTRL_LIN_INTERPOLATION.bError;
+				
+
+FTRIG(CLK := bGo);
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_PressureControl">
-      <LineId Id="125" Count="1" />
-      <LineId Id="120" Count="2" />
-      <LineId Id="118" Count="0" />
-      <LineId Id="127" Count="0" />
-      <LineId Id="119" Count="0" />
-      <LineId Id="6" Count="60" />
-      <LineId Id="116" Count="0" />
-      <LineId Id="67" Count="10" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="136" Count="9" />
-      <LineId Id="117" Count="0" />
-      <LineId Id="134" Count="0" />
-      <LineId Id="133" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
