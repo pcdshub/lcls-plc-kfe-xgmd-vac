@@ -943,7 +943,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GPI&quot;: &quot;EM2K0:XGMD:GPI:50&quot;, &quot;VCN&quot;: &quot;EM2K0:XGMD:VCN:50&quot;, &quot;VGP&quot;: &quot;EM2K0:XGMD:VGP:50&quot;, &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:50&quot;, &quot;VVC&quot;: &quot;EM2K0:XGMD:VVC:50&quot;, &quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:50&quot;}</string>
+        <string>{&quot;GPI&quot;: &quot;EM2K0:XGMD:GPI:50&quot;, &quot;VCN&quot;: &quot;EM2K0:XGMD:VCN:50&quot;, &quot;VGP&quot;: &quot;EM2K0:XGMD:VGP:50&quot;, &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:50&quot;, &quot;VVC&quot;: &quot;EM2K0:XGMD:VVC:50&quot;, &quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:50&quot;, &quot;NUMBER&quot;:&quot;50&quot;, &quot;VVC_NUMBER&quot;:&quot;51&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>GasInjectorInterface.ui</string>
