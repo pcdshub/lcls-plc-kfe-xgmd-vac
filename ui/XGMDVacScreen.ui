@@ -420,7 +420,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:30&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:30&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:30&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:30&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:30&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:30&quot;, &quot;NUMBER&quot;: &quot;30&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -565,7 +565,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:20&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:20&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:20&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:20&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:20&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:20&quot;, &quot;NUMBER&quot;: &quot;20&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -751,7 +751,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:60&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:60&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:60&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:60&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:60&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:60&quot;, &quot;NUMBER&quot;: &quot;60&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -770,7 +770,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:70&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:70&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:70&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:70&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:70&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:70&quot;, &quot;NUMBER&quot;: &quot;70&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -886,7 +886,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:10&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:10&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:10&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:10&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:10&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:10&quot;, &quot;NUMBER&quot;: &quot;10&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -943,7 +943,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GPI&quot;: &quot;EM2K0:XGMD:GPI:50&quot;, &quot;VCN&quot;: &quot;EM2K0:XGMD:VCN:50&quot;, &quot;VGP&quot;: &quot;EM2K0:XGMD:VGP:50&quot;, &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:50&quot;, &quot;VVC&quot;: &quot;EM2K0:XGMD:VVC:50&quot;, &quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:50&quot;}</string>
+        <string>{&quot;GPI&quot;: &quot;EM2K0:XGMD:GPI:50&quot;, &quot;VCN&quot;: &quot;EM2K0:XGMD:VCN:50&quot;, &quot;VGP&quot;: &quot;EM2K0:XGMD:VGP:50&quot;, &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:50&quot;, &quot;VVC&quot;: &quot;EM2K0:XGMD:VVC:50&quot;, &quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:50&quot;, &quot;NUMBER&quot;:&quot;50&quot;, &quot;VVC_NUMBER&quot;:&quot;51&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>GasInjectorInterface.ui</string>
@@ -1211,7 +1211,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:40&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:40&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:40&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:40&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:40&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:40&quot;, &quot;NUMBER&quot;: &quot;40&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1268,7 +1268,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:90&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:90&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:90&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:90&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:90&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:90&quot;, &quot;NUMBER&quot;: &quot;90&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1338,7 +1338,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:80&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:80&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:80&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:80&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:80&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:80&quot;, &quot;NUMBER&quot;: &quot;80&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1505,6 +1505,32 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <enum>Qt::Vertical</enum>
        </property>
       </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>670</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PRT-50</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>680</y>
+         <width>59</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>GPI-10</string>
+       </property>
+      </widget>
       <zorder>line_17</zorder>
       <zorder>PyDMEmbeddedDisplay_7</zorder>
       <zorder>PyDMDrawingArc</zorder>
@@ -1565,6 +1591,8 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
       <zorder>PyDMByteIndicator_2</zorder>
       <zorder>PyDMCheckbox_2</zorder>
       <zorder>line_19</zorder>
+      <zorder>label</zorder>
+      <zorder>label_2</zorder>
      </widget>
     </widget>
    </item>
