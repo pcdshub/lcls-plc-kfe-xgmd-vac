@@ -170,7 +170,12 @@ IF bAutoVVC50 THEN
 END_IF
 
 fb_EM2K0_XGMD_VVC_50(
-	i_xExtILK_OK := F_TURBO_PROT_SLND_ILK(fb_EM2K0_XGMD_PRT_50.stPump),
+	i_xExtILK_OK := F_TURBO_PROT_SLND_ILK(
+        i_Turbo := fb_EM2K0_XGMD_PTM_50.iq_stPtm,
+	    i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+	    i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+        ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	),
 	i_xOverrideMode := xSystemOverrideMode,
 );
 ]]></ST>
@@ -228,7 +233,10 @@ fb_EM2K0_XGMD_VVC_50(
       <LineId Id="192" Count="1" />
       <LineId Id="197" Count="0" />
       <LineId Id="190" Count="0" />
-      <LineId Id="186" Count="3" />
+      <LineId Id="186" Count="1" />
+      <LineId Id="203" Count="2" />
+      <LineId Id="201" Count="1" />
+      <LineId Id="188" Count="1" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>

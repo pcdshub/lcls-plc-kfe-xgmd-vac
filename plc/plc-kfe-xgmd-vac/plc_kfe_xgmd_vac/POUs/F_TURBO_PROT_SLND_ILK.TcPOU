@@ -6,15 +6,21 @@
 *)
 FUNCTION F_TURBO_PROT_SLND_ILK : BOOL
 VAR_INPUT
-	ScrollPump : ST_RoughPump;
+    i_Turbo : ST_PTM; // Turbo Pump
+	i_stISG : ST_VG; //Gauge measuring inlet Pressure e.g Pirani
+	i_stBSG : ST_VG; //Gauge measuring backing Pressure e.g Pirani
+	ScrollPump : ST_RoughPump; // Roughing pump
 END_VAR
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[F_TURBO_PROT_SLND_ILK := ScrollPump.eState = pumpRUNNING;]]></ST>
+      <ST><![CDATA[F_TURBO_PROT_SLND_ILK := (i_stISG.xPRESS_OK AND i_stISG.rPRESS < i_Turbo.rInletPressureSP)
+						    AND (i_stBSG.xPRESS_OK AND i_stBSG.rPRESS < i_Turbo.rBackingPressureSP)
+                            AND (ScrollPump.eState = pumpRUNNING);]]></ST>
     </Implementation>
     <LineIds Name="F_TURBO_PROT_SLND_ILK">
+      <LineId Id="20" Count="1" />
       <LineId Id="7" Count="0" />
     </LineIds>
   </POU>
