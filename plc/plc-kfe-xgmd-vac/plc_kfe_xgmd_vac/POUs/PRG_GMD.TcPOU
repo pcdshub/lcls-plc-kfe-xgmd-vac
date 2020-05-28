@@ -73,7 +73,7 @@ fb_EM2K0_XGMD_PTM_90(i_xExtILKOk := F_TurboExtILKLogic_2(
 // FB_VRC
 
 fb_EM2K0_XGMD_VRC_10(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_10.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
@@ -82,7 +82,7 @@ fb_EM2K0_XGMD_VRC_10(
 	i_xOverrideMode := xSystemOverrideMode
 );
 fb_EM2K0_XGMD_VRC_20(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_20.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
@@ -91,7 +91,7 @@ fb_EM2K0_XGMD_VRC_20(
 	i_xOverrideMode := xSystemOverrideMode
 );
 fb_EM2K0_XGMD_VRC_30(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_30.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
@@ -100,7 +100,7 @@ fb_EM2K0_XGMD_VRC_30(
 	i_xOverrideMode := xSystemOverrideMode
 );
 fb_EM2K0_XGMD_VRC_40(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_40.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
@@ -109,7 +109,7 @@ fb_EM2K0_XGMD_VRC_40(
 	i_xOverrideMode := xSystemOverrideMode
 );
 fb_EM2K0_XGMD_VRC_60(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_60.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
@@ -118,7 +118,7 @@ fb_EM2K0_XGMD_VRC_60(
 	i_xOverrideMode := xSystemOverrideMode
 );
 fb_EM2K0_XGMD_VRC_70(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_70.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
@@ -127,7 +127,7 @@ fb_EM2K0_XGMD_VRC_70(
 	i_xOverrideMode := xSystemOverrideMode
 );
 fb_EM2K0_XGMD_VRC_80(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_80.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
@@ -136,7 +136,7 @@ fb_EM2K0_XGMD_VRC_80(
 	i_xOverrideMode := xSystemOverrideMode
 );
 fb_EM2K0_XGMD_VRC_90(
-	i_xExtILK_OK := F_TurboGateValve_Protection_ILK(
+	i_xExtILK_OK := F_TurboGateValve_Protection_ILK_local(
 		i_Turbo := fb_EM2K0_XGMD_PTM_90.iq_stPtm,
 		i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
 		i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
