@@ -420,7 +420,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:30&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:30&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:30&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:30&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:30&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:30&quot;, &quot;NUMBER&quot;: &quot;30&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -565,7 +565,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:20&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:20&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:20&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:20&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:20&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:20&quot;, &quot;NUMBER&quot;: &quot;20&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -751,7 +751,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:60&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:60&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:60&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:60&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:60&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:60&quot;, &quot;NUMBER&quot;: &quot;60&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -770,7 +770,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:70&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:70&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:70&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:70&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:70&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:70&quot;, &quot;NUMBER&quot;: &quot;70&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -886,7 +886,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:10&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:10&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:10&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:10&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:10&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:10&quot;, &quot;NUMBER&quot;: &quot;10&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1211,7 +1211,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:40&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:40&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:40&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:40&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:40&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:40&quot;, &quot;NUMBER&quot;: &quot;40&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1268,7 +1268,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:90&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:90&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:90&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:90&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:90&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:90&quot;, &quot;NUMBER&quot;: &quot;90&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
@@ -1338,7 +1338,7 @@ ControlOnlyValveNC[state=&quot;Close&quot;] #icon {
         <string/>
        </property>
        <property name="macros" stdset="0">
-        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:80&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:80&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:80&quot;}</string>
+        <string>{&quot;GCC&quot;: &quot;EM2K0:XGMD:GCC:80&quot; , &quot;VRC&quot;:&quot;EM2K0:XGMD:VRC:80&quot; , &quot;PTM&quot;: &quot;EM2K0:XGMD:PTM:80&quot;, &quot;NUMBER&quot;: &quot;80&quot;}</string>
        </property>
        <property name="filename" stdset="0">
         <string>DiffPump.ui</string>
