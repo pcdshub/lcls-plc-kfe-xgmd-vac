@@ -2,9 +2,9 @@
 <TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
 	<LicenseInfo>
 		<SystemId>{A763DCF2-A783-ABB5-4B07-884869356469}</SystemId>
-		<IssueTime>2020-02-21T02:14:00</IssueTime>
-		<ExpireTime>2020-02-29T00:00:00</ExpireTime>
-		<LicenseKey>8bb1bcb4444f6b546e2d814252c4e021cbf59176e7d7f7a0a3ea4186ff28b5dd1f3c27a596a97dbfa1c39ceb42dba31a7438905697a222cb4f2dc286c431a4498806cda87a6a848aa4209d97a2b1b9ce376705d3b52c19d046ca43d73a490a756833516fb5367978b43a3d8c9844edcee09c1a6f7bfb1b7f8f13e2e89802e19a69579dd364ad0474bbbd740073d6b54df241fa9c6560bda4bdac7f2c857e9fbc8f273e85ce7066047a06dc76fae69fef7b79d3d62806b109273c4c988c2d9e315b4a0384640d6b1e3c537a7a6dd5c9249b5ee7cf78aa9c69192ae1e4e3ac8ec2c72488db33081c61d7901289a3072fa426bf318caa18be5b639a9005b32610d3</LicenseKey>
+		<IssueTime>2020-06-05T19:25:00</IssueTime>
+		<ExpireTime>2020-06-13T00:00:00</ExpireTime>
+		<LicenseKey>27af0f445b1ea312325cc069b5a8c34efde0dce246afe28df25841f89efdcb30a96c15c0157a48e8e8b127b82a5c74d2e06f8fa8e43dba3462f061f01aef607b24e3807522f46c33e3680b88bdc6e4f65e16f7b2b917d2c9c449a061a9029c7f9dc934cc33468636964da81e7bb4c1bcaa5b86281afda612d538d6a3008cb22c8d4d82c40d0e30899ddb4c7c9456b6726eadfda13bb005bb71fd7d97efdb6afb6f548ac3c1df027afc501ef62b417626c5ea3c5e4e5f64958e912bd3cb9b2e89366b0243852d7caf7f2f395b274f09490d25cfdeea0212cc1f66388d3e99cd291cc36fcc02442cb5ede00e83252e3727b4faac2f44569710109240a6350d5e85</LicenseKey>
 		<License>
 			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
 			<Name>TC3 ADS</Name>
@@ -46,14 +46,14 @@
 			<OrderNo>TF4100</OrderNo>
 		</License>
 		<License>
-			<LicenseId>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</LicenseId>
-			<Name>TC3 XCAD Interface</Name>
-			<OrderNo>TE1120</OrderNo>
-		</License>
-		<License>
 			<LicenseId>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</LicenseId>
 			<Name>TC3 Scope View Professional</Name>
 			<OrderNo>TE1300</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</LicenseId>
+			<Name>TC3 XCAD Interface</Name>
+			<OrderNo>TE1120</OrderNo>
 		</License>
 	</LicenseInfo>
 </TcLicenseInfo>
