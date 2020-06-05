@@ -281,7 +281,7 @@ External Setpoint Generation:
 	field: ZRST CLOSE ;
 	field: ONST OPEN;
 	field: TWST PRESS CNTRL ;
-	field: THST MANUAL CNTRL ;;
+	field: THST MANUAL CNTRL ;
 	io: io;
 	</Value></Property></Properties></SubItem><SubItem><Name>eState</Name><Type>E_MoveState</Type><Comment><![CDATA[ state machine state ]]></Comment><BitSize>32</BitSize><BitOffs>224</BitOffs><Properties><Property><Name>pytmc</Name><Value>
 	pv: Axis_STATE;
