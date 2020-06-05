@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <GVL Name="GVL_Devices" Id="{49019085-0c45-46f1-a256-56d701fd306c}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -36,10 +36,10 @@
 	
 	
 	(*HV*)
-	{attribute 'pytmc' :=' pv: EM2K0:XGEM:HV:1 '}
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PSV:1 '}
 	hv1 : FB_HighVoltage;
-	{attribute 'pytmc' :=' pv: EM2K0:XGEM:HV:2 '}	
-	hv2 : FB_HighVoltage;
+	//{attribute 'pytmc' :=' pv: EM2K0:XGMD:PSV '}	
+	//hv2 : FB_HighVoltage;
 	
 	(*RTD*)
 	

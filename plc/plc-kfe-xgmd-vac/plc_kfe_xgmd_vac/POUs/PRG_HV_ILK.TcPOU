@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_HV_ILK" Id="{74363be8-caf7-4d2d-8709-16ae5ee5e8a6}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_HV_ILK
 VAR
-	HV_ILK_OK: bool := false;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -11,12 +10,17 @@ END_VAR
 //evaluate the HV ILK_OK bit
 //HV_ILK_OK := GCC_40.IG.xAT_VAC;
 
-hv1(i_xExtIlkOK := HV_ILK_OK);
-hv2(i_xExtIlkOK := HV_ILK_OK);
+hv1(i_xExtIlkOK := F_HV_ILK(
+	IG := fb_EM2K0_XGMD_GCC_50.IG,
+	HV := hv1.hv)
+);
+//hv2(i_xExtIlkOK := HV_ILK_OK);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_HV_ILK">
-      <LineId Id="6" Count="5" />
+      <LineId Id="6" Count="4" />
+      <LineId Id="16" Count="2" />
+      <LineId Id="11" Count="0" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
