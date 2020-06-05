@@ -88,14 +88,14 @@ CASE step OF
 	
 30: //Fully open VGP:40
 	VGP_50.M_ValveControl(E_VCN.OpenValve); 
-	IF NOT(VGP_50.q_stVGP.state = E_MoveState.MOVESTATE_READY ) THEN // wait until the VGP encoder reads Open
+	IF NOT(VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP encoder reads Open
 		step:=31;
 	END_IF
 	if (VGP_50.q_stVGP.pv_xError )then
 		step:=900+step;
 	END_IF
 31: 
-	IF (VGP_50.q_stVGP.state = E_MoveState.MOVESTATE_READY ) THEN // wait until the VGP encoder reads Open //use motion ready
+	IF (VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP encoder reads Open //use motion ready
 		step:=40;
 	END_IF
 	if (VGP_50.q_stVGP.pv_xError )then
@@ -158,7 +158,7 @@ CASE step OF
 90: //Release VGP:40
 	VGP_50.M_ValveControl(E_VCN.PressureControl);
 	VGP_50.i_ReqPos:= 50; //50% open
-	IF NOT(VGP_50.q_stVGP.state = E_MoveState.MOVESTATE_READY ) THEN // wait until the VGP encoder reads Open //use motion ready
+	IF NOT(VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP encoder reads Open //use motion ready
 		step:=91;
 	END_IF
 	if (VGP_50.q_stVGP.pv_xError )then
@@ -166,7 +166,7 @@ CASE step OF
 	END_IF
 	
 91: 
-	IF (VGP_50.q_stVGP.state = E_MoveState.MOVESTATE_READY ) THEN // wait until the VGP encoder reads Open //use motion ready
+	IF (VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP encoder reads Open //use motion ready
 		step:=100;
 	END_IF
 	if (VGP_50.q_stVGP.pv_xError )then
