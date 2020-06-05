@@ -184,7 +184,7 @@ fbCTRL_LIN_INTERPOLATION(
 
 (* call controller *)
 fbCTRL_PID(		fSetpointValue		:= fSetpointValue,
-					fActualValue		:= GCM_80.VG.rPRESS,
+					fActualValue		:=  GHC_50.PG.rPRESS,
 					fManSyncValue	:= ,
 					bSync				:= bSync,
 					eMode				:= eMode,
