@@ -187,7 +187,7 @@ CASE step OF
 	VVC_85.M_Set_OPN_SW(false);
 	VVC_86.M_Set_OPN_SW(false);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
-	//VGP_50.M_ValveControl(E_VCN.CloseValve); // CLOSE or OPEN to pump down
+	VGP_50.M_ValveControl(E_VCN.ManualControl); // CLOSE or OPEN to pump down
 
 END_CASE
 
