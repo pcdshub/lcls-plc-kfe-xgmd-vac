@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <GVL Name="GVL_VAC_INTF" Id="{165b9a13-b466-4efc-8e82-d6aa491fa983}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	ads_watch_dog : FB_ADS_WATCHDOG;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
