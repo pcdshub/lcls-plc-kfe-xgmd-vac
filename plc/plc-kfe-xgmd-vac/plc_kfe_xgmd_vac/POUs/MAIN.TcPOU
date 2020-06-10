@@ -13,6 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[PRG_DIAGNOSTIC();
 PRG_GMD();
+PRG_VAC_INTF();
 
 //MG
 PRG_INJ();
@@ -36,7 +37,9 @@ RTD_2();
 PRG_HV_ILK();]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="3" Count="18" />
+      <LineId Id="3" Count="1" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="5" Count="16" />
       <LineId Id="2" Count="0" />
       <LineId Id="32" Count="0" />
       <LineId Id="31" Count="0" />
