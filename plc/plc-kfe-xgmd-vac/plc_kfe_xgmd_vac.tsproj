@@ -2008,8 +2008,8 @@ External Setpoint Generation:
 		<System>
 			<Licenses>
 				<Target>
-					<ManualSelect>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</ManualSelect>
 					<ManualSelect>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</ManualSelect>
+					<ManualSelect>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</ManualSelect>
 					<LicenseDevice DongleHardwareId="2" DongleDevice="#x0302000f" DongleSystemId="{33C3F8F7-3866-EC4F-C944-B776064C5299}" DongleSerialNumber="100062536"/>
 				</Target>
 			</Licenses>
