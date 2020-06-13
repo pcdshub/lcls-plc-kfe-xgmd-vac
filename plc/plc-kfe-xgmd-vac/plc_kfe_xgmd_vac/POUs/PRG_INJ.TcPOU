@@ -13,8 +13,12 @@ END_VAR
     <Implementation>
       <ST><![CDATA[// GCM
 GCM_80(i_rFULL_SCALE := fullScale );
+GCM_80.M_SetBits(30518);
+
+
 i:=i+1;
 //GHC
+GHC_50.M_SetBits(30518);
 GHC_50(PG=> );
 
 // Vent Valves
