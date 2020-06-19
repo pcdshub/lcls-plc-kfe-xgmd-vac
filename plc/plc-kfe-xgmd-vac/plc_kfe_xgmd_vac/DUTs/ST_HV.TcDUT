@@ -7,7 +7,7 @@ STRUCT
     pv: HV_SW;
 	io: io;
     '}
-	HV_sw: BOOL:=false; // EPICS control for switching the HV on or off. 
+	HV_sw: BOOL:=True; // EPICS control for switching the HV on or off. 
 	{attribute 'pytmc' := '
     pv: HV_DO;
 	io: i;
