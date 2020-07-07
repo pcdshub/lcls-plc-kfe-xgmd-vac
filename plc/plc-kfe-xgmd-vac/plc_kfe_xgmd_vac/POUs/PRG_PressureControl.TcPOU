@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_PressureControl" Id="{8ef02f00-e542-4b0e-902f-3d7061b2691f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PressureControl
 VAR CONSTANT
@@ -214,5 +214,9 @@ FTRIG(CLK := bGo);
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_PressureControl">
+      <LineId Id="3" Count="143" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

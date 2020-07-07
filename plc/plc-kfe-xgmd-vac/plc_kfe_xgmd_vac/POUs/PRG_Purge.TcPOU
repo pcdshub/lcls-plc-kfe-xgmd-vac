@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_Purge" Id="{a79f4482-bdf5-4b0d-9d35-039b4e6b3713}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Purge
 VAR
@@ -213,5 +213,9 @@ VCN_Timer(IN:= (step = 20) OR (step = 60) OR (step = 70), PT:=tNeedlePurgeTime);
 
 /// vcn and vgp on manual or auto?? manual, until the Go or auto button is pressed??]]></ST>
     </Implementation>
+    <LineIds Name="PRG_Purge">
+      <LineId Id="3" Count="167" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
