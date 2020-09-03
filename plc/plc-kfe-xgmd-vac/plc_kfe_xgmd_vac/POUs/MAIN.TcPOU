@@ -4,7 +4,7 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	
-	vgp_debug_mode : BOOL;
+	vgp_debug_mode : BOOL := False;
 	
 	gas_selection_debug_mode : BOOL := TRUE;
 END_VAR
