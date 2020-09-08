@@ -3,6 +3,7 @@
   <POU Name="MAIN" Id="{80634dbc-d649-47af-a183-d3f1342ca1c9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	fbLogHandler : FB_LogHandler;
 	gas_selection_debug_mode : BOOL := TRUE;
 END_VAR
 
@@ -31,7 +32,8 @@ RTD_1();
 RTD_2();
 
 // Operate high voltage interlocking logic 
-PRG_HV_ILK();]]></ST>
+PRG_HV_ILK();
+fbLogHandler();]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="3" Count="1" />
@@ -41,6 +43,7 @@ PRG_HV_ILK();]]></ST>
       <LineId Id="32" Count="0" />
       <LineId Id="31" Count="0" />
       <LineId Id="30" Count="0" />
+      <LineId Id="48" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
