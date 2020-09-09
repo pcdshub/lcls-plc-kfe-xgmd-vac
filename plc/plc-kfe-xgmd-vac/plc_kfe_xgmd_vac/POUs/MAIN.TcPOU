@@ -5,6 +5,7 @@
 VAR
 	fbLogHandler : FB_LogHandler;
 	gas_selection_debug_mode : BOOL := TRUE;
+	vgp_debug_mode : BOOL := FALSE;
 END_VAR
 
     ]]></Declaration>
@@ -17,8 +18,9 @@ PRG_VAC_INTF();
 PRG_INJ();
 PRG_PressureControl();
 
-PRG_VGP();
-
+IF NOT vgp_debug_mode THEN
+	PRG_VGP();
+END_IF
 
 //TO Be tested
 IF NOT gas_selection_debug_mode THEN
@@ -38,7 +40,9 @@ fbLogHandler();]]></ST>
     <LineIds Name="MAIN">
       <LineId Id="3" Count="1" />
       <LineId Id="41" Count="0" />
-      <LineId Id="5" Count="16" />
+      <LineId Id="5" Count="3" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="9" Count="12" />
       <LineId Id="2" Count="0" />
       <LineId Id="32" Count="0" />
       <LineId Id="31" Count="0" />
