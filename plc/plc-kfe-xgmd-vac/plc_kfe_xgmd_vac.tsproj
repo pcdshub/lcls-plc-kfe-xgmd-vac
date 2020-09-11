@@ -2006,11 +2006,16 @@ External Setpoint Generation:
 	</ImageDatas>
 	<Project ProjectGUID="{B1281B23-6ACE-402F-BAAC-F3BB7BD6AB55}" TargetNetId="172.21.92.60.1.1" ShowHideConfigurations="#x306">
 		<System>
-			<Licenses>
-				<Target>
-					<ManualSelect>{D59230D3-7C55-4138-859C-234C1C6CFDA8}</ManualSelect>
-					<ManualSelect>{4989A799-AEEA-4FEE-88EF-666B99EEFB45}</ManualSelect>
-					<LicenseDevice DongleHardwareId="2" DongleDevice="#x0302000f" DongleSystemId="{33C3F8F7-3866-EC4F-C944-B776064C5299}" DongleSerialNumber="100062536"/>
+			<Licenses CacheOrCheckLicensesOnStartup="true">
+				<Target BkhfOrder="00359201">
+					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
+					<ManualSelect>{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</ManualSelect>
+					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
+					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
+					<TargetSelect TargetId="2">{777F1598-583B-4503-99BB-7C02E0ABD97E}</TargetSelect>
+					<TargetSelect TargetId="2">{E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}</TargetSelect>
+					<TargetSelect TargetId="2">{520DE751-9DB6-47CB-8240-BD5C466E7E64}</TargetSelect>
+					<LicenseDevice DongleHardwareId="2" DongleDevice="#x0302000f" DongleLevel="40" DongleSystemId="{33C3F8F7-3866-EC4F-C944-B776064C5299}" DongleSerialNumber="100062536"/>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -2213,18 +2218,41 @@ External Setpoint Generation:
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
-							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>LCLS_Vacuum.LCLSVacuumSerialDriverLib.L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
 							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
 							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VGP_50.Axis.NcToPlc</Name>
+							<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VGP_50.InfoData_State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.GCM_80.i_iPRESS_R</Name>
+							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.RTD_1.bError</Name>
@@ -2243,6 +2271,10 @@ External Setpoint Generation:
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_Devices.RTD_2.bError</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_Devices.RTD_2.bUnderrange</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -2253,33 +2285,6 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_Devices.RTD_2.iRaw</Name>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.RTD_2.bError</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
-							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.GCM_80.i_iPRESS_R</Name>
-							<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VGP_50.Axis.NcToPlc</Name>
-							<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VGP_50.InfoData_State</Name>
-							<Type>UINT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R</Name>
@@ -2524,6 +2529,15 @@ IO]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_Devices.VGP_50.Axis.PlcToNc</Name>
+							<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_80.q_xOPN_DO</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_Devices.VVC_81.q_xOPN_DO</Name>
 							<Comment><![CDATA[IO]]></Comment>
 							<Type>BOOL</Type>
@@ -2557,20 +2571,6 @@ IO]]></Comment>
 							<Name>GVL_Devices.hv1.q_HV_DO</Name>
 							<Comment><![CDATA[outputs]]></Comment>
 							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_80.q_xOPN_DO</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO</Name>
-							<Comment><![CDATA[IO]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VGP_50.Axis.PlcToNc</Name>
-							<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 						</Var>
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_10.q_RunDO</Name>
@@ -2709,19 +2709,24 @@ IO]]></Comment>
 							<Comment><![CDATA[ Remote/Local Control]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="8">
 						<Name>PlcTask Retains</Name>
 						<Var>
 							<Name>PMPS_GVL.SuccessfulPreemption</Name>
 							<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 						<Var>
 							<Name>PMPS_GVL.AccumulatedFF</Name>
 							<Comment><![CDATA[ Any time a FF occurs]]></Comment>
-							<Type>ULINT</Type>
+							<Type>UDINT</Type>
 							<InOut>7</InOut>
 						</Var>
 					</Vars>
@@ -9164,6 +9169,7 @@ Bit1: Value smaller than Limit2]]></Comment>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500841000403}" Id="#x02030020"/>
 		<MappingInfo Identifier="{00000000-0010-0304-3000-040310000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{05000010-2001-0850-3000-040300205008}" Id="#x02030030" Watchdog="14000000040000000400000004000000"/>
 		<OwnerA Name="TINC^NC-Task 1 SAF^Axes^VGP_50">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL5101_03_03">
 				<Link VarA="Enc^Inputs^In^nDataIn1[0]" VarB="ENC Status compact^Counter value"/>
@@ -9374,6 +9380,10 @@ Bit1: Value smaller than Limit2]]></Comment>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1200_00_00^EL2794_00_07">
 				<Link VarA="PlcTask Outputs^GVL_Devices.hv1.q_HV_DO" VarB="Channel 1^Output"/>
+			</OwnerB>
+			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^VGP_50">
+				<Link VarA="PlcTask Inputs^GVL_Devices.VGP_50.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.VGP_50.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
