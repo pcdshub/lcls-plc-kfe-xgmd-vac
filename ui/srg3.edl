@@ -39,7 +39,7 @@ fgColor index 14
 bgColor index 0
 topShadowColor index 0
 botShadowColor index 14
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 invisible
 numPvs 4
 numDsps 1
@@ -95,9 +95,9 @@ minor 1
 release 1
 x 180
 y 735
-w 154
-h 21
-font "helvetica-medium-r-18.0"
+w 102
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -115,9 +115,9 @@ minor 1
 release 1
 x 180
 y 780
-w 154
-h 21
-font "helvetica-medium-r-18.0"
+w 102
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -135,9 +135,9 @@ minor 1
 release 1
 x 20
 y 735
-w 142
-h 21
-font "helvetica-medium-r-18.0"
+w 96
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -157,7 +157,7 @@ x 10
 y 200
 w 84
 h 21
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 2
@@ -177,7 +177,7 @@ y 760
 w 110
 h 20
 controlPv "$(P):SetUpperSpeedLimit"
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 fgColor index 25
 bgColor index 5
 editable
@@ -201,7 +201,7 @@ y 805
 w 110
 h 20
 controlPv "$(P):SetLowerSpeedLimit"
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 fgColor index 25
 bgColor index 5
 editable
@@ -225,7 +225,7 @@ y 688
 w 164
 h 20
 controlPv "$(P):GetDampLvlAB"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 bgColor index 11
@@ -247,9 +247,9 @@ minor 1
 release 1
 x 15
 y 687
-w 121
-h 21
-font "helvetica-medium-r-18.0"
+w 78
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -271,7 +271,7 @@ w 148
 h 20
 controlPv "$(P):GetSignalLevel"
 format "exponential"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
 bgColor index 11
@@ -293,9 +293,9 @@ minor 1
 release 1
 x 10
 y 125
-w 100
-h 21
-font "helvetica-medium-r-18.0"
+w 72
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -313,9 +313,9 @@ minor 1
 release 1
 x 9
 y 163
-w 104
-h 21
-font "helvetica-medium-r-18.0"
+w 66
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -336,7 +336,7 @@ y 163
 w 117
 h 20
 controlPv "$(P):GetGasTemperature"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 bgColor index 11
@@ -361,7 +361,7 @@ y 110
 w 120
 h 20
 controlPv "$(P):GetGasType"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -384,9 +384,9 @@ minor 1
 release 1
 x 309
 y 88
-w 115
-h 16
-font "helvetica-medium-r-14.0"
+w 96
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -421,7 +421,8 @@ x 6
 y 53
 w 112
 h 20
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 2
 value {
@@ -439,7 +440,7 @@ x 16
 y 717
 w 104
 h 21
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 2
@@ -471,9 +472,9 @@ minor 1
 release 1
 x 16
 y 16
-w 188
-h 21
-font "helvetica-medium-r-18.0"
+w 126
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 54
 value {
@@ -496,7 +497,7 @@ fgColor index 14
 bgColor index 4
 topShadowColor index 1
 botShadowColor index 11
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 buttonLabel "Home"
 numPvs 4
 numDsps 0
@@ -523,7 +524,7 @@ onLabel "N"
 offLabel "N"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -547,7 +548,7 @@ onLabel "Ar"
 offLabel "Ar"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -571,7 +572,7 @@ onLabel "Kr"
 offLabel "Kr"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -595,7 +596,7 @@ onLabel "Ne"
 offLabel "Ne"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -619,7 +620,7 @@ onLabel "Xe"
 offLabel "Xe"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Button)
@@ -644,7 +645,7 @@ offLabel "STOP"
 labelType "literal"
 buttonType "push"
 3d
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
@@ -670,7 +671,7 @@ offLabel "Restart Meas."
 labelType "literal"
 buttonType "push"
 3d
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
@@ -696,7 +697,7 @@ offLabel "Start Meas."
 labelType "literal"
 buttonType "push"
 3d
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
@@ -716,7 +717,7 @@ inconsistentColor index 12
 topShadowColor index 1
 botShadowColor index 14
 controlPv "$(P):UpdateHighRate.SCAN"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Static Text)
@@ -729,7 +730,7 @@ x 250
 y 49
 w 148
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "right"
 fgColor index 14
 bgColor index 3
@@ -749,7 +750,7 @@ x 16
 y 873
 w 73
 h 20
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 3
@@ -757,155 +758,6 @@ useDisplayBg
 value {
   "Rem. Time"
 }
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 450
-y 86
-w 56
-h 97
-
-beginGroup
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 450
-y 86
-w 56
-h 97
-
-beginGroup
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 450
-y 86
-w 56
-h 97
-lineColor index 14
-fill
-fillColor index 2
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 456
-y 96
-w 38
-h 14
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "N = 19"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 455
-y 112
-w 42
-h 14
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Ar = 10"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 457
-y 144
-w 45
-h 14
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Ne = 21"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 456
-y 128
-w 34
-h 14
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Kr = 3"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 456
-y 160
-w 45
-h 14
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Xe = 25"
-}
-autoSize
-endObjectProperties
-
-endGroup
-
 endObjectProperties
 
 # (Related Display)
@@ -922,7 +774,7 @@ fgColor index 14
 bgColor index 3
 topShadowColor index 1
 botShadowColor index 12
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 buttonLabel "IOC"
 numPvs 4
 numDsps 1
@@ -948,31 +800,12 @@ x 14
 y 222
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
   "Raw Decel (DCR)"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 29
-y 348
-w 123
-h 20
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Zero Offset (OFS)"
 }
 endObjectProperties
 
@@ -988,7 +821,7 @@ w 107
 h 20
 controlPv "$(P):SetZeroOffset"
 format "exponential"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fgColor index 25
 fgAlarm
 bgColor index 5
@@ -1008,30 +841,11 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 29
-y 348
+x 30
+y 345
 w 123
 h 20
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Zero Offset (OFS)"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 29
-y 348
-w 123
-h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1052,7 +866,7 @@ w 127
 h 20
 controlPv "$(P):SetGasTemperature"
 format "float"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fgColor index 25
 fgAlarm
 bgColor index 5
@@ -1078,7 +892,7 @@ w 135
 h 20
 controlPv "$(P):SetZeroOffset"
 format "exponential"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1104,7 +918,7 @@ w 136
 h 20
 controlPv "$(P):Calib:BallDensity"
 format "float"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1130,7 +944,7 @@ w 107
 h 20
 controlPv "$(P):Calib:BallDensity"
 format "float"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fgColor index 25
 fgAlarm
 bgColor index 5
@@ -1154,7 +968,7 @@ x 32
 y 293
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1175,7 +989,7 @@ w 136
 h 20
 controlPv "$(P):Calib:BallDiameter"
 format "float"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1201,7 +1015,7 @@ w 107
 h 20
 controlPv "$(P):Calib:BallDiameter"
 format "float"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fgColor index 25
 fgAlarm
 bgColor index 5
@@ -1225,7 +1039,7 @@ x 33
 y 317
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1246,7 +1060,7 @@ w 136
 h 20
 controlPv "$(P):Calib:AccomFactor"
 format "float"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1272,7 +1086,7 @@ w 107
 h 20
 controlPv "$(P):Calib:AccomFactor"
 format "float"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fgColor index 25
 fgAlarm
 bgColor index 5
@@ -1296,7 +1110,7 @@ x 32
 y 268
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1317,7 +1131,7 @@ w 115
 h 20
 controlPv "$(P):Selected:Gas:Name"
 format "exponential"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1340,7 +1154,7 @@ x 155
 y 190
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "right"
 fgColor index 14
 bgColor index 0
@@ -1362,7 +1176,7 @@ w 136
 h 20
 controlPv "$(P):Selected:Gas:Atomic:Weight"
 format "float"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1386,7 +1200,7 @@ x 25
 y 384
 w 145
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1407,7 +1221,7 @@ w 136
 h 20
 controlPv "$(P):DecelRate:Gas"
 format "exponential"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1431,7 +1245,7 @@ x 41
 y 412
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1452,7 +1266,7 @@ w 136
 h 20
 controlPv "$(P):PreCalc:1"
 format "float"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1476,7 +1290,7 @@ x 46
 y 463
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1497,7 +1311,7 @@ w 136
 h 20
 controlPv "$(P):PreCalc:2"
 format "float"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1521,7 +1335,7 @@ x 42
 y 483
 w 194
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1540,7 +1354,7 @@ x 40
 y 504
 w 194
 h 20
-font "helvetica-bold-r-18.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 14
 bgColor index 0
@@ -1562,7 +1376,7 @@ w 136
 h 20
 controlPv "$(P):Calib:K:Calc"
 format "float"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1586,7 +1400,7 @@ x 45
 y 610
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1605,7 +1419,7 @@ x 41
 y 627
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1626,7 +1440,7 @@ w 136
 h 20
 controlPv "$(P):Calib:Pressure:Pa"
 format "exponential"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1648,12 +1462,12 @@ major 4
 minor 7
 release 0
 x 310
-y 628
+y 630
 w 136
 h 20
 controlPv "$(P):Calib:Pressure:Calc"
 format "exponential"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1678,7 +1492,7 @@ x 51
 y 587
 w 123
 h 20
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -1701,7 +1515,7 @@ fgColor index 14
 bgColor index 0
 topShadowColor index 0
 botShadowColor index 14
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 invisible
 numPvs 4
 numDsps 2
@@ -1734,7 +1548,7 @@ w 136
 h 20
 controlPv "$(P):Calib:Pressure"
 format "exponential"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1795,7 +1609,7 @@ y 760
 w 136
 h 20
 controlPv "$(P):GetRotSpeed"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1857,7 +1671,7 @@ w 148
 h 20
 controlPv "$(P):GetRemainingTime"
 format "float"
-font "helvetica-bold-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1944,7 +1758,7 @@ fgColor index 14
 bgColor index 0
 topShadowColor index 0
 botShadowColor index 14
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 invisible
 numPvs 4
 numDsps 2
@@ -1977,7 +1791,7 @@ w 135
 h 20
 controlPv "$(P):GetDecelRate"
 format "exponential"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -1999,9 +1813,9 @@ minor 1
 release 1
 x 475
 y 275
-w 30
-h 32
-font "helvetica-medium-r-14.0"
+w 24
+h 26
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -2022,7 +1836,7 @@ x 20
 y 795
 w 134
 h 21
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-12.0"
 fgColor index 20
 bgColor index 0
 useDisplayBg
@@ -2045,7 +1859,7 @@ x 375
 y 740
 w 100
 h 80
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 fgColor index 20
 fgAlarm
 bgColor index 0
@@ -2069,7 +1883,7 @@ x 20
 y 840
 w 105
 h 25
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 fontAlign "right"
 fgColor index 14
 bgColor index 0
@@ -2099,7 +1913,156 @@ controlPv "$(P):AutoRestartEnable"
 onLabel "Enabled"
 offLabel "Disabled"
 3d
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 objType "controls"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 450
+y 86
+w 56
+h 97
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 450
+y 86
+w 56
+h 97
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 450
+y 86
+w 56
+h 97
+lineColor index 14
+fill
+fillColor index 2
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 455
+y 90
+w 36
+h 13
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "N = 19"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 455
+y 105
+w 45
+h 15
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ar = 10"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 455
+y 120
+w 36
+h 13
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Kr = 3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 455
+y 135
+w 42
+h 13
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ne = 21"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 455
+y 150
+w 42
+h 13
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Xe = 25"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
 endObjectProperties
 
