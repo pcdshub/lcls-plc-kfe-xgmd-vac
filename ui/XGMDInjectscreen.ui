@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>EM2K0-XGMD-INJ</string>
   </property>
   <property name="styleSheet">
    <string notr="true">RoughGauge[state=&quot;FALSE&quot;] #icon{
@@ -1033,7 +1033,7 @@ IonPump[state=&quot;On&quot;] #icon {
     <string/>
    </property>
    <property name="text">
-    <string>0.000</string>
+    <string>100.000</string>
    </property>
    <property name="channel" stdset="0">
     <string>ca://EM2K0:XGMD:VGP:50:POS_RBV</string>
@@ -1411,7 +1411,7 @@ IonPump[state=&quot;On&quot;] #icon {
    </property>
    <property name="filenames" stdset="0">
     <stringlist>
-     <string>AT1K0-VGP.ui</string>
+     <string>EM2K0-VGP.ui</string>
     </stringlist>
    </property>
   </widget>
@@ -1461,6 +1461,25 @@ IonPump[state=&quot;On&quot;] #icon {
    </property>
    <property name="displayFormat" stdset="0">
     <enum>PyDMLineEdit::Exponential</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>640</y>
+     <width>180</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>FEE - EM2K0-XGMD</string>
    </property>
   </widget>
   <zorder>line_18</zorder>
@@ -1516,6 +1535,7 @@ IonPump[state=&quot;On&quot;] #icon {
   <zorder>PyDMRelatedDisplayButton_2</zorder>
   <zorder>PyDMTimePlot</zorder>
   <zorder>PyDMLineEdit_3</zorder>
+  <zorder>label_15</zorder>
  </widget>
  <customwidgets>
   <customwidget>
