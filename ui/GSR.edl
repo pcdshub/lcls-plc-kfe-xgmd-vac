@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1993
-y 1232
+x 50
+y 50
 w 518
 h 600
 font "helvetica-medium-r-18.0"
@@ -42,14 +42,14 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 11
 y 407
 w 136
 h 20
 controlPv "$(P):GetRotSpeed"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -68,14 +68,14 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 224
 y 192
 w 136
 h 20
 controlPv "$(P):GetDecelRate"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -95,12 +95,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
-x 223
-y 371
+release 1
+x 222
+y 359
 w 154
-h 21
-font "helvetica-medium-r-18.0"
+h 34
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -115,12 +115,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
-x 223
-y 415
+release 1
+x 222
+y 400
 w 154
-h 21
-font "helvetica-medium-r-18.0"
+h 38
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -134,15 +134,15 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 183
 y 295
 w 140
 h 20
-controlPv "$(P):GetPressure"
+controlPv "$(P):Pressure"
 format "exponential"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -162,12 +162,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 11
-y 383
+y 361
 w 142
-h 21
-font "helvetica-medium-r-18.0"
+h 43
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -182,12 +182,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 224
-y 168
+y 138
 w 145
-h 21
-font "helvetica-medium-r-18.0"
+h 51
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -202,12 +202,13 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
-x 99
-y 291
-w 72
-h 21
-font "helvetica-medium-r-18.0"
+release 1
+x 127
+y 299
+w 48
+h 13
+font "helvetica-medium-r-10.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -221,14 +222,14 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 243
 y 395
 w 112
 h 20
 controlPv "$(P):SetUpperSpeedLimit"
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-12.0"
 fgColor index 25
 bgColor index 5
 limitsFromDb
@@ -244,14 +245,14 @@ endObjectProperties
 object activeXTextDspClass
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 243
 y 439
 w 112
 h 20
 controlPv "$(P):SetLowerSpeedLimit"
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-12.0"
 fgColor index 25
 bgColor index 5
 limitsFromDb
@@ -267,14 +268,14 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 8
 y 188
 w 164
 h 16
 controlPv "$(P):GetDampLvlA/B/AB"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fgColor index 15
 bgColor index 11
 autoHeight
@@ -291,12 +292,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 8
-y 164
+y 145
 w 121
-h 21
-font "helvetica-medium-r-18.0"
+h 40
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -310,7 +311,7 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 8
 y 244
@@ -318,7 +319,7 @@ w 148
 h 20
 controlPv "$(P):GetSignalLevel"
 format "exponential"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
 bgColor index 11
@@ -337,12 +338,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 8
-y 220
+y 201
 w 100
-h 21
-font "helvetica-medium-r-18.0"
+h 40
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -357,12 +358,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 224
-y 220
+y 206
 w 104
-h 21
-font "helvetica-medium-r-18.0"
+h 35
+font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -376,14 +377,14 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 224
 y 244
 w 172
 h 20
 controlPv "$(P):GetGasTemperature"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
 bgColor index 11
@@ -401,14 +402,14 @@ endObjectProperties
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 309
 y 112
 w 128
 h 20
 controlPv "$(P):GetGasType"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -428,17 +429,17 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 309
 y 88
-w 115
-h 16
-font "helvetica-medium-r-14.0"
+w 102
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "Current Gas Type"
+  "Current Gas Type "
 }
 autoSize
 endObjectProperties
@@ -463,12 +464,13 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 8
-y 64
+y 55
 w 112
-h 20
-font "helvetica-medium-r-14.0"
+h 29
+font "helvetica-medium-r-10.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 2
 value {
@@ -481,12 +483,13 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 7
-y 339
-w 113
-h 21
-font "helvetica-medium-r-14.0"
+y 335
+w 98
+h 25
+font "helvetica-medium-r-10.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 2
 value {
@@ -514,12 +517,12 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
-x 16
-y 16
-w 188
-h 21
-font "helvetica-medium-r-18.0"
+release 1
+x 13
+y 21
+w 126
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 54
 value {
@@ -532,7 +535,7 @@ endObjectProperties
 object relatedDisplayClass
 beginObjectProperties
 major 4
-minor 3
+minor 4
 release 0
 x 436
 y 16
@@ -542,7 +545,7 @@ fgColor index 14
 bgColor index 4
 topShadowColor index 1
 botShadowColor index 11
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 buttonLabel "Home"
 numPvs 4
 numDsps 0
@@ -569,7 +572,7 @@ onLabel "N"
 offLabel "N"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -593,7 +596,7 @@ onLabel "Ar"
 offLabel "Ar"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -617,7 +620,7 @@ onLabel "Kr"
 offLabel "Kr"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -641,7 +644,7 @@ onLabel "Ne"
 offLabel "Ne"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Message Button)
@@ -665,14 +668,14 @@ onLabel "Xe"
 offLabel "Xe"
 3d
 useEnumNumeric
-font "helvetica-medium-r-18.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 5
+minor 7
 release 0
 x 87
 y 526
@@ -680,7 +683,7 @@ w 148
 h 20
 controlPv "$(P):GetRemainingTime"
 format "float"
-font "helvetica-bold-r-12.0"
+font "helvetica-medium-r-12.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -698,7 +701,7 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 371
 y 490
@@ -716,7 +719,7 @@ offLabel "STOP"
 labelType "literal"
 buttonType "push"
 3d
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
@@ -724,7 +727,7 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 247
 y 526
@@ -742,7 +745,7 @@ offLabel "Restart Meas."
 labelType "literal"
 buttonType "push"
 3d
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
@@ -750,7 +753,7 @@ endObjectProperties
 object activeButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
 x 247
 y 490
@@ -768,7 +771,7 @@ offLabel "Start Meas."
 labelType "literal"
 buttonType "push"
 3d
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 objType "controls"
 endObjectProperties
 
@@ -788,7 +791,7 @@ inconsistentColor index 12
 topShadowColor index 1
 botShadowColor index 14
 controlPv "$(P):UpdateHighRate.SCAN"
-font "helvetica-medium-r-14.0"
+font "helvetica-medium-r-10.0"
 endObjectProperties
 
 # (Static Text)
@@ -796,13 +799,13 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 250
 y 49
 w 148
 h 20
-font "helvetica-medium-r-12.0"
-fontAlign "right"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 3
 useDisplayBg
@@ -816,18 +819,17 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
-x -1
-y 526
-w 80
-h 20
-font "helvetica-medium-r-14.0"
-fontAlign "right"
+release 1
+x 92
+y 489
+w 139
+h 45
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Rem. Time"
+  "Remaining Time"
 }
 endObjectProperties
 
@@ -881,7 +883,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 456
 y 96
 w 38
@@ -901,7 +903,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 455
 y 112
 w 42
@@ -921,7 +923,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 457
 y 144
 w 45
@@ -941,7 +943,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 456
 y 128
 w 34
@@ -961,7 +963,7 @@ object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
-release 0
+release 1
 x 456
 y 160
 w 45
