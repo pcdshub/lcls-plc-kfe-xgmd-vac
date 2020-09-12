@@ -49,7 +49,7 @@ y 407
 w 136
 h 20
 controlPv "$(P):GetRotSpeed"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -75,7 +75,7 @@ y 192
 w 136
 h 20
 controlPv "$(P):GetDecelRate"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -273,9 +273,9 @@ release 0
 x 8
 y 188
 w 164
-h 16
+h 19
 controlPv "$(P):GetDampLvlA/B/AB"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fgColor index 15
 bgColor index 11
 autoHeight
@@ -319,7 +319,7 @@ w 148
 h 20
 controlPv "$(P):GetSignalLevel"
 format "exponential"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 bgColor index 11
@@ -384,7 +384,7 @@ y 244
 w 172
 h 20
 controlPv "$(P):GetGasTemperature"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 bgColor index 11
@@ -409,7 +409,7 @@ y 112
 w 128
 h 20
 controlPv "$(P):GetGasType"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -683,7 +683,7 @@ w 148
 h 20
 controlPv "$(P):GetRemainingTime"
 format "float"
-font "helvetica-medium-r-12.0"
+font "helvetica-medium-r-10.0"
 fontAlign "center"
 fgColor index 15
 fgAlarm
@@ -886,9 +886,9 @@ minor 1
 release 1
 x 456
 y 96
-w 38
-h 14
-font "helvetica-medium-r-12.0"
+w 36
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -907,8 +907,8 @@ release 1
 x 455
 y 112
 w 42
-h 14
-font "helvetica-medium-r-12.0"
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -924,11 +924,31 @@ beginObjectProperties
 major 4
 minor 1
 release 1
+x 456
+y 128
+w 36
+h 13
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Kr = 3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
 x 457
 y 144
-w 45
-h 14
-font "helvetica-medium-r-12.0"
+w 42
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
@@ -945,30 +965,10 @@ major 4
 minor 1
 release 1
 x 456
-y 128
-w 34
-h 14
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 0
-useDisplayBg
-value {
-  "Kr = 3"
-}
-autoSize
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 456
 y 160
-w 45
-h 14
-font "helvetica-medium-r-12.0"
+w 42
+h 13
+font "helvetica-medium-r-10.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
