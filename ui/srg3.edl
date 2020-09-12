@@ -1351,8 +1351,8 @@ major 4
 minor 1
 release 1
 x 40
-y 504
-w 194
+y 505
+w 100
 h 20
 font "helvetica-medium-r-10.0"
 fontAlign "center"
