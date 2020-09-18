@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_Gas_Selection" Id="{7286873a-eeab-49a1-80e4-b57c23d91e0f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Gas_Selection
 VAR
-	CurrentGas: E_GasType;
-	//pragma
 	{attribute 'pytmc' := '
 	pv: EM2K0:XGMD:GAS_TYPE ;
 	type: mbbi ;
@@ -16,6 +14,8 @@ VAR
 	io: i
 	'}
 	SelectedGas: E_GasType;
+	CurrentGas: E_GasType;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -33,7 +33,7 @@ if ( VVC_83.iq_stValve.q_xOPN_DO) then
 END_IF
 
 
-If( CurrentGas <> SelectedGas) then
+If( CurrentGas <> SelectedGas) AND NOT (CurrentGas=E_GasType.none) then
 	bStartPurge_sw := true;
 END_IF
 
