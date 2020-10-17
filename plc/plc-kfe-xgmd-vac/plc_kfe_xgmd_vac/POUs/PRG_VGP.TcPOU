@@ -43,7 +43,7 @@ END_IF
 VGP_50.i_xOpenIlkOK := (fb_EM2K0_XGMD_PTM_50.iq_stPtm.eState = pumpRUNNING) ;
  
 VGP_50(
-	i_xExtIlkOK:= TRUE,//(fb_EM2K0_XGMD_PTM_50.iq_stPtm.eState = pumpRUNNING), 
+	i_xExtIlkOK:= (fb_EM2K0_XGMD_PTM_50.iq_stPtm.eState = pumpRUNNING), 
 	i_ReqPos:=  , 
 	arrTable:= arrTable ,
 	q_stVGP=> ); ]]></ST>

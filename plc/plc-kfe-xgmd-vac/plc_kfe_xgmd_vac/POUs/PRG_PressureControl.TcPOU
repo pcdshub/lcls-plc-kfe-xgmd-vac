@@ -1,39 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_PressureControl" Id="{8ef02f00-e542-4b0e-902f-3d7061b2691f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_PressureControl
 VAR CONSTANT
 		nDataTable_NumberOfRows : INT:=9;
 END_VAR
 VAR
-	{attribute 'pytmc' :=' pv: EM2K0:XGMD:CNTRL:SP '}
-	fSetpointValue :FLOAT; 
-	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:GO;
-	 field: ZNAM STOP; 
-	 field: ONAM START; 
-	 io: io;
-	'}
-	bGo: BOOL; 
- 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:CNTRL:RESET;
-	 field: ZNAM FALSE; 
-	 field: ONAM TRUE; 
-	 io: io;
-	 '}
-	bReset : BOOL; 
-	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:ERROR;
-    field: ZNAM FALSE; 
-	 field: ONAM TRUE; 
-	 io: io;
-	 '}
-	bError : BOOL; 
-	{attribute 'pytmc' :=' pv:  EM2K0:XGMDCNTRL:Kp1 '}
-	fKp1 : REAL:= 0.04; 
-	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:Tn1 '}
-	fTn1 : REAL:= 1;//0.5; 
-	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:Kp2 '}
-	fKp2 : REAL:= 0.01; 
-	{attribute 'pytmc' :=' pv:  EM2K0:XGMD:CNTRL:Tn2 '}
-	fTn2 : REAL:= 0.5; 
 	
 	fActualValue				: FLOAT;
 	fCtrlOutput						: FLOAT;
@@ -69,12 +41,24 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-VCN_50.i_xExtIlkOK := (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
+//VCN //bAdditionalVCNIlk
+IF (bAdditionalVCNIlk) THEN
+	VCN_50.i_xExtIlkOK := ( fb_EM2K0_XGMD_GCC_10.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_20.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_30.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_40.IG.xAT_VAC
+							AND  fb_EM2K0_XGMD_GCC_50.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_60.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_70.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_80.IG.xAT_VAC)
+								AND  fb_EM2K0_XGMD_GPI_50.PG.xAT_VAC AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
+	ELSE
+		
+		VCN_50.i_xExtIlkOK :=  fb_EM2K0_XGMD_GPI_50.PG.xAT_VAC AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
+END_IF
 
-//VCN
-VCN_50(i_xExtIlkOK := , i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut );
+VCN_50(i_xExtIlkOK :=, i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut );
 
-f_Rep_POS := VCN_50.iq_stVCN.rReqPosition;
+(* Gauge selection *)
+(*Assign reading to psuedo gauge*)
+IF (fb_EM2K0_XGMD_GCC_50.IG.rPRESS <=0.0001) AND (fb_EM2K0_XGMD_GCC_50.IG.rPRESS >0) THEN GCP := fb_EM2K0_XGMD_GCC_50.IG;
+			ElSE GCP := fb_EM2K0_XGMD_GPI_50.PG;
+END_IF
+		 
 
 (*-------------------------------------------------------------------*)
 (*             PI CONTROL          *)
@@ -146,8 +130,14 @@ END_IF
 (* set the addresses *)
 	stCTRL_LIN_INTERPOLATION_PARAMS.pDataTable_ADR			:= ADR(arrTable);
 	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_SIZEOF		:= SIZEOF(arrTable);
-
-
+   
+fSetpointValue:= LIMIT(0,fSetpointValue,0.001);
+	
+if (VVC_80.M_IsClosed() ) THEN 
+		//eMode	:= eCTRL_MODE_PASSIVE;
+		fSetpointValue :=0; 
+END_IF
+	
 if (bGo) THEN
 	IF (bReset) THEN
 	(* set the mode to RESET*)
@@ -184,7 +174,7 @@ fbCTRL_LIN_INTERPOLATION(
 
 (* call controller *)
 fbCTRL_PID(		fSetpointValue		:= fSetpointValue,
-					fActualValue		:=  GHC_50.PG.rPRESS,
+					fActualValue		:= ,
 					fManSyncValue	:= ,
 					bSync				:= bSync,
 					eMode				:= eMode,
@@ -214,9 +204,5 @@ FTRIG(CLK := bGo);
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_PressureControl">
-      <LineId Id="3" Count="143" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

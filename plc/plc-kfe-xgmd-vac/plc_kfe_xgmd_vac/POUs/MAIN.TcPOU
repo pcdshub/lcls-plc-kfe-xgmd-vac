@@ -4,9 +4,8 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	fbLogHandler : FB_LogHandler;
-	gas_selection_debug_mode : BOOL := TRUE;
+	gas_selection_debug_mode : BOOL := FALSE;
 	vgp_debug_mode : BOOL := FALSE;
-	press_cntrl :BOOL := FALSE;
 END_VAR
 
     ]]></Declaration>
@@ -17,19 +16,14 @@ PRG_VAC_INTF();
 
 //MG
 PRG_INJ();
-//PRG_PressureControl();
-
+PRG_PressureControl();
+PRG_Gas_Selection();
 IF NOT vgp_debug_mode THEN
 	PRG_VGP();
 END_IF
 
-//TO Be tested
-IF (press_cntrl) THEN
-	PRG_PressureControl();
-END_IF
-IF NOT gas_selection_debug_mode THEN
-	PRG_Purge();
-	PRG_Gas_Selection();
+IF gas_selection_debug_mode THEN
+	PRG_Purge();	
 END_IF
 
 // Call the RTD Function blocks
