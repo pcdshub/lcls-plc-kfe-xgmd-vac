@@ -13,6 +13,14 @@ VAR
     pv: EM2K0:XGMD:RESET
 	'}
 	bReset:BOOL := False;
+	
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PURGE:SP;
+	field: HOPR 1000;
+	field: LOPR 0;
+	field: PREC 2;
+	field: EGU "TORR";
+	'}
+	rPurge_SP :REAL :=0.1; 
 //ADD PRAGMAS
 
 	AllGasVlvCls 		: BOOL; (* All Gas Manifold Valves are closed when True, not including VIC80, 81 or VGP40 *)
