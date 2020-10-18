@@ -3,17 +3,7 @@
   <POU Name="PRG_Gas_Selection" Id="{7286873a-eeab-49a1-80e4-b57c23d91e0f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Gas_Selection
 VAR
-	{attribute 'pytmc' := '
-	pv: EM2K0:XGMD:GAS_TYPE ;
-	type: mbbi ;
-	field: ZRST none ;
-	field: ONST Neon;
-	field: TWST Argon ;
-	field: THST Krypton ;
-	field: FRST Xenon ;
-	io: i
-	'}
-	SelectedGas: E_GasType;
+	
 	CurrentGas: E_GasType;
 	
 END_VAR
@@ -30,7 +20,7 @@ if ( VVC_83.iq_stValve.q_xOPN_DO) then
 		SelectedGas := E_GasType.Krypton;
 			elsif ( VVC_86.iq_stValve.q_xOPN_DO) then
 			SelectedGas := E_GasType.Xenon;
-				else SelectedGas := E_GasType.none;
+				//else SelectedGas := E_GasType.none;
 END_IF
 
 (*

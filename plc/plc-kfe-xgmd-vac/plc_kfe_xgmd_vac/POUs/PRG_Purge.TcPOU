@@ -14,46 +14,46 @@ VAR
 	'}
 	bReset:BOOL := False;
 	
-	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PURGE:SP;
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PURGE:SP1;
 	field: HOPR 1000;
 	field: LOPR 0;
 	field: PREC 2;
 	field: EGU "TORR";
 	'}
-	rPurge_SP :REAL :=0.1; 
-//ADD PRAGMAS
+	rPurge_SP1 :REAL :=0.01; 
+	
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PURGE:SP2;
+	field: HOPR 1000;
+	field: LOPR 0;
+	field: PREC 2;
+	field: EGU "TORR";
+	'}
+	rPurge_SP2 :REAL :=0.1; 
 
-	AllGasVlvCls 		: BOOL; (* All Gas Manifold Valves are closed when True, not including VIC80, 81 or VGP40 *)
-	WatchdogTmr			: TON;  (* Purge Watchdog Timer*)
-
-	StartWatchdogTmr 	: BOOL;
-	WatchdogPeriod 		: TIME;
-
+	
+	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PURGE:REPEAT;
+	'}
+	NeedlePurgeRepeat	: INT:= 1;
 	NeedleVlvPurgeTmr	: TON;	(* Declaration for the needle valve Purge timer *)
 	tNeedlePurgeTime		: TIME:=T#5S;
-		NeedlePurgeTime		: TIME:=T#30S;
+	NeedlePurgeTime		: TIME:=T#5S;
 	BurpET				: TIME;
 	NeedlePurgeRun		: BOOL;
 	NeedlePurgeDone		: BOOL;
-	NeedlePurgeRepeat	: INT:= 1;
+	
 	VCN_Timer	:TON;
 	
 
 	rt_reset: R_TRIG;
-	//PRAGMA
-	GBA80Tmr			: TON;
-	GBA80Time			: TIME:=T#20S;
-	GBATimeDone			: BOOL;
-
-	CATCH : INT;
-	CATCH1 : INT;
 	
 	// Timers
 	VVC_81_Timer : TON;
 	VVC_82_Timer : TON;
-	VVC_81_Time			: TIME:=T#60S;
-	VVC_82_Time			: TIME:=T#60S;
-	VCN_Time : TIME := T#10S;
+	VVC_81_Time			: TIME:=T#5S;
+	VVC_82_Time			: TIME:=T#5S;
+	VCN_Time : TIME := T#5S;
+	
+	iVGP_POS: REAL:=0;
 	
 
 END_VAR
@@ -64,9 +64,10 @@ PURGE CYCLE
 The purge cycle consists of the following steps;
 1. Close all gas valves 83-86 and Close Needle valve and switch off PID control
 2. Wait till needle valve closes
-3. Fully open VGP:40
-4. PUMP DOWN MANIFOLD: Open VVC-80  then Open VVC82 for a certain period of time or till certain pressure on the baratron
+3. Close VGP, to protect the Detector chamber in case a pressure spike on the roughing line stops the turbo.
+4. PUMP DOWN MANIFOLD: Open VVC-80  then Open VVC82 for certain pressure on the baratron
 5. Open VIC:81 and keep it open while the manifold pumps down to pressure set point for a certain time to avoid flukes then close VVC-80
+ - THEN Fully open VGP:40
 6. BURP NEEDLE VALVE: Once the manifold is pumped down, open the needle valve (burp) to evacuate gases that may be trapped in its mechanism
 - this step is done gradually to avoid sending pressure spike into the detector
 7. Close needle valve
@@ -83,6 +84,7 @@ CASE step OF
 			bGo :=FALSE;
 			bPurgeActive := true;
 			bPurgeDone := false;
+			iVGP_POS := VGP_50.q_stVGP.rReqPosition;
 			sMessage:= 'Purge Start';		
 		END_IF
 
@@ -110,19 +112,20 @@ CASE step OF
 	END_IF
 	
 	
-30: //Fully open VGP:40
-	VGP_50.M_ValveControl(E_VCN.OpenValve);
-	IF NOT(VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP Starts moving
+30: //Fully close VGP:40
+	VGP_50.M_ValveControl(E_VCN.CloseValve);
+	VGP_50.M_SetGoSw(TRUE);
+	IF NOT(VGP_50.q_stVGP.eState = E_MoveState.READY)THEN // wait until the VGP Starts moving
 		step:=31;
-		sMessage:= 'Prep: VGP to fully open';
+		sMessage:= 'Prep: VGP to fully closed';
 	END_IF
-	if (VGP_50.q_stVGP.pv_xError )then
+	if (VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK) OR NOT (VGP_50.q_stVGP.pv_xHomed) THEN
 		step:=900+step;
 	END_IF
 31: 
 	IF (VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP motion is done
 		step:=40;
-		sMessage:= 'Prep: VGP is open';
+		sMessage:= 'Prep: VGP is closed';
 	END_IF
 	if (VGP_50.q_stVGP.pv_xError )then
 		step:=900+step;
@@ -137,14 +140,14 @@ CASE step OF
 41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain peroid of time or till certain pressure
 	VVC_82.M_Set_OPN_SW(TRUE);
 	sMessage:= 'Pumping down: VVC80 and VVC82 are open';
-	if (VVC_82.iq_stValve.q_xOPN_DO ) AND (VVC_82_Timer.Q) THEN
+	if (VVC_82.iq_stValve.q_xOPN_DO) AND (VVC_82_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP1) THEN
 		step:=50;
 	END_IF
 
 50:// Open VIC:81 and keep it open while the manifold pumps down to pressure set point
 	VVC_81.M_Set_OPN_SW(TRUE);
 	sMessage:= 'Pumping down: VVC80, VVC81 and VVC82 are open';
-	IF (VVC_81.iq_stValve.q_xOPN_DO ) AND (VVC_81_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP) THEN // or a certain pressure reading and check timeouts
+	IF (VVC_81.iq_stValve.q_xOPN_DO ) AND (VVC_81_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP2) THEN // or a certain pressure reading and check timeouts
 		step:=51;
 	END_IF
 	
@@ -154,7 +157,25 @@ CASE step OF
 	VVC_82.M_Set_OPN_SW(false);
 	sMessage:= 'Pumping down complete: valves are closed';
 	IF (NOT VVC_80.iq_stValve.q_xOPN_DO) AND(NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO) THEN
+		step:=55;
+	END_IF
+
+55: //Fully close VGP
+	VGP_50.M_ValveControl(E_VCN.OpenValve);
+	IF NOT(VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP Starts moving
+		step:=56;
+		sMessage:= 'Prep: VGP to fully open';
+	END_IF
+	if (VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK) OR NOT (VGP_50.q_stVGP.pv_xHomed) THEN
+		step:=900+step;
+	END_IF
+56: 
+	IF (VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP motion is done
 		step:=60;
+		sMessage:= 'Prep: VGP is Open';
+	END_IF
+	if (VGP_50.q_stVGP.pv_xError )then
+		step:=900+step;
 	END_IF
 
 60: //BURP NEEDLE VALVE: Once the manifold is pumped down, open the needle valve (burp) to evacuate gases that may be trapped in its mechanism
@@ -242,10 +263,10 @@ CASE step OF
 	
 
 90: //Release VGP:40
-	VGP_50.M_ValveControl(E_VCN.PressureControl);
-	VGP_50.i_ReqPos:= 50; //50% open
+	VGP_50.M_ValveControl(E_VCN.ManualControl);
+	VGP_50.i_ReqPos:= iVGP_POS; //50% open
 	VGP_50.M_SetGoSw(TRUE);
-	sMessage:= 'Post: VGP to 50%';
+	sMessage:= 'Post: VGP to previous position';
 	IF NOT(VGP_50.q_stVGP.eState = E_MoveState.READY ) THEN // wait until the VGP encoder reads Open //use motion ready
 		step:=91;
 	END_IF
@@ -278,6 +299,8 @@ CASE step OF
 	VVC_86.M_Set_OPN_SW(false);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
 	VGP_50.M_ValveControl(E_VCN.ManualControl); 
+	// reset selected gas to none
+	SelectedGas := E_GasType.none;
 	step :=0;
 	
 900: //Error
@@ -293,7 +316,7 @@ CASE step OF
 	VVC_86.M_Set_OPN_SW(false);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
 	VGP_50.M_ValveControl(E_VCN.ManualControl); // CLOSE or OPEN to pump down
-	sMessage:= 'Purge Error';
+	sMessage:= 'Purge Error: Interlock';
 END_CASE
 
 
@@ -323,7 +346,7 @@ if (step >900 ) Then
 END_IF
 
 rt_reset(CLK:= bReset);
-IF rt_reset.Q THEN Step:=100; END_IF
+IF rt_reset.Q THEN Step:=100; bReset:=False; bPurgeDone:=False; END_IF
 
 //Timers
 VVC_81_Timer(IN:= (step = 50), PT:=VVC_81_Time);
@@ -333,7 +356,14 @@ NeedleVlvPurgeTmr(IN:= (step = 60) OR (step = 62)  OR (step = 64)  OR (step = 66
 
 //
 IF (bStartPurge_sw) THEN bGo :=FALSE; END_IF
-/// vcn and vgp on manual or auto?? manual, until the Go or auto button is pressed??]]></ST>
+/// If at any point the VGP interlocked or in an error state, we stop purge.
+
+IF (VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK) AND (bPurgeActive)  AND (step >=55) AND (step <=70) THEN
+		step:=900;
+END_IF
+IF NOT (VCN_50.i_xExtIlkOK) AND (bPurgeActive) AND (step >=60) AND (step <=70) THEN
+		step:=900;
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

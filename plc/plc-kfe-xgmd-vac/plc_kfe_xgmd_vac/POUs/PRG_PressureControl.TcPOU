@@ -51,7 +51,7 @@ IF (bAdditionalVCNIlk) THEN
 		VCN_50.i_xExtIlkOK :=  fb_EM2K0_XGMD_GPI_50.PG.xAT_VAC AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
 END_IF
 
-VCN_50(i_xExtIlkOK :=, i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut );
+VCN_50(i_xExtIlkOK :=, i_ReqPos:= );
 
 (* Gauge selection *)
 (*Assign reading to psuedo gauge*)
@@ -139,6 +139,7 @@ if (VVC_80.M_IsClosed() ) THEN
 END_IF
 	
 if (bGo) THEN
+	VCN_50.i_ReqPos:=  fbCTRL_LIN_INTERPOLATION.fOut + fbCTRL_PID.fOut;
 	IF (bReset) THEN
 	(* set the mode to RESET*)
 	eMode							:= eCTRL_MODE_RESET   ;
