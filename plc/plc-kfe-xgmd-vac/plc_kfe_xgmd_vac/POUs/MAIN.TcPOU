@@ -18,13 +18,13 @@ PRG_VAC_INTF();
 PRG_INJ();
 PRG_PressureControl();
 PRG_Gas_Selection();
+PRG_Purge();
 IF NOT vgp_debug_mode THEN
 	PRG_VGP();
 END_IF
 
-IF gas_selection_debug_mode THEN
-	PRG_Purge();	
-END_IF
+	
+
 
 // Call the RTD Function blocks
 //RTD

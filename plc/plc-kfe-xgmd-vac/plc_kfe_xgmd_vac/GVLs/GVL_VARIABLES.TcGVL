@@ -8,11 +8,7 @@
 	
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:AUTO_VVC_50 '}
 	bAutoVVC50 : BOOL := False;
-	
-	//PRAGMA
-	{attribute 'pytmc' :=' pv: EM2K0:XGMD:NeedleBurpTime '}
-	iNeedleBurpTIME		: INT; // milliseconds
-	
+
 	// Purge COMMANDS FROM epics
 	//pragma
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:Purge_SW'}
