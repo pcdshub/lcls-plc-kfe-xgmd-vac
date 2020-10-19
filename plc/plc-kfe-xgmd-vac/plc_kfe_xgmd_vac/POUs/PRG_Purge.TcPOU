@@ -371,6 +371,10 @@ IF (VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK) AND (bPurgeActive)  A
 END_IF
 IF NOT (VCN_50.i_xExtIlkOK) AND (bPurgeActive) AND (step >=60) AND (step <=70) THEN
 		step:=900;
+END_IF
+
+IF (NOT (fb_EM2K0_XGMD_PRT_50.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
+		step:=900;
 END_IF]]></ST>
     </Implementation>
   </POU>

@@ -75,7 +75,7 @@
 	 field: ONAM TRUE; 
 	 io: io;
 	 '}
-	bAdditionalVCNIlk : BOOL; 
+	bAdditionalVCNIlk : BOOL:=TRUE; 
 	
 	(*HV*)
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PSV:1 '}
