@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_VARIABLES" Id="{f5eb425e-877f-4a98-b4fc-8b7970a753e9}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -8,11 +8,7 @@
 	
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:AUTO_VVC_50 '}
 	bAutoVVC50 : BOOL := False;
-	
-	//PRAGMA
-	{attribute 'pytmc' :=' pv: EM2K0:XGMD:NeedleBurpTime '}
-	iNeedleBurpTIME		: INT; // milliseconds
-	
+
 	// Purge COMMANDS FROM epics
 	//pragma
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:Purge_SW'}
@@ -21,6 +17,17 @@
 	bPurgeActive : BOOL:=false;
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PurgeDone'}
 	bPurgeDone : BOOL :=false;
+	{attribute 'pytmc' := '
+	pv: EM2K0:XGMD:GAS_TYPE ;
+	type: mbbi ;
+	field: ZRST none ;
+	field: ONST Neon;
+	field: TWST Argon ;
+	field: THST Krypton ;
+	field: FRST Xenon ;
+	io: i
+	'}
+	SelectedGas: E_GasType;
 	
 END_VAR]]></Declaration>
   </GVL>

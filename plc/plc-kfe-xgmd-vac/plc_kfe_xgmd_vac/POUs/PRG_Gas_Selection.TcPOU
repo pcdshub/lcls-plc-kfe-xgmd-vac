@@ -1,71 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_Gas_Selection" Id="{7286873a-eeab-49a1-80e4-b57c23d91e0f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Gas_Selection
 VAR
+	
 	CurrentGas: E_GasType;
-	//pragma
-	{attribute 'pytmc' := '
-	pv: EM2K0:XGMD:GAS_TYPE ;
-	type: mbbi ;
-	field: ZRST none ;
-	field: ONST Neon;
-	field: TWST Argon ;
-	field: THST Krypton ;
-	field: FRST Xenon ;
-	io: i
-	'}
-	SelectedGas: E_GasType;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* Gas selection includes a purge and checks interlocks*)
 //fix
+// Initialize the selected gas
 if ( VVC_83.iq_stValve.q_xOPN_DO) then
-	CurrentGas := E_GasType.Neon;
+	SelectedGas := E_GasType.Neon;
 	elsif ( VVC_84.iq_stValve.q_xOPN_DO) then
-		CurrentGas := E_GasType.Argon;
+		SelectedGas := E_GasType.Argon;
 		elsif ( VVC_85.iq_stValve.q_xOPN_DO) then
-		CurrentGas := E_GasType.Krypton;
+		SelectedGas := E_GasType.Krypton;
 			elsif ( VVC_86.iq_stValve.q_xOPN_DO) then
-			CurrentGas := E_GasType.Xenon;
-				else CurrentGas := E_GasType.none;
+			SelectedGas := E_GasType.Xenon;
+				//else SelectedGas := E_GasType.none;
 END_IF
 
+(*
+If( CurrentGas <> SelectedGas) AND bStartPurge_sw  (*AND NOT (CurrentGas=E_GasType.none)*) THEN
+	if NOT(bStartPurge_sw) AND NOT(bPurgeActive)AND(bPurgeDone) then
+		case SelectedGas of
+		E_GasType.none: // all valves closed
+			VVC_83.M_Set_OPN_SW(false);
+			VVC_84.M_Set_OPN_SW(false);
+			VVC_85.M_Set_OPN_SW(false);
+			VVC_86.M_Set_OPN_SW(false);
+		E_GasType.Neon:
+			VVC_83.M_Set_OPN_SW(TRUE);
+			VVC_84.M_Set_OPN_SW(false);
+			VVC_85.M_Set_OPN_SW(false);
+			VVC_86.M_Set_OPN_SW(false);
+		E_GasType.Argon: 
+			VVC_83.M_Set_OPN_SW(false);
+			VVC_84.M_Set_OPN_SW(TRUE);
+			VVC_85.M_Set_OPN_SW(false);
+			VVC_86.M_Set_OPN_SW(false);	 
+		E_GasType.Krypton: 
+			VVC_83.M_Set_OPN_SW(false);
+			VVC_84.M_Set_OPN_SW(false);
+			VVC_85.M_Set_OPN_SW(TRUE);
+			VVC_86.M_Set_OPN_SW(false);
+		E_GasType.Xenon: 
+			VVC_83.M_Set_OPN_SW(false);
+			VVC_84.M_Set_OPN_SW(false);
+			VVC_85.M_Set_OPN_SW(false);
+			VVC_86.M_Set_OPN_SW(TRUE);
+		END_CASE
+	END_IF
 
-If( CurrentGas <> SelectedGas) then
-	bStartPurge_sw := true;
 END_IF
-
-if NOT(bStartPurge_sw) AND NOT(bPurgeActive)AND(bPurgeDone) then
-	case SelectedGas of
-	E_GasType.none: // all valves closed
-		VVC_83.M_Set_OPN_SW(false);
-		VVC_84.M_Set_OPN_SW(false);
-		VVC_85.M_Set_OPN_SW(false);
-		VVC_86.M_Set_OPN_SW(false);
-	E_GasType.Neon:
-		VVC_83.M_Set_OPN_SW(TRUE);
-		VVC_84.M_Set_OPN_SW(false);
-		VVC_85.M_Set_OPN_SW(false);
-		VVC_86.M_Set_OPN_SW(false);
-	E_GasType.Argon: 
-		VVC_83.M_Set_OPN_SW(false);
-		VVC_84.M_Set_OPN_SW(TRUE);
-		VVC_85.M_Set_OPN_SW(false);
-		VVC_86.M_Set_OPN_SW(false);	 
-	E_GasType.Krypton: 
-		VVC_83.M_Set_OPN_SW(false);
-		VVC_84.M_Set_OPN_SW(false);
-		VVC_85.M_Set_OPN_SW(TRUE);
-		VVC_86.M_Set_OPN_SW(false);
-	E_GasType.Xenon: 
-		VVC_83.M_Set_OPN_SW(false);
-		VVC_84.M_Set_OPN_SW(false);
-		VVC_85.M_Set_OPN_SW(false);
-		VVC_86.M_Set_OPN_SW(TRUE);
-	END_CASE
-END_IF
+*)
 
 
 /// vcn and vgp on manual or auto??]]></ST>
