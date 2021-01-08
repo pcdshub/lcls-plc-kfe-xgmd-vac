@@ -2274,6 +2274,42 @@ LCLS_Vacuum.FB_VCN
         | io: input
 
 
+    * - $(PREFIX):ILK_SP
+      - ao
+      - $(SYMBOL).iq_stVCN.rIlk_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):ILK_SP_RBV
+      - ai
+      - $(SYMBOL).iq_stVCN.rIlk_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):Limit
+      - ao
+      - $(SYMBOL).iq_stVCN.rUpperLimit
+      - | autosave_pass1: VAL DESC
+        | io: output
+
+
+    * - $(PREFIX):Limit_RBV
+      - ai
+      - $(SYMBOL).iq_stVCN.rUpperLimit
+      - | autosave_pass1: VAL DESC
+        | io: output
+
+
     * - $(PREFIX):OPN_SW
       - bo
       - $(SYMBOL).iq_stVCN.xOPN_SW
@@ -2593,16 +2629,16 @@ LCLS_Vacuum.FB_VVC
     * - $(PREFIX):OVRD_ON
       - bo
       - $(SYMBOL).iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - $(PREFIX):OVRD_ON_RBV
       - bi
       - $(SYMBOL).iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -3274,6 +3310,42 @@ LCLS_Vacuum.ST_VCN
         | io: input
 
 
+    * - $(PREFIX):ILK_SP
+      - ao
+      - $(SYMBOL).rIlk_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):ILK_SP_RBV
+      - ai
+      - $(SYMBOL).rIlk_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):Limit
+      - ao
+      - $(SYMBOL).rUpperLimit
+      - | autosave_pass1: VAL DESC
+        | io: output
+
+
+    * - $(PREFIX):Limit_RBV
+      - ai
+      - $(SYMBOL).rUpperLimit
+      - | autosave_pass1: VAL DESC
+        | io: output
+
+
     * - $(PREFIX):OPN_SW
       - bo
       - $(SYMBOL).xOPN_SW
@@ -3773,16 +3845,16 @@ LCLS_Vacuum.ST_VVC
     * - $(PREFIX):OVRD_ON
       - bo
       - $(SYMBOL).xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - $(PREFIX):OVRD_ON_RBV
       - bi
       - $(SYMBOL).xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -9138,6 +9210,42 @@ Database Records
         | io: input
 
 
+    * - EM2K0:XGMD:VCN:50:ILK_SP
+      - ao
+      - GVL_Devices.VCN_50.iq_stVCN.rIlk_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - EM2K0:XGMD:VCN:50:ILK_SP_RBV
+      - ai
+      - GVL_Devices.VCN_50.iq_stVCN.rIlk_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - EM2K0:XGMD:VCN:50:Limit
+      - ao
+      - GVL_Devices.VCN_50.iq_stVCN.rUpperLimit
+      - | autosave_pass1: VAL DESC
+        | io: output
+
+
+    * - EM2K0:XGMD:VCN:50:Limit_RBV
+      - ai
+      - GVL_Devices.VCN_50.iq_stVCN.rUpperLimit
+      - | autosave_pass1: VAL DESC
+        | io: output
+
+
     * - EM2K0:XGMD:VCN:50:OPN_SW
       - bo
       - GVL_Devices.VCN_50.iq_stVCN.xOPN_SW
@@ -10846,6 +10954,70 @@ Database Records
         | io: input
 
 
+    * - EM2K0:XGMD:VRO:50:FORCE_OPN
+      - bo
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.xOvrdOpn
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - EM2K0:XGMD:VRO:50:FORCE_OPN_RBV
+      - bi
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.xOvrdOpn
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - EM2K0:XGMD:VRO:50:OPN_DO_RBV
+      - bi
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.q_xOPN_DO
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: input
+
+
+    * - EM2K0:XGMD:VRO:50:OPN_OK_RBV
+      - bi
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - EM2K0:XGMD:VRO:50:OPN_SW
+      - bo
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - EM2K0:XGMD:VRO:50:OPN_SW_RBV
+      - bi
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - EM2K0:XGMD:VRO:50:OVRD_ON
+      - bo
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - EM2K0:XGMD:VRO:50:OVRD_ON_RBV
+      - bi
+      - GVL_GMD.fb_EM1K0_GMD_VRO_50.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
     * - EM2K0:XGMD:VVC:50:FORCE_OPN
       - bo
       - GVL_GMD.fb_EM2K0_XGMD_VVC_50.iq_stValve.xOvrdOpn
@@ -10897,16 +11069,16 @@ Database Records
     * - EM2K0:XGMD:VVC:50:OVRD_ON
       - bo
       - GVL_GMD.fb_EM2K0_XGMD_VVC_50.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:50:OVRD_ON_RBV
       - bi
       - GVL_GMD.fb_EM2K0_XGMD_VVC_50.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -10961,16 +11133,16 @@ Database Records
     * - EM2K0:XGMD:VVC:80:OVRD_ON
       - bo
       - GVL_Devices.VVC_80.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:80:OVRD_ON_RBV
       - bi
       - GVL_Devices.VVC_80.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -11025,16 +11197,16 @@ Database Records
     * - EM2K0:XGMD:VVC:81:OVRD_ON
       - bo
       - GVL_Devices.VVC_81.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:81:OVRD_ON_RBV
       - bi
       - GVL_Devices.VVC_81.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -11089,16 +11261,16 @@ Database Records
     * - EM2K0:XGMD:VVC:82:OVRD_ON
       - bo
       - GVL_Devices.VVC_82.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:82:OVRD_ON_RBV
       - bi
       - GVL_Devices.VVC_82.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -11153,16 +11325,16 @@ Database Records
     * - EM2K0:XGMD:VVC:83:OVRD_ON
       - bo
       - GVL_Devices.VVC_83.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:83:OVRD_ON_RBV
       - bi
       - GVL_Devices.VVC_83.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -11217,16 +11389,16 @@ Database Records
     * - EM2K0:XGMD:VVC:84:OVRD_ON
       - bo
       - GVL_Devices.VVC_84.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:84:OVRD_ON_RBV
       - bi
       - GVL_Devices.VVC_84.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -11281,16 +11453,16 @@ Database Records
     * - EM2K0:XGMD:VVC:85:OVRD_ON
       - bo
       - GVL_Devices.VVC_85.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:85:OVRD_ON_RBV
       - bi
       - GVL_Devices.VVC_85.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
@@ -11345,16 +11517,16 @@ Database Records
     * - EM2K0:XGMD:VVC:86:OVRD_ON
       - bo
       - GVL_Devices.VVC_86.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 
     * - EM2K0:XGMD:VVC:86:OVRD_ON_RBV
       - bi
       - GVL_Devices.VVC_86.iq_stValve.xOverrideMode
-      - | field: ONAM Override OFF
-        | field: ZNAM Override ON
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
         | io: output
 
 

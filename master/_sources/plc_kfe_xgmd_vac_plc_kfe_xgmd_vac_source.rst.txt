@@ -327,7 +327,7 @@ GVL_Devices
     	 field: ONAM TRUE; 
     	 io: io;
     	 '}
-    	bAdditionalVCNIlk : BOOL; 
+    	bAdditionalVCNIlk : BOOL:=TRUE; 
     	
     	(*HV*)
     	{attribute 'pytmc' :=' pv: EM2K0:XGMD:PSV:1 '}
@@ -440,6 +440,11 @@ GVL_GMD
     // FB_VVC
     {attribute 'pytmc' := ' pv: EM2K0:XGMD:VVC:50 '}
     fb_EM2K0_XGMD_VVC_50 : FB_VVC;
+
+    //Roughing DC Valves
+    {attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:50 '}
+    {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_02_19]^DOX Control Channel 2^Control^Output'}
+    fb_EM1K0_GMD_VRO_50 : FB_VVC;
 
     END_VAR
 
@@ -1618,6 +1623,12 @@ PRG_GMD
     	i_xOverrideMode := xSystemOverrideMode,
     );
 
+
+
+    // Roughing valve
+    IF( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ) OR ( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING ) THEN fb_EM1K0_GMD_VRO_50.M_Open(TRUE); END_IF
+    fb_EM1K0_GMD_VRO_50(i_xExtILK_OK:= (fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING  OR  fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ), i_xOverrideMode:= , iq_stValve=> );
+
     END_PROGRAM
 
 
@@ -1736,10 +1747,15 @@ PRG_PressureControl
     	wait : time := T#10S;
     	FTrig: F_TRIG;
     END_VAR
+    //Set VRC upper limit
+    IF bInit
+    THEN
+    	VCN_50.M_SetThrottle(30); // default at start up, should be changed through epics pv
+    END_IF
     //VCN //bAdditionalVCNIlk
     IF (bAdditionalVCNIlk) THEN
     	VCN_50.i_xExtIlkOK := ( fb_EM2K0_XGMD_GCC_10.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_20.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_30.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_40.IG.xAT_VAC
-    							AND  fb_EM2K0_XGMD_GCC_50.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_60.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_70.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_80.IG.xAT_VAC)
+    							AND  fb_EM2K0_XGMD_GCC_50.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_60.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_70.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_80.IG.xAT_VAC  AND  fb_EM2K0_XGMD_GCC_90.IG.xAT_VAC)
     								AND  fb_EM2K0_XGMD_GPI_50.PG.xAT_VAC AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
     	ELSE
     		
@@ -1777,7 +1793,7 @@ PRG_PressureControl
     	(* init array with the interpolation points  *)
     	(* 	fIn					 |		fOut		*)
     (* 	fIn					 |		fOut		*)
-    	arrTable[1,1] := 0;		arrTable[1,2] := 0;
+    	arrTable[1,1] := 0;		arrTable[1,2] := 5;
     	arrTable[2,1] := 0.0000412;		arrTable[2,2] := 34;
     	arrTable[3,1] := 0.001282;		arrTable[3,2] := 36;
     	arrTable[4,1] :=  0.002136;	    arrTable[4,2] := 38;
@@ -1957,8 +1973,10 @@ PRG_Purge
     	rt_reset: R_TRIG;
     	
     	// Timers
+    	VVC_80_Timer : TON;
     	VVC_81_Timer : TON;
     	VVC_82_Timer : TON;
+    	VVC_80_Time			: TIME:=T#30S;
     	VVC_81_Time			: TIME:=T#5S;
     	VVC_82_Time			: TIME:=T#5S;
     	VCN_Time : TIME := T#5S;
@@ -2014,6 +2032,7 @@ PRG_Purge
     	
     20: //Close Needle valve 
     	VCN_50.M_ValveControl( E_VCN.CloseValve);
+    	//sMessage:= 'Prep: Needle Valve is closed';
     	// wait for a period of time to ensure that the Valve is fully closed
     	IF (VCN_Timer.Q) THEN
     		step:=30;
@@ -2041,26 +2060,40 @@ PRG_Purge
     	END_IF
     	
     40: // open vavle 80 to pump down all the way to the needle valve
-    	VVC_80.M_Set_OPN_SW(TRUE);
-    	if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
-    		step:=41;
-    	END_IF
+    	//VVC_80.M_Set_OPN_SW(TRUE);
+    	//if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
+    	step:=41;
+    	//END_IF
     	
     41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain peroid of time or till certain pressure
     	VVC_82.M_Set_OPN_SW(TRUE);
-    	sMessage:= 'Pumping down: VVC80 and VVC82 are open';
+    	sMessage:= 'Pumping down: VVC82 is open';
     	if (VVC_82.iq_stValve.q_xOPN_DO) AND (VVC_82_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP1) THEN
     		step:=50;
     	END_IF
 
     50:// Open VIC:81 and keep it open while the manifold pumps down to pressure set point
     	VVC_81.M_Set_OPN_SW(TRUE);
-    	sMessage:= 'Pumping down: VVC80, VVC81 and VVC82 are open';
+    	sMessage:= 'Pumping down:  VVC81 and VVC82 are open';
     	IF (VVC_81.iq_stValve.q_xOPN_DO ) AND (VVC_81_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP2) THEN // or a certain pressure reading and check timeouts
     		step:=51;
     	END_IF
     	
-    51: //Close VIC:81 and VIC:82
+    51: // open vavle 80 to pump down all the way to the needle valve
+    	VVC_80.M_Set_OPN_SW(TRUE);
+    	if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
+    	step:=52;
+    	END_IF	
+    	
+    52:// Open VIC:81 and keep it open while the manifold pumps down to pressure set point
+    	VVC_81.M_Set_OPN_SW(TRUE);
+    	sMessage:= 'Pumping down:  VVC80, VVC81 and VVC82 are open';
+    	IF (VVC_81.iq_stValve.q_xOPN_DO ) AND (VVC_80_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP2) THEN // or a certain pressure reading and check timeouts
+    		step:=54;
+    	END_IF
+
+    	
+    54: //Close VIC:81 and VIC:82
     	VVC_80.M_Set_OPN_SW(false);
     	VVC_81.M_Set_OPN_SW(false);
     	VVC_82.M_Set_OPN_SW(false);
@@ -2260,7 +2293,8 @@ PRG_Purge
     IF rt_reset.Q THEN Step:=100; bReset:=False; bPurgeDone:=False; END_IF
 
     //Timers
-    VVC_81_Timer(IN:= (step = 50), PT:=VVC_81_Time);
+    VVC_80_Timer(IN:=(step = 52), PT:=VVC_80_Time);
+    VVC_81_Timer(IN:= (step = 50) , PT:=VVC_81_Time);
     VVC_82_Timer(IN:= (step = 41), PT:=VVC_82_Time);
     VCN_Timer(IN:= (step = 20) OR (step = 61)  OR (step = 63)  OR (step = 65)  OR (step = 67) OR (step = 70), PT:=VCN_Time);
     NeedleVlvPurgeTmr(IN:= (step = 60) OR (step = 62)  OR (step = 64)  OR (step = 66)  OR (step = 68), PT:=NeedlePurgeTime );
@@ -2269,10 +2303,14 @@ PRG_Purge
     IF (bStartPurge_sw) THEN bGo :=FALSE; END_IF
     /// If at any point the VGP interlocked or in an error state, we stop purge.
 
-    IF (VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK) AND (bPurgeActive)  AND (step >=55) AND (step <=70) THEN
+    IF ((VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK)) AND (bPurgeActive)  AND (step >=55) AND (step <=70) THEN
     		step:=900;
     END_IF
     IF NOT (VCN_50.i_xExtIlkOK) AND (bPurgeActive) AND (step >=60) AND (step <=70) THEN
+    		step:=900;
+    END_IF
+
+    IF (NOT (fb_EM2K0_XGMD_PRT_50.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
     		step:=900;
     END_IF
 
