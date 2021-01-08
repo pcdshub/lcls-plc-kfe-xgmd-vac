@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_GMD" Id="{e07be9ee-1c30-4de2-9fbb-2a29f1e5894a}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -82,6 +82,11 @@ fb_EM2K0_XGMD_PRT_50 : FB_EbaraEVA;
 // FB_VVC
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:VVC:50 '}
 fb_EM2K0_XGMD_VVC_50 : FB_VVC;
+
+//Roughing DC Valves
+{attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:50 '}
+{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_02_19]^DOX Control Channel 2^Control^Output'}
+fb_EM1K0_GMD_VRO_50 : FB_VVC;
 
 END_VAR]]></Declaration>
   </GVL>

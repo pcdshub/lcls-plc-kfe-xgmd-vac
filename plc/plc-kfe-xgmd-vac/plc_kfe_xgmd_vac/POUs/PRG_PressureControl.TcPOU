@@ -40,7 +40,11 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[//Set VRC upper limit
+IF bInit
+THEN
+	VCN_50.M_SetThrottle(30); // default at start up, should be changed through epics pv
+END_IF
 //VCN //bAdditionalVCNIlk
 IF (bAdditionalVCNIlk) THEN
 	VCN_50.i_xExtIlkOK := ( fb_EM2K0_XGMD_GCC_10.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_20.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_30.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_40.IG.xAT_VAC
