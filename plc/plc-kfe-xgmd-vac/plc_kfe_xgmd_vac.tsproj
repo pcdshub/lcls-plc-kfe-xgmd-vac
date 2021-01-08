@@ -2458,6 +2458,13 @@ IO]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM1K0_GMD_VRO_50.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="8">
 						<Name>PlcTask Retains</Name>
@@ -10040,6 +10047,7 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.q_xOPN_DO" VarB="Channel 3^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2212_02_19">
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM1K0_GMD_VRO_50.q_xOPN_DO" VarB="DOX Control Channel 2^Control^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO" VarB="DOX Control Channel 1^Control^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26">

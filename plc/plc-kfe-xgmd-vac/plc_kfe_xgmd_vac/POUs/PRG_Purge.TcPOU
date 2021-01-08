@@ -52,8 +52,10 @@ VAR
 	rt_reset: R_TRIG;
 	
 	// Timers
+	VVC_80_Timer : TON;
 	VVC_81_Timer : TON;
 	VVC_82_Timer : TON;
+	VVC_80_Time			: TIME:=T#30S;
 	VVC_81_Time			: TIME:=T#5S;
 	VVC_82_Time			: TIME:=T#5S;
 	VCN_Time : TIME := T#5S;
@@ -111,6 +113,7 @@ CASE step OF
 	
 20: //Close Needle valve 
 	VCN_50.M_ValveControl( E_VCN.CloseValve);
+	//sMessage:= 'Prep: Needle Valve is closed';
 	// wait for a period of time to ensure that the Valve is fully closed
 	IF (VCN_Timer.Q) THEN
 		step:=30;
@@ -138,26 +141,40 @@ CASE step OF
 	END_IF
 	
 40: // open vavle 80 to pump down all the way to the needle valve
-	VVC_80.M_Set_OPN_SW(TRUE);
-	if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
-		step:=41;
-	END_IF
+	//VVC_80.M_Set_OPN_SW(TRUE);
+	//if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
+	step:=41;
+	//END_IF
 	
 41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain peroid of time or till certain pressure
 	VVC_82.M_Set_OPN_SW(TRUE);
-	sMessage:= 'Pumping down: VVC80 and VVC82 are open';
+	sMessage:= 'Pumping down: VVC82 is open';
 	if (VVC_82.iq_stValve.q_xOPN_DO) AND (VVC_82_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP1) THEN
 		step:=50;
 	END_IF
 
 50:// Open VIC:81 and keep it open while the manifold pumps down to pressure set point
 	VVC_81.M_Set_OPN_SW(TRUE);
-	sMessage:= 'Pumping down: VVC80, VVC81 and VVC82 are open';
+	sMessage:= 'Pumping down:  VVC81 and VVC82 are open';
 	IF (VVC_81.iq_stValve.q_xOPN_DO ) AND (VVC_81_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP2) THEN // or a certain pressure reading and check timeouts
 		step:=51;
 	END_IF
 	
-51: //Close VIC:81 and VIC:82
+51: // open vavle 80 to pump down all the way to the needle valve
+	VVC_80.M_Set_OPN_SW(TRUE);
+	if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
+	step:=52;
+	END_IF	
+	
+52:// Open VIC:81 and keep it open while the manifold pumps down to pressure set point
+	VVC_81.M_Set_OPN_SW(TRUE);
+	sMessage:= 'Pumping down:  VVC80, VVC81 and VVC82 are open';
+	IF (VVC_81.iq_stValve.q_xOPN_DO ) AND (VVC_80_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP2) THEN // or a certain pressure reading and check timeouts
+		step:=54;
+	END_IF
+
+	
+54: //Close VIC:81 and VIC:82
 	VVC_80.M_Set_OPN_SW(false);
 	VVC_81.M_Set_OPN_SW(false);
 	VVC_82.M_Set_OPN_SW(false);
@@ -357,7 +374,8 @@ rt_reset(CLK:= bReset);
 IF rt_reset.Q THEN Step:=100; bReset:=False; bPurgeDone:=False; END_IF
 
 //Timers
-VVC_81_Timer(IN:= (step = 50), PT:=VVC_81_Time);
+VVC_80_Timer(IN:=(step = 52), PT:=VVC_80_Time);
+VVC_81_Timer(IN:= (step = 50) , PT:=VVC_81_Time);
 VVC_82_Timer(IN:= (step = 41), PT:=VVC_82_Time);
 VCN_Timer(IN:= (step = 20) OR (step = 61)  OR (step = 63)  OR (step = 65)  OR (step = 67) OR (step = 70), PT:=VCN_Time);
 NeedleVlvPurgeTmr(IN:= (step = 60) OR (step = 62)  OR (step = 64)  OR (step = 66)  OR (step = 68), PT:=NeedlePurgeTime );
@@ -366,10 +384,14 @@ NeedleVlvPurgeTmr(IN:= (step = 60) OR (step = 62)  OR (step = 64)  OR (step = 66
 IF (bStartPurge_sw) THEN bGo :=FALSE; END_IF
 /// If at any point the VGP interlocked or in an error state, we stop purge.
 
-IF (VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK) AND (bPurgeActive)  AND (step >=55) AND (step <=70) THEN
+IF ((VGP_50.q_stVGP.pv_xError ) OR NOT (VGP_50.i_xExtIlkOK)) AND (bPurgeActive)  AND (step >=55) AND (step <=70) THEN
 		step:=900;
 END_IF
 IF NOT (VCN_50.i_xExtIlkOK) AND (bPurgeActive) AND (step >=60) AND (step <=70) THEN
+		step:=900;
+END_IF
+
+IF (NOT (fb_EM2K0_XGMD_PRT_50.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
 		step:=900;
 END_IF]]></ST>
     </Implementation>

@@ -40,11 +40,15 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[//Set VRC upper limit
+IF bInit
+THEN
+	VCN_50.M_SetThrottle(30); // default at start up, should be changed through epics pv
+END_IF
 //VCN //bAdditionalVCNIlk
 IF (bAdditionalVCNIlk) THEN
 	VCN_50.i_xExtIlkOK := ( fb_EM2K0_XGMD_GCC_10.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_20.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_30.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_40.IG.xAT_VAC
-							AND  fb_EM2K0_XGMD_GCC_50.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_60.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_70.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_80.IG.xAT_VAC)
+							AND  fb_EM2K0_XGMD_GCC_50.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_60.IG.xAT_VAC AND fb_EM2K0_XGMD_GCC_70.IG.xAT_VAC AND  fb_EM2K0_XGMD_GCC_80.IG.xAT_VAC  AND  fb_EM2K0_XGMD_GCC_90.IG.xAT_VAC)
 								AND  fb_EM2K0_XGMD_GPI_50.PG.xAT_VAC AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO);
 	ELSE
 		
@@ -82,7 +86,7 @@ THEN
 	(* init array with the interpolation points  *)
 	(* 	fIn					 |		fOut		*)
 (* 	fIn					 |		fOut		*)
-	arrTable[1,1] := 0;		arrTable[1,2] := 0;
+	arrTable[1,1] := 0;		arrTable[1,2] := 5;
 	arrTable[2,1] := 0.0000412;		arrTable[2,2] := 34;
 	arrTable[3,1] := 0.001282;		arrTable[3,2] := 36;
 	arrTable[4,1] :=  0.002136;	    arrTable[4,2] := 38;
