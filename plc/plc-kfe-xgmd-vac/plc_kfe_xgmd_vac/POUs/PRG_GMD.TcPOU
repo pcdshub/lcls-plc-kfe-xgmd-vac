@@ -162,7 +162,7 @@ fb_EM2K0_XGMD_PRT_50(i_xExtIlkOK := TRUE);
 
 // FB_VVC
 IF bAutoVVC50 THEN
-	IF fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING THEN
+	IF fb_EM2K0_XGMD_PTM_50.iq_stPtm.eState = pumpRUNNING OR  fb_EM2K0_XGMD_PTM_50.iq_stPtm.eState = pumpStarting THEN
 		fb_EM2K0_XGMD_VVC_50.M_Open(True);
 	ELSE 
 		fb_EM2K0_XGMD_VVC_50.M_Open(False);
@@ -170,12 +170,12 @@ IF bAutoVVC50 THEN
 END_IF
 
 fb_EM2K0_XGMD_VVC_50(
-	i_xExtILK_OK := F_TURBO_PROT_SLND_ILK(
-        i_Turbo := fb_EM2K0_XGMD_PTM_50.iq_stPtm,
-	    i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
-	    i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
-        ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
-	),
+	i_xExtILK_OK := fb_EM2K0_XGMD_PTM_50.iq_stPtm.eState = pumpRUNNING OR  fb_EM2K0_XGMD_PTM_50.iq_stPtm.eState = pumpStarting,//F_TURBO_PROT_SLND_ILK(
+       // i_Turbo := fb_EM2K0_XGMD_PTM_50.iq_stPtm,
+	   // i_stISG := fb_EM2K0_XGMD_GPI_50.PG,
+	   // i_stBSG := fb_EM2K0_XGMD_GPI_10.PG,
+      //  ScrollPump := fb_EM2K0_XGMD_PRT_50.stPump
+	//),
 	i_xOverrideMode := xSystemOverrideMode,
 );
 
