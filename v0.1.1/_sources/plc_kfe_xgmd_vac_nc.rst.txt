@@ -1,0 +1,38 @@
+
+NC Settings
+-----------
+
+.. csv-table::
+    :header: Axis ID, Name
+    :align: center
+
+        1, VGP_50
+
+
+
+Axis 1: VGP_50
+^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 1
+    Name, VGP_50
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 0.0390625
+    Enc:SoftEndMaxControl:Enable, true
+    Enc:SoftEndMaxControl:Range, 1670
+    Enc:SoftEndMinControl:Enable, true
+    Enc:SoftEndMinControl:Range, -15
+    General:UnitName, step
+    Id, 1
+    OtherSettings:AllowMotionCmdToSlave, true
+    Velo:Maximum, 1800
+
+
