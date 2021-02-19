@@ -16,17 +16,17 @@
   <widget class="NeedleValve" name="NeedleValve">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>-4</y>
-     <width>180</width>
-     <height>121</height>
+     <x>450</x>
+     <y>30</y>
+     <width>70</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="toolTip">
     <string/>
    </property>
    <property name="controlsLocation" stdset="0">
-    <enum>PCDSSymbolBase::Left</enum>
+    <enum>PCDSSymbolBase::Hidden</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
     <string>ca://${VGP}</string>
@@ -104,14 +104,17 @@
   <widget class="NeedleValve" name="NeedleValve_2">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>180</x>
      <y>41</y>
-     <width>180</width>
-     <height>141</height>
+     <width>80</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="toolTip">
     <string/>
+   </property>
+   <property name="controlsLocation" stdset="0">
+    <enum>PCDSSymbolBase::Hidden</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
     <string>ca://${VCN}</string>
@@ -217,8 +220,8 @@
   <widget class="ColdCathodeGauge" name="ColdCathodeGauge_2">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>100</y>
+     <x>60</x>
+     <y>140</y>
      <width>180</width>
      <height>142</height>
     </rect>
@@ -227,7 +230,7 @@
     <string/>
    </property>
    <property name="controlsLocation" stdset="0">
-    <enum>PCDSSymbolBase::Left</enum>
+    <enum>PCDSSymbolBase::Bottom</enum>
    </property>
    <property name="channelsPrefix" stdset="0">
     <string>ca://${GCC}</string>
@@ -252,8 +255,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>240</y>
+     <x>60</x>
+     <y>150</y>
      <width>59</width>
      <height>15</height>
     </rect>
@@ -266,7 +269,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>190</y>
+     <y>100</y>
      <width>59</width>
      <height>15</height>
     </rect>
@@ -314,6 +317,44 @@
     <string>VVC-${VVC_NUMBER}</string>
    </property>
   </widget>
+  <widget class="PyDMLabel" name="PyDMLabel_7">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>70</y>
+     <width>40</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string>0.000</string>
+   </property>
+   <property name="channel" stdset="0">
+    <string>ca://EM2K0:XGMD:VCN:50:POS_REQ_RBV</string>
+   </property>
+  </widget>
+  <widget class="PyDMLabel" name="PyDMLabel_6">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>50</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string>100.000</string>
+   </property>
+   <property name="channel" stdset="0">
+    <string>ca://EM2K0:XGMD:VGP:50:POS_RBV</string>
+   </property>
+  </widget>
   <zorder>NeedleValve</zorder>
   <zorder>TurboPump</zorder>
   <zorder>ControlOnlyValveNC</zorder>
@@ -333,8 +374,15 @@
   <zorder>label_4</zorder>
   <zorder>label_5</zorder>
   <zorder>label_6</zorder>
+  <zorder>PyDMLabel_7</zorder>
+  <zorder>PyDMLabel_6</zorder>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
   <customwidget>
    <class>PCDSSymbolBase</class>
    <extends>QWidget</extends>
