@@ -906,7 +906,7 @@ IonPump[state=&quot;On&quot;] #icon {
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>71</y>
+      <y>48</y>
       <width>50</width>
       <height>15</height>
      </rect>
@@ -934,7 +934,7 @@ IonPump[state=&quot;On&quot;] #icon {
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>110</y>
+      <y>87</y>
       <width>48</width>
       <height>15</height>
      </rect>
@@ -1000,7 +1000,7 @@ IonPump[state=&quot;On&quot;] #icon {
     <property name="geometry">
      <rect>
       <x>283</x>
-      <y>103</y>
+      <y>80</y>
       <width>71</width>
       <height>23</height>
      </rect>
@@ -1089,7 +1089,7 @@ IonPump[state=&quot;On&quot;] #icon {
     <property name="geometry">
      <rect>
       <x>283</x>
-      <y>68</y>
+      <y>45</y>
       <width>71</width>
       <height>23</height>
      </rect>
@@ -1175,6 +1175,72 @@ IonPump[state=&quot;On&quot;] #icon {
     </property>
     <property name="text">
      <string>Set State</string>
+    </property>
+   </widget>
+   <widget class="PyDMPushButton" name="PyDMPushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>118</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>HOME</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://EM2K0:XGMD:VGP:50:HOME_SW</string>
+    </property>
+    <property name="pressValue" stdset="0">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="PyDMByteIndicator" name="PyDMByteIndicator_4">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>120</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://EM2K0:XGMD:VGP:50:IS_HOMED_RBV</string>
+    </property>
+    <property name="offColor" stdset="0">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="labels" stdset="0">
+     <stringlist>
+      <string>HOMED/READY</string>
+     </stringlist>
+    </property>
+   </widget>
+   <widget class="PyDMLabel" name="PyDMLabel_23">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>250</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="channel" stdset="0">
+     <string>ca://EM2K0:XGMD:VGP:50:Axis_STATE_RBV</string>
     </property>
    </widget>
   </widget>
