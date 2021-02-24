@@ -7,7 +7,7 @@
 	xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
 	
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:AUTO_VVC_50 '}
-	bAutoVVC50 : BOOL := False;
+	bAutoVVC50 : BOOL := TRUE;
 
 	// Purge COMMANDS FROM epics
 	//pragma
