@@ -406,6 +406,11 @@ END_IF
 
 IF (NOT (fb_EM2K0_XGMD_PRT_50.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
 		step:=900;
+END_IF
+
+//Extra purge interlock
+IF (VVC_83.M_IsOpen()) OR  (VVC_84.M_IsOpen()) OR (VVC_85.M_IsOpen()) OR  (VVC_86.M_IsOpen()) THEN
+	VCN_50.i_xPurge := FALSE;
 END_IF]]></ST>
     </Implementation>
   </POU>
