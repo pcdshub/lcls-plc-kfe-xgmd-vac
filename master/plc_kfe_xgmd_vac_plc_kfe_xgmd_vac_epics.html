@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -85,14 +88,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">plc_kfe_xgmd_vac</span></p>
+              <p class="caption" role="heading"><span class="caption-text">plc_kfe_xgmd_vac</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_nc.html">NC Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_links.html">Links</a></li>
 </ul>
-<p class="caption"><span class="caption-text">plc_kfe_xgmd_vac</span></p>
+<p class="caption" role="heading"><span class="caption-text">plc_kfe_xgmd_vac</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_plc_kfe_xgmd_vac_summary.html">Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_plc_kfe_xgmd_vac_summary.html#pragmas">Pragmas</a></li>
@@ -136,7 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_plc_kfe_xgmd_vac_source.html#gvls">GVLs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_plc_kfe_xgmd_vac_source.html#pous">POUs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">plc_kfe_xgmd_vac_sim</span></p>
+<p class="caption" role="heading"><span class="caption-text">plc_kfe_xgmd_vac_sim</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_plc_kfe_xgmd_vac_sim_summary.html">Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plc_kfe_xgmd_vac_plc_kfe_xgmd_vac_sim_summary.html#pragmas">Pragmas</a></li>
@@ -2004,7 +2007,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -2014,7 +2045,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -2024,7 +2055,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -2032,7 +2063,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_SW</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2042,7 +2073,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2052,7 +2083,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xILKOk</p></td>
 <td><div class="line-block">
@@ -2062,7 +2093,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):LOGGER</p></td>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).PG.xLog</p></td>
 <td><div class="line-block">
@@ -2072,7 +2103,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xLog</p></td>
 <td><div class="line-block">
@@ -2082,7 +2113,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).PG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -2090,7 +2121,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -2100,7 +2131,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rPRESS</p></td>
 <td><div class="line-block">
@@ -2112,7 +2143,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRO_SP</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2125,7 +2156,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2138,7 +2169,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):SP_HYS</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2151,7 +2182,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2164,7 +2195,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):STATE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>$(SYMBOL).PG.eState</p></td>
 <td><div class="line-block">
@@ -2173,14 +2204,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):VAC_SP</p></td>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -2193,7 +2224,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -2236,7 +2267,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -2246,7 +2305,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -2256,7 +2315,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -2264,7 +2323,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_SW</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2274,7 +2333,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2284,7 +2343,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xILKOk</p></td>
 <td><div class="line-block">
@@ -2294,7 +2353,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):LOGGER</p></td>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).PG.xLog</p></td>
 <td><div class="line-block">
@@ -2304,7 +2363,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xLog</p></td>
 <td><div class="line-block">
@@ -2314,7 +2373,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).PG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -2322,7 +2381,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -2332,7 +2391,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rPRESS</p></td>
 <td><div class="line-block">
@@ -2344,7 +2403,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRO_SP</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2357,7 +2416,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2370,7 +2429,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):SP_HYS</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2383,7 +2442,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2396,7 +2455,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):STATE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>$(SYMBOL).PG.eState</p></td>
 <td><div class="line-block">
@@ -2405,14 +2464,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):VAC_SP</p></td>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -2425,7 +2484,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -2468,7 +2527,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -2478,7 +2565,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -2488,7 +2575,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -2496,7 +2583,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_SW</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2506,7 +2593,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2516,7 +2603,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xILKOk</p></td>
 <td><div class="line-block">
@@ -2526,7 +2613,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):LOGGER</p></td>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).PG.xLog</p></td>
 <td><div class="line-block">
@@ -2536,7 +2623,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xLog</p></td>
 <td><div class="line-block">
@@ -2546,7 +2633,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).PG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -2554,7 +2641,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).PG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -2564,7 +2651,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rPRESS</p></td>
 <td><div class="line-block">
@@ -2576,7 +2663,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRO_SP</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2589,7 +2676,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2602,7 +2689,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):SP_HYS</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2615,7 +2702,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2628,7 +2715,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):STATE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>$(SYMBOL).PG.eState</p></td>
 <td><div class="line-block">
@@ -2637,14 +2724,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):VAC_SP</p></td>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -2657,7 +2744,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -2700,7 +2787,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).IG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -2710,7 +2825,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).IG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -2720,7 +2835,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).IG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -2728,7 +2843,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_SW</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2738,7 +2853,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -2748,7 +2863,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).IG.xILKOk</p></td>
 <td><div class="line-block">
@@ -2758,7 +2873,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):LOGGER</p></td>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).IG.xLog</p></td>
 <td><div class="line-block">
@@ -2768,7 +2883,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).IG.xLog</p></td>
 <td><div class="line-block">
@@ -2778,7 +2893,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).IG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -2786,7 +2901,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).IG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -2796,7 +2911,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).IG.rPRESS</p></td>
 <td><div class="line-block">
@@ -2808,7 +2923,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRO_SP</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2821,7 +2936,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -2834,7 +2949,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):SP_HYS</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2847,7 +2962,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -2860,7 +2975,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):STATE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>$(SYMBOL).IG.eState</p></td>
 <td><div class="line-block">
@@ -2869,14 +2984,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):VAC_SP</p></td>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -2889,7 +3004,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -3671,16 +3786,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PulseEnergy_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>This beam parameter is non-op for now.</p></td>
-<td><div class="line-block">
-<div class="line">field: EGU mJ</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX):Rate_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):Rate_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).nRate</p></td>
 <td><div class="line-block">
@@ -3689,19 +3795,13 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):ST_RBV</p></td>
-<td><p>waveform</p></td>
-<td><p>$(SYMBOL).aStoppers</p></td>
-<td><div class="line-block">
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
 <tr class="row-odd"><td><p>$(PREFIX):Transmission_RBV</p></td>
-<td><p>longin</p></td>
+<td><p>ai</p></td>
 <td><p>$(SYMBOL).nTran</p></td>
 <td><div class="line-block">
-<div class="line">field: EGU %</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -3709,6 +3809,14 @@
 <tr class="row-even"><td><p>$(PREFIX):Valid_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).xValid</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>$(SYMBOL).aVetoDevices</p></td>
 <td><div class="line-block">
 <div class="line">io: input</div>
 </div>
@@ -4652,7 +4760,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -4662,7 +4798,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -4672,7 +4808,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -4680,7 +4816,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):HV_SW</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).xHV_SW</p></td>
 <td><div class="line-block">
@@ -4690,7 +4826,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).xHV_SW</p></td>
 <td><div class="line-block">
@@ -4700,7 +4836,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).xILKOk</p></td>
 <td><div class="line-block">
@@ -4710,7 +4846,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):LOGGER</p></td>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>$(SYMBOL).xLog</p></td>
 <td><div class="line-block">
@@ -4720,7 +4856,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).xLog</p></td>
 <td><div class="line-block">
@@ -4730,7 +4866,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>$(SYMBOL).i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -4738,7 +4874,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>$(SYMBOL).xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -4748,7 +4884,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).rPRESS</p></td>
 <td><div class="line-block">
@@ -4760,7 +4896,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):PRO_SP</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).rPRO_SP</p></td>
 <td><div class="line-block">
@@ -4773,7 +4909,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).rPRO_SP</p></td>
 <td><div class="line-block">
@@ -4786,7 +4922,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):SP_HYS</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).rHYS_PR</p></td>
 <td><div class="line-block">
@@ -4799,7 +4935,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).rHYS_PR</p></td>
 <td><div class="line-block">
@@ -4812,7 +4948,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):STATE_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>$(SYMBOL).eState</p></td>
 <td><div class="line-block">
@@ -4821,14 +4957,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX):VAC_SP</p></td>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>$(SYMBOL).rVAC_SP</p></td>
 <td><div class="line-block">
@@ -4841,7 +4977,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>$(SYMBOL).rVAC_SP</p></td>
 <td><div class="line-block">
@@ -5730,17 +5866,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:PulseEnergy_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>This beam parameter is non-op for now.</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU mJ</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Rate_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:Rate_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>0-rate beam constant</p></td>
 <td><div class="line-block">
@@ -5750,21 +5876,14 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)0RateBeamCnst:ST_RBV</p></td>
-<td><p>waveform</p></td>
-<td><p>0-rate beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
 <tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Transmission_RBV</p></td>
-<td><p>longin</p></td>
+<td><p>ai</p></td>
 <td><p>0-rate beam constant</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU %</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -5778,7 +5897,16 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)AccumulatedFastFaults_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)0RateBeamCnst:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>0-rate beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)AccumulatedFastFaults_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>PMPS_GVL.AccumulatedFF</p></td>
 <td><div class="line-block">
@@ -5786,7 +5914,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Cohort_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Cohort_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>Cohort inc on each arb cycle</p></td>
 <td><div class="line-block">
@@ -5795,22 +5923,12 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:PhotonEnergyRanges_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>PMPS_GVL.stCurrentBeamParameters.neVRange</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
 <div class="line">field: EGU eV</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX)CurrentBP:PulseEnergy_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>This beam parameter is non-op for now.</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU mJ</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -5825,28 +5943,30 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)CurrentBP:ST_RBV</p></td>
-<td><p>waveform</p></td>
-<td><p>PMPS_GVL.stCurrentBeamParameters.aStoppers</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Transmission_RBV</p></td>
-<td><p>longin</p></td>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Transmission_RBV</p></td>
+<td><p>ai</p></td>
 <td><p>PMPS_GVL.stCurrentBeamParameters.nTran</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU %</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Valid_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)CurrentBP:Valid_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>PMPS_GVL.stCurrentBeamParameters.xValid</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)CurrentBP:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PMPS_GVL.stCurrentBeamParameters.aVetoDevices</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
 <div class="line">io: input</div>
@@ -5892,17 +6012,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:PulseEnergy_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>This beam parameter is non-op for now.</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU mJ</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Rate_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:Rate_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>Full beam constant</p></td>
 <td><div class="line-block">
@@ -5912,21 +6022,14 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)FullBeamCnst:ST_RBV</p></td>
-<td><p>waveform</p></td>
-<td><p>Full beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
 <tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Transmission_RBV</p></td>
-<td><p>longin</p></td>
+<td><p>ai</p></td>
 <td><p>Full beam constant</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU %</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -5940,7 +6043,16 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)K:eVRangeCnst_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)FullBeamCnst:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Full beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)K:eVRangeCnst_RBV</p></td>
 <td><p>waveform</p></td>
 <td><p>eV Range constants</p></td>
 <td><div class="line-block">
@@ -5950,7 +6062,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)L:eVRangeCnst_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)L:eVRangeCnst_RBV</p></td>
 <td><p>waveform</p></td>
 <td><p>eV Range constants</p></td>
 <td><div class="line-block">
@@ -5960,7 +6072,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:GlobalLogTrickleTrip_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>Tripped by overall log count</p></td>
 <td><div class="line-block">
@@ -5968,7 +6080,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogHost</p></td>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogHost</p></td>
 <td><p>waveform</p></td>
 <td><p>The log host IP address</p></td>
 <td><div class="line-block">
@@ -5976,7 +6088,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogHost_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogHost_RBV</p></td>
 <td><p>waveform</p></td>
 <td><p>The log host IP address</p></td>
 <td><div class="line-block">
@@ -5984,7 +6096,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogMessageCount_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogMessageCount_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>Total log messages on the last cycle</p></td>
 <td><div class="line-block">
@@ -5992,7 +6104,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogPort</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogPort</p></td>
 <td><p>longout</p></td>
 <td><p>The log host UDP port</p></td>
 <td><div class="line-block">
@@ -6000,7 +6112,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)LCLSGeneral:LogPort_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)LCLSGeneral:LogPort_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>The log host UDP port</p></td>
 <td><div class="line-block">
@@ -6008,7 +6120,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Cohort_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Cohort_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>Cohort inc on each arb cycle</p></td>
 <td><div class="line-block">
@@ -6017,22 +6129,12 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:PhotonEnergyRanges_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>PMPS_GVL.stRequestedBeamParameters.neVRange</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
 <div class="line">field: EGU eV</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX)RequestedBP:PulseEnergy_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>This beam parameter is non-op for now.</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU mJ</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -6047,28 +6149,30 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)RequestedBP:ST_RBV</p></td>
-<td><p>waveform</p></td>
-<td><p>PMPS_GVL.stRequestedBeamParameters.aStoppers</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Transmission_RBV</p></td>
-<td><p>longin</p></td>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Transmission_RBV</p></td>
+<td><p>ai</p></td>
 <td><p>PMPS_GVL.stRequestedBeamParameters.nTran</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU %</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Valid_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)RequestedBP:Valid_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>PMPS_GVL.stRequestedBeamParameters.xValid</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX)RequestedBP:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>PMPS_GVL.stRequestedBeamParameters.aVetoDevices</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
 <div class="line">io: input</div>
@@ -6094,17 +6198,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)SafeBeamCnst:PulseEnergy_RBV</p></td>
-<td><p>ai</p></td>
-<td><p>This beam parameter is non-op for now.</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU mJ</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>$(PREFIX)SafeBeamCnst:Rate_RBV</p></td>
+<tr class="row-odd"><td><p>$(PREFIX)SafeBeamCnst:Rate_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>Safe beam constant</p></td>
 <td><div class="line-block">
@@ -6114,21 +6208,14 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>$(PREFIX)SafeBeamCnst:ST_RBV</p></td>
-<td><p>waveform</p></td>
-<td><p>Safe beam constant</p></td>
-<td><div class="line-block">
-<div class="line">archive: 1s monitor</div>
-<div class="line">io: input</div>
-</div>
-</td>
-</tr>
 <tr class="row-even"><td><p>$(PREFIX)SafeBeamCnst:Transmission_RBV</p></td>
-<td><p>longin</p></td>
+<td><p>ai</p></td>
 <td><p>Safe beam constant</p></td>
 <td><div class="line-block">
 <div class="line">archive: 1s monitor</div>
-<div class="line">field: EGU %</div>
+<div class="line">field: HOPR 1</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -6142,7 +6229,16 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>$(PREFIX)SuccessfulPreemptions_RBV</p></td>
+<tr class="row-even"><td><p>$(PREFIX)SafeBeamCnst:Veto_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>Safe beam constant</p></td>
+<td><div class="line-block">
+<div class="line">archive: 1s monitor</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX)SuccessfulPreemptions_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>PMPS_GVL.SuccessfulPreemption</p></td>
 <td><div class="line-block">
@@ -6150,7 +6246,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:AUTO_VVC_50</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:AUTO_VVC_50</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_VARIABLES.bAutoVVC50</p></td>
 <td><div class="line-block">
@@ -6158,7 +6254,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:AUTO_VVC_50_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:AUTO_VVC_50_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_VARIABLES.bAutoVVC50</p></td>
 <td><div class="line-block">
@@ -6166,7 +6262,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:ERROR</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:ERROR</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.bError</p></td>
 <td><div class="line-block">
@@ -6176,7 +6272,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:ERROR_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:ERROR_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.bError</p></td>
 <td><div class="line-block">
@@ -6186,7 +6282,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:GO</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:GO</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.bGo</p></td>
 <td><div class="line-block">
@@ -6196,7 +6292,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:GO_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:GO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.bGo</p></td>
 <td><div class="line-block">
@@ -6206,7 +6302,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:Kp2</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:Kp2</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.fKp2</p></td>
 <td><div class="line-block">
@@ -6214,7 +6310,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:Kp2_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:Kp2_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.fKp2</p></td>
 <td><div class="line-block">
@@ -6222,7 +6318,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:RESET</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:RESET</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.bReset</p></td>
 <td><div class="line-block">
@@ -6232,7 +6328,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:RESET_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:RESET_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.bReset</p></td>
 <td><div class="line-block">
@@ -6242,7 +6338,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.fSetpointValue</p></td>
 <td><div class="line-block">
@@ -6254,7 +6350,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.fSetpointValue</p></td>
 <td><div class="line-block">
@@ -6266,7 +6362,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:Tn1</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:Tn1</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.fTn1</p></td>
 <td><div class="line-block">
@@ -6274,7 +6370,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:Tn1_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:Tn1_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.fTn1</p></td>
 <td><div class="line-block">
@@ -6282,7 +6378,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:Tn2</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:Tn2</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.fTn2</p></td>
 <td><div class="line-block">
@@ -6290,7 +6386,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:CNTRL:Tn2_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:CNTRL:Tn2_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.fTn2</p></td>
 <td><div class="line-block">
@@ -6298,7 +6394,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GAS_TYPE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GAS_TYPE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_VARIABLES.SelectedGas</p></td>
 <td><div class="line-block">
@@ -6312,12 +6408,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:10:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:10:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_10.IG.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:10:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_10.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:10:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_10.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:10:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_10.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -6491,9 +6615,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -6534,7 +6658,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:DISC_ACTIVE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -6544,7 +6696,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:HV_DIS_DO_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -6554,7 +6706,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:HV_ON_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -6562,7 +6714,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:HV_SW</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -6572,7 +6724,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:HV_SW_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -6582,7 +6734,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:ILK_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xILKOk</p></td>
 <td><div class="line-block">
@@ -6592,7 +6744,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:LOGGER</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xLog</p></td>
 <td><div class="line-block">
@@ -6602,7 +6754,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:LOGGER_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xLog</p></td>
 <td><div class="line-block">
@@ -6612,7 +6764,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:PRESS_AI_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -6620,7 +6772,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:PRESS_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -6630,7 +6782,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:PRESS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.rPRESS</p></td>
 <td><div class="line-block">
@@ -6642,7 +6794,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:PRO_SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -6655,7 +6807,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:PRO_SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -6668,7 +6820,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:SP_HYS</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -6681,7 +6833,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:SP_HYS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -6694,7 +6846,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:STATE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.eState</p></td>
 <td><div class="line-block">
@@ -6703,14 +6855,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:VAC_SP</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -6723,7 +6875,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:20:VAC_SP_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:20:VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_20.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -6736,12 +6888,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:30:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:30:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_30.IG.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:30:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_30.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:30:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_30.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:30:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_30.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -6915,9 +7095,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -6958,7 +7138,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:DISC_ACTIVE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -6968,7 +7176,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:HV_DIS_DO_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -6978,7 +7186,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:HV_ON_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -6986,7 +7194,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:HV_SW</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -6996,7 +7204,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:HV_SW_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -7006,7 +7214,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:ILK_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xILKOk</p></td>
 <td><div class="line-block">
@@ -7016,7 +7224,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:LOGGER</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xLog</p></td>
 <td><div class="line-block">
@@ -7026,7 +7234,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:LOGGER_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xLog</p></td>
 <td><div class="line-block">
@@ -7036,7 +7244,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:PRESS_AI_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -7044,7 +7252,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:PRESS_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -7054,7 +7262,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:PRESS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.rPRESS</p></td>
 <td><div class="line-block">
@@ -7066,7 +7274,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:PRO_SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -7079,7 +7287,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:PRO_SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -7092,7 +7300,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:SP_HYS</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -7105,7 +7313,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:SP_HYS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -7118,7 +7326,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:STATE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.eState</p></td>
 <td><div class="line-block">
@@ -7127,14 +7335,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:VAC_SP</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -7147,7 +7355,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:40:VAC_SP_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:40:VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_40.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -7160,12 +7368,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:50:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:50:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_50.IG.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:50:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_50.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:50:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_50.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:50:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_50.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -7339,9 +7575,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -7382,7 +7618,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:DISC_ACTIVE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -7392,7 +7656,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:HV_DIS_DO_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -7402,7 +7666,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:HV_ON_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -7410,7 +7674,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:HV_SW</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -7420,7 +7684,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:HV_SW_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -7430,7 +7694,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:ILK_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xILKOk</p></td>
 <td><div class="line-block">
@@ -7440,7 +7704,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:LOGGER</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xLog</p></td>
 <td><div class="line-block">
@@ -7450,7 +7714,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:LOGGER_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xLog</p></td>
 <td><div class="line-block">
@@ -7460,7 +7724,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:PRESS_AI_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -7468,7 +7732,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:PRESS_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -7478,7 +7742,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:PRESS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.rPRESS</p></td>
 <td><div class="line-block">
@@ -7490,7 +7754,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:PRO_SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -7503,7 +7767,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:PRO_SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -7516,7 +7780,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:SP_HYS</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -7529,7 +7793,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:SP_HYS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -7542,7 +7806,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:STATE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.eState</p></td>
 <td><div class="line-block">
@@ -7551,14 +7815,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:VAC_SP</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -7571,7 +7835,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:60:VAC_SP_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:60:VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_60.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -7584,12 +7848,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:70:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:70:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_70.IG.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:70:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_70.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:70:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_70.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:70:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_70.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -7763,9 +8055,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -7806,7 +8098,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:DISC_ACTIVE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -7816,7 +8136,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:HV_DIS_DO_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -7826,7 +8146,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:HV_ON_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -7834,7 +8154,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:HV_SW</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -7844,7 +8164,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:HV_SW_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -7854,7 +8174,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:ILK_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xILKOk</p></td>
 <td><div class="line-block">
@@ -7864,7 +8184,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:LOGGER</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xLog</p></td>
 <td><div class="line-block">
@@ -7874,7 +8194,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:LOGGER_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xLog</p></td>
 <td><div class="line-block">
@@ -7884,7 +8204,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:PRESS_AI_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -7892,7 +8212,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:PRESS_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -7902,7 +8222,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:PRESS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.rPRESS</p></td>
 <td><div class="line-block">
@@ -7914,7 +8234,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:PRO_SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -7927,7 +8247,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:PRO_SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -7940,7 +8260,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:SP_HYS</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -7953,7 +8273,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:SP_HYS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -7966,7 +8286,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:STATE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.eState</p></td>
 <td><div class="line-block">
@@ -7975,14 +8295,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:VAC_SP</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -7995,7 +8315,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:80:VAC_SP_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:80:VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_80.IG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -8008,12 +8328,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCC:90:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:90:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_90.IG.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:90:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_90.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCC:90:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_90.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCC:90:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GCC_90.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -8187,9 +8535,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -8230,7 +8578,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:DISC_ACTIVE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.GCM_80.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.GCM_80.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.GCM_80.PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -8240,7 +8616,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:HV_DIS_DO_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -8250,7 +8626,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:HV_ON_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -8258,7 +8634,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:HV_SW</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.GCM_80.PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -8268,7 +8644,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:HV_SW_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -8278,7 +8654,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:ILK_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.xILKOk</p></td>
 <td><div class="line-block">
@@ -8288,7 +8664,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:LOGGER</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.GCM_80.PG.xLog</p></td>
 <td><div class="line-block">
@@ -8298,7 +8674,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:LOGGER_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.xLog</p></td>
 <td><div class="line-block">
@@ -8308,7 +8684,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:PRESS_AI_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>GVL_Devices.GCM_80.PG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -8316,7 +8692,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:PRESS_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -8326,7 +8702,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:PRESS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GCM_80.PG.rPRESS</p></td>
 <td><div class="line-block">
@@ -8338,7 +8714,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:PRO_SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.GCM_80.PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -8351,7 +8727,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:PRO_SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GCM_80.PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -8364,7 +8740,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:SP_HYS</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.GCM_80.PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -8377,7 +8753,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:SP_HYS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GCM_80.PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -8390,7 +8766,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:STATE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_Devices.GCM_80.PG.eState</p></td>
 <td><div class="line-block">
@@ -8399,14 +8775,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:VAC_SP</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.GCM_80.PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -8419,7 +8795,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GCM:80:VAC_SP_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCM:80:VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GCM_80.PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -8432,12 +8808,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GCP:50:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCP:50:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GCP.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCP:50:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.GCP.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GCP:50:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.GCP.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GCP:50:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.GCP.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -8611,9 +9015,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -8654,7 +9058,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:DISC_ACTIVE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.GHC_50.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.GHC_50.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_Devices.GHC_50.PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -8664,7 +9096,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:HV_DIS_DO_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -8674,7 +9106,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:HV_ON_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -8682,7 +9114,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:HV_SW</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.GHC_50.PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -8692,7 +9124,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:HV_SW_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -8702,7 +9134,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:ILK_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.xILKOk</p></td>
 <td><div class="line-block">
@@ -8712,7 +9144,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:LOGGER</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.GHC_50.PG.xLog</p></td>
 <td><div class="line-block">
@@ -8722,7 +9154,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:LOGGER_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.xLog</p></td>
 <td><div class="line-block">
@@ -8732,7 +9164,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:PRESS_AI_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>GVL_Devices.GHC_50.PG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -8740,7 +9172,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:PRESS_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -8750,7 +9182,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:PRESS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GHC_50.PG.rPRESS</p></td>
 <td><div class="line-block">
@@ -8762,7 +9194,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:PRO_SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.GHC_50.PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -8775,7 +9207,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:PRO_SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GHC_50.PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -8788,7 +9220,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:SP_HYS</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.GHC_50.PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -8801,7 +9233,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:SP_HYS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GHC_50.PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -8814,7 +9246,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:STATE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_Devices.GHC_50.PG.eState</p></td>
 <td><div class="line-block">
@@ -8823,14 +9255,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:VAC_SP</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_Devices.GHC_50.PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -8843,7 +9275,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GHC:50:VAC_SP_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GHC:50:VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_Devices.GHC_50.PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -8856,12 +9288,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:10:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:10:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_10.PG.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:10:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_10.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:10:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_10.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:10:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_10.PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -9035,9 +9495,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
@@ -9078,7 +9538,35 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:DISC_ACTIVE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:DISC_ACTIVE_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.i_xDisc_Active</p></td>
 <td><div class="line-block">
@@ -9088,7 +9576,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:HV_DIS_DO_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:HV_DIS_DO_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.q_xHV_DIS</p></td>
 <td><div class="line-block">
@@ -9098,7 +9586,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:HV_ON_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:HV_ON_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.i_xHV_ON</p></td>
 <td><div class="line-block">
@@ -9106,7 +9594,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:HV_SW</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:HV_SW</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -9116,7 +9604,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:HV_SW_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:HV_SW_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xHV_SW</p></td>
 <td><div class="line-block">
@@ -9126,7 +9614,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:ILK_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:ILK_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xILKOk</p></td>
 <td><div class="line-block">
@@ -9136,7 +9624,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:LOGGER</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:LOGGER</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xLog</p></td>
 <td><div class="line-block">
@@ -9146,7 +9634,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:LOGGER_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:LOGGER_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xLog</p></td>
 <td><div class="line-block">
@@ -9156,7 +9644,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:PRESS_AI_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:PRESS_AI_RBV</p></td>
 <td><p>longin</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.i_iPRESS_R</p></td>
 <td><div class="line-block">
@@ -9164,7 +9652,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:PRESS_OK_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:PRESS_OK_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.xPRESS_OK</p></td>
 <td><div class="line-block">
@@ -9174,7 +9662,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:PRESS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:PRESS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.rPRESS</p></td>
 <td><div class="line-block">
@@ -9186,7 +9674,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:PRO_SP</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:PRO_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -9199,7 +9687,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:PRO_SP_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:PRO_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.rPRO_SP</p></td>
 <td><div class="line-block">
@@ -9212,7 +9700,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:SP_HYS</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:SP_HYS</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -9225,7 +9713,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:SP_HYS_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:SP_HYS_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.rHYS_PR</p></td>
 <td><div class="line-block">
@@ -9238,7 +9726,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:STATE_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:STATE_RBV</p></td>
 <td><p>mbbi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.eState</p></td>
 <td><div class="line-block">
@@ -9247,14 +9735,14 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:VAC_SP</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:VAC_SP</p></td>
 <td><p>ao</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -9267,7 +9755,7 @@
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:50:VAC_SP_RBV</p></td>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:50:VAC_SP_RBV</p></td>
 <td><p>ai</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_50.PG.rVAC_SP</p></td>
 <td><div class="line-block">
@@ -9280,12 +9768,40 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>EM2K0:XGMD:GPI:90:AT_VAC_RBV</p></td>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:90:AT_VAC_RBV</p></td>
 <td><p>bi</p></td>
 <td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_90.PG.xAT_VAC</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM TRUE</div>
 <div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:90:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_90.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>EM2K0:XGMD:GPI:90:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_90.PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>EM2K0:XGMD:GPI:90:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_GMD.fb_EM2K0_XGMD_GPI_90.PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
 <div class="line">io: input</div>
 </div>
 </td>
@@ -9459,9 +9975,9 @@
 <div class="line">field: ONST GaugeDisconnected</div>
 <div class="line">field: SVST ValidLo</div>
 <div class="line">field: SXST ValidHi</div>
-<div class="line">field: THST Off</div>
+<div class="line">field: THST PressInvalid</div>
 <div class="line">field: TWST OoR</div>
-<div class="line">field: ZRST PressInvalid</div>
+<div class="line">field: ZRST Off</div>
 <div class="line">io: input</div>
 </div>
 </td>
