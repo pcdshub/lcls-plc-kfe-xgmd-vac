@@ -11,6 +11,7 @@ END_VAR
 
 fb_EM2K0_XGMD_GPI_10(PG=>);
 fb_EM2K0_XGMD_GPI_50(PG=>);
+fb_EM2K0_XGMD_GPI_80(PG=>);
 fb_EM2K0_XGMD_GPI_90(PG=>);
 
 // FB_PTM_TwisTorr
@@ -159,6 +160,8 @@ fb_EM2K0_XGMD_GCC_90(PG := fb_EM2K0_XGMD_GPI_50.PG);
 
 // FB_EbaraEVA
 fb_EM2K0_XGMD_PRT_50(i_xExtIlkOK := TRUE);
+fb_EM2K0_XGMD_PRT_80(i_xExtIlkOK := TRUE);
+
 
 // FB_VVC
 IF bAutoVVC50 THEN
@@ -184,6 +187,9 @@ fb_EM2K0_XGMD_VVC_50(
 // Roughing valve
 IF( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ) OR ( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING ) THEN fb_EM1K0_GMD_VRO_50.M_Open(TRUE); END_IF
 fb_EM1K0_GMD_VRO_50(i_xExtILK_OK:= (fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING  OR  fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ), i_xOverrideMode:= , iq_stValve=> );
+
+IF( fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpSTARTING ) OR ( fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpRUNNING ) THEN fb_EM1K0_GMD_VRO_80.M_Open(TRUE); END_IF
+fb_EM1K0_GMD_VRO_80(i_xExtILK_OK:= (fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpRUNNING  OR  fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpSTARTING ), i_xOverrideMode:= , iq_stValve=> );
 ]]></ST>
     </Implementation>
   </POU>

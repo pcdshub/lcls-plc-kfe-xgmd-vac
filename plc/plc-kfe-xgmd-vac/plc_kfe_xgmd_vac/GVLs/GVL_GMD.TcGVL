@@ -11,7 +11,10 @@ fb_EM2K0_XGMD_GPI_10 : FB_MKS317;
 fb_EM2K0_XGMD_GPI_50 : FB_MKS317;
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:GPI:90 '}
 fb_EM2K0_XGMD_GPI_90 : FB_MKS317;
-
+//change these TcLinkTo parameters when the Eplan is returned with final terminal placement
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL2212_03_XX]^DOX Control Channel 1^Control^Output'}
+{attribute 'pytmc' := '+ pv: EM2K0:XGMD:GPI:80 '}
+fb_EM2K0_XGMD_GPI_80 : FB_MKS275;
 // FB_PTM_TwisTorr
 
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:PTM:10 '}
@@ -78,6 +81,18 @@ fb_EM2K0_XGMD_GCC_90 : FB_MKS422;
 
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:50 '}
 fb_EM2K0_XGMD_PRT_50 : FB_EbaraEVA;
+//update these links when final placement is updated in EPLAN link all of these
+{*
+q_xRunDo AT%Q* : BOOL; // Output signal
+	q_xRemote At%Q* :BOOL;// Remote/Local Control
+	q_xResetAlarm At%Q* :BOOL;// Remote/Local Control
+	i_xAlarmOK AT%I* :BOOL; // Normally closed Alarm bit
+	i_xIsRun   AT%I*:BOOL; // Input status
+*)
+{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_XX]^DOX Control Channel 1^Control^Output'}
+{attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:80 '}
+fb_EM2K0_XGMD_PRT_80 : FB_EbaraEVA;
+
 
 // FB_VVC
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:VVC:50 '}
@@ -87,6 +102,10 @@ fb_EM2K0_XGMD_VVC_50 : FB_VVC;
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:50 '}
 {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_02_19]^DOX Control Channel 2^Control^Output'}
 fb_EM1K0_GMD_VRO_50 : FB_VVC;
+//update with DRL position of EL2212
+{attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:80 '}
+{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_XX]^DOX Control Channel 1^Control^Output'}
+fb_EM1K0_GMD_VRO_80 : FB_VVC;
 
 END_VAR]]></Declaration>
   </GVL>
