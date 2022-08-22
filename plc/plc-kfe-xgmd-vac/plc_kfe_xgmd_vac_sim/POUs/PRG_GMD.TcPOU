@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_GMD" Id="{ef457147-cd34-43fb-991b-fb6b04ff27a6}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GMD
 VAR
@@ -12,6 +12,7 @@ END_VAR
 fb_EM1K0_GMD_GPI_10(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_10);
 fb_EM1K0_GMD_GPI_40(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_40);
 fb_EM1K0_GMD_GPI_70(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_70);
+fb_EM1K0_GMD_GPI_80(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_80);
 
 // FB_TurboPump
 
@@ -47,9 +48,5 @@ fb_EM1K0_GMD_GCC_70(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GCC_70);
 fb_EM1K0_GMD_PRT_40(stVolInlet := st_RoughingLine, stPump := st_EM1K0_GMD_PRT_40);
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_GMD">
-      <LineId Id="48" Count="38" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

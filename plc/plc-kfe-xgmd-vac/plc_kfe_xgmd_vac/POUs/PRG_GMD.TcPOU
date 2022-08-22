@@ -6,13 +6,14 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[//How to add the new roughing pump here?
 // FB_MKS317
 
 fb_EM2K0_XGMD_GPI_10(PG=>);
 fb_EM2K0_XGMD_GPI_50(PG=>);
 fb_EM2K0_XGMD_GPI_80(PG=>);
 fb_EM2K0_XGMD_GPI_90(PG=>);
+fb_EM2K0_XGMD_GPI_91(PG=>); //same syntax for different model GPI, mks 275?
 
 // FB_PTM_TwisTorr
 
@@ -188,6 +189,7 @@ fb_EM2K0_XGMD_VVC_50(
 IF( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ) OR ( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING ) THEN fb_EM1K0_GMD_VRO_50.M_Open(TRUE); END_IF
 fb_EM1K0_GMD_VRO_50(i_xExtILK_OK:= (fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING  OR  fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ), i_xOverrideMode:= , iq_stValve=> );
 
+//where to add peterpaul pump input
 IF( fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpSTARTING ) OR ( fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpRUNNING ) THEN fb_EM1K0_GMD_VRO_80.M_Open(TRUE); END_IF
 fb_EM1K0_GMD_VRO_80(i_xExtILK_OK:= (fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpRUNNING  OR  fb_EM2K0_XGMD_PRT_80.stPump.eState = pumpSTARTING ), i_xOverrideMode:= , iq_stValve=> );
 ]]></ST>

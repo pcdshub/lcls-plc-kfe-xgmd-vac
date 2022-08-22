@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_GMD" Id="{44d86ec2-2f79-486c-b8f6-d6fec6cbae21}">
     <Declaration><![CDATA[VAR_GLOBAL
 
@@ -19,12 +19,16 @@ st_EM1K0_GMD_VRC_70_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pres
 st_EM1K0_GMD_GPI_10 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_EM1K0_GMD_GPI_40 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 st_EM1K0_GMD_GPI_70 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_EM1K0_GMD_GPI_80 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 
 // FB_MKS_275
 
 fb_EM1K0_GMD_GPI_10 : FB_MKS_275;
 fb_EM1K0_GMD_GPI_40 : FB_MKS_275;
 fb_EM1K0_GMD_GPI_70 : FB_MKS_275;
+//update 
+{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_XX]^DOX Control Channel 1^Control^Output'}
+fb_EM1K0_GMD_GPI_80 : FB_MKS_275;
 
 // ST_MechPump
 

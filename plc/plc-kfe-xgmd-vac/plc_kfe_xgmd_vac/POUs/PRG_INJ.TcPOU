@@ -24,11 +24,13 @@ GHC_50(PG=> );
 // Vent Valves
 // interlock evaluation
 
+//should VVC 87 be added here?
 VVC_80.i_xExtILK_OK := (VCN_50.iq_stVCN.eValveControl = E_VCN.CloseValve) OR( (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO)); // we need to purge all the way up to the VCN
 VVC_81.i_xExtILK_OK :=  (VVC_82.iq_stValve.q_xOPN_DO) AND(NOT VVC_83.iq_stValve.q_xOPN_DO) AND(NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO);// AND (NOT VVC_80.iq_stValve.q_xOPN_DO);
 VVC_82.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND(NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO);// AND (NOT VVC_80.iq_stValve.q_xOPN_DO);
 
-// instanitation
+// instantiation
+//again, should VVC 87 be added here?
 VVC_80(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 VVC_81(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 VVC_82(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
@@ -42,12 +44,14 @@ VVC_83.i_xExtILK_OK := (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stVa
 VVC_84.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive  ;
 VVC_85.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;  
 VVC_86.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive ;
-
+//what should this interlock to, should VVC 86 be included?
+VVC_87.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive ;
 //Gas Panel
 VVC_83(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 VVC_84(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 VVC_85(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 VVC_86(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
+VVC_87(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 
 
 
