@@ -32,6 +32,7 @@
 	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:86 '}
 	VVC_86 : FB_VVC;
     {attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:87 '}
+    {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[ES2004_03_08]^Channel 4^Output'}
 	VVC_87 : FB_VVC;
 //VVC87 KOS-DRL-02
 // ES2004_03_08, pin: 8= 24V, 7=RTN

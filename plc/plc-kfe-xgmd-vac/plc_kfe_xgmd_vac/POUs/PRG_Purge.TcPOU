@@ -109,7 +109,7 @@ CASE step OF
     VVC_87.M_Set_OPN_SW(FALSE);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
 	IF   (NOT VVC_80.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO)  AND (NOT VVC_82.iq_stValve.q_xOPN_DO)
-			AND (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) THEN
+			AND (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_87.iq_stValve.q_xOPN_DO) THEN
 		step:= 20;
 		sMessage:= 'Prep: All valves are closed';
 	END_IF
@@ -142,12 +142,14 @@ CASE step OF
 	if (VGP_50.q_stVGP.pv_xError )then
 		step:=900+step;
 	END_IF
+
 	
-40: // open valve 80 to pump down all the way to the needle valve
-	//VVC_80.M_Set_OPN_SW(TRUE);
-	//if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
-	step:=41;
-	//END_IF
+40: // Run roughing pump
+	IF (FB_EM2K0_XGMD_PRT_100.stPump.eState = pumpRUNNING)
+    THEN step:=41;
+    ELSE step:=900+step;
+         sMessage:= 'roughing pump is not running';
+	END_IF
 	
 41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain period of time or till certain pressure
 	VVC_82.M_Set_OPN_SW(TRUE);
@@ -412,12 +414,11 @@ IF (NOT (fb_EM2K0_XGMD_PRT_50.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPu
 		step:=900;
 END_IF
 
-IF (NOT (fb_EM2K0_XGMD_PRT_80.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
+IF (NOT (fb_EM2K0_XGMD_PRT_100.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
 		step:=900;
 END_IF
 
 //Extra purge interlock
-//should VVC87 be here?
 IF (VVC_83.M_IsOpen()) OR  (VVC_84.M_IsOpen()) OR (VVC_85.M_IsOpen()) OR  (VVC_86.M_IsOpen()) OR  (VVC_87.M_IsOpen()) THEN
 	VCN_50.i_xPurge := FALSE;
 END_IF]]></ST>

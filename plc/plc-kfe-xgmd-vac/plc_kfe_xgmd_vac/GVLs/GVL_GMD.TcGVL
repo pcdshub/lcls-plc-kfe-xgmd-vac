@@ -17,9 +17,9 @@ fb_EM2K0_XGMD_GPI_90 : FB_MKS317;
 //EL3174_03_12, pin: 3=AOUT?,7=SGND?
 //EL9070_03_11, pin: 5=SHD
 //EL9184_03_10, pin: 4= +24V DC, 9=GND 
-{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL3174_03_12]^DOX Control Channel 3^Control^Output'}
-{attribute 'pytmc' := '+ pv: EM2K0:XGMD:GPI:91 '}
-fb_EM2K0_XGMD_GPI_91 : FB_MKS275;
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL3174_03_12]^AI Standard Channel 3^Value'}
+{attribute 'pytmc' := '+ pv: EM2K0:XGMD:GPI:100 '}
+fb_EM2K0_XGMD_GPI_100 : FB_MKS275;
 // FB_PTM_TwisTorr
 
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:PTM:10 '}
@@ -92,17 +92,16 @@ fb_EM2K0_XGMD_PRT_50 : FB_EbaraEVA;
 //K0S2-DRL-01
 //EL2794_02_24, pin: 1=REMOT+,2=REMOT- ,5=RSET+, 6=RSET-,4=RUN+,3=RUN-
 //EL1004_02_25, pin: 1=STAT+, 2=STAT-, 5=ALRMNC+, 6 = ALRMNC-
-{*
-q_xRunDo AT%Q* : BOOL; // Output signal
-	q_xRemote At%Q* :BOOL;// Remote/Local Control
-	q_xResetAlarm At%Q* :BOOL;// Remote/Local Control
-	i_xAlarmOK AT%I* :BOOL; // Normally closed Alarm bit
-	i_xIsRun   AT%I*:BOOL; // Input status
-*)
-{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2794_02_24]^DOX Control Channel 4^Control^Output'}
-{attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:80 '}
-fb_EM2K0_XGMD_PRT_80 : FB_EbaraEVA;
+//switch to channel 3 of EL1004_02_25 for status of PRT:100
+//switch to channel 4 of " "" for alarm of PRT:100
 
+{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[EL2794_02_24]^Channel 3^Output;
+    .q_xRemote	:=	TIIB[EL2794_02_24]^Channel 1^Output;
+    .q_xResetAlarm	:=	TIIB[EL2794_02_24]^Channel 2^Output;
+    .i_xAlarmOK	:=	TIIB[EL2794_02_25]^Channel 4^Input;
+    .i_xIsRun	:=	TIIB[EL1004_02_25]^Channel 3^Input'}
+{attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:100 '}
+fb_EM2K0_XGMD_PRT_100 : FB_EbaraEVA;
 
 // FB_VVC
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:VVC:50 '}
@@ -115,9 +114,9 @@ fb_EM1K0_GMD_VRO_50 : FB_VVC;
 //peterpaul 51z0158TCCM
 //KOS2_DRL-02
 //EL2212_03_13 pin: 1 = +?, 2= -? 
-{attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:80 '}
+{attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:100 '}
 {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_13]^DOX Control Channel 1^Control^Output'}
-fb_EM1K0_GMD_VRO_80 : FB_VVC;
+fb_EM1K0_GMD_VRO_100 : FB_VVC;
 
 END_VAR]]></Declaration>
   </GVL>
