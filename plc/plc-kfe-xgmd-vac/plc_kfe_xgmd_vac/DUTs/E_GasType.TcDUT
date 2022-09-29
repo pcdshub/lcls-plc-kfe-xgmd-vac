@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <DUT Name="E_GasType" Id="{532e7f83-eaf3-47a9-aec9-3260d1893fee}">
     <Declaration><![CDATA[
 TYPE E_GasType :
@@ -9,7 +9,8 @@ TYPE E_GasType :
 	Neon,
 	Argon,
 	Krypton,
-	Xenon
+	Xenon,
+    Nitrogen
 
 );
 END_TYPE

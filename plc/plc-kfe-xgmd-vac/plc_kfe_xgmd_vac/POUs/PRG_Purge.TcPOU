@@ -69,7 +69,7 @@ END_VAR
       <ST><![CDATA[(* 
 PURGE CYCLE
 The purge cycle consists of the following steps;
-1. Close all gas valves 83-86 and Close Needle valve and switch off PID control
+1. Close all gas valves 83-87 and Close Needle valve and switch off PID control
 2. Wait till needle valve closes
 3. Close VGP, to protect the Detector chamber in case a pressure spike on the roughing line stops the turbo.
 4. PUMP DOWN MANIFOLD: Open VVC-80  then Open VVC82 for certain pressure on the baratron
@@ -79,7 +79,7 @@ The purge cycle consists of the following steps;
 - this step is done gradually to avoid sending pressure spike into the detector
 7. Close needle valve
 8. Release VGP:40
-
+Q: adding vvc 87 shouldn't add a new case, correct?
 *)
 
 
@@ -106,9 +106,10 @@ CASE step OF
 	VVC_84.M_Set_OPN_SW(FALSE);
 	VVC_85.M_Set_OPN_SW(FALSE);
 	VVC_86.M_Set_OPN_SW(FALSE);
+    VVC_87.M_Set_OPN_SW(FALSE);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
 	IF   (NOT VVC_80.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO)  AND (NOT VVC_82.iq_stValve.q_xOPN_DO)
-			AND (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) THEN
+			AND (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_87.iq_stValve.q_xOPN_DO) THEN
 		step:= 20;
 		sMessage:= 'Prep: All valves are closed';
 	END_IF
@@ -141,14 +142,16 @@ CASE step OF
 	if (VGP_50.q_stVGP.pv_xError )then
 		step:=900+step;
 	END_IF
+
 	
-40: // open vavle 80 to pump down all the way to the needle valve
-	//VVC_80.M_Set_OPN_SW(TRUE);
-	//if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
-	step:=41;
-	//END_IF
+40: // Run roughing pump
+	IF (FB_EM2K0_XGMD_PRT_100.stPump.eState = pumpRUNNING)
+    THEN step:=41;
+    ELSE step:=900+step;
+         sMessage:= 'roughing pump is not running';
+	END_IF
 	
-41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain peroid of time or till certain pressure
+41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain period of time or till certain pressure
 	VVC_82.M_Set_OPN_SW(TRUE);
 	sMessage:= 'Pumping down: VVC82 is open';
 	if (VVC_82.iq_stValve.q_xOPN_DO) AND (VVC_82_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP1) THEN
@@ -162,7 +165,7 @@ CASE step OF
 		step:=51;
 	END_IF
 	
-51: // open vavle 80 to pump down all the way to the needle valve
+51: // open valve 80 to pump down all the way to the needle valve
 	VVC_80.M_Set_OPN_SW(TRUE);
 	if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
 	step:=52;
@@ -331,6 +334,7 @@ CASE step OF
 	VVC_84.M_Set_OPN_SW(false);
 	VVC_85.M_Set_OPN_SW(false);
 	VVC_86.M_Set_OPN_SW(false);
+    VVC_87.M_Set_OPN_SW(false);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
 	VCN_50.i_xPurge := FALSE;
 	VGP_50.M_ValveControl(E_VCN.ManualControl); 
@@ -350,6 +354,7 @@ CASE step OF
 	VVC_84.M_Set_OPN_SW(false);
 	VVC_85.M_Set_OPN_SW(false);
 	VVC_86.M_Set_OPN_SW(false);
+    VVC_87.M_Set_OPN_SW(false);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
 	VCN_50.i_xPurge := FALSE;
 	VGP_50.M_ValveControl(E_VCN.ManualControl); // CLOSE or OPEN to pump down
@@ -378,6 +383,7 @@ if (step >900 ) Then
 	VVC_84.M_Set_OPN_SW(false);
 	VVC_85.M_Set_OPN_SW(false);
 	VVC_86.M_Set_OPN_SW(false);
+    VVC_87.M_Set_OPN_SW(false);
 	VCN_50.M_ValveControl(E_VCN.CloseValve);
 	VGP_50.M_ValveControl(E_VCN.ManualControl);
 	sMessage:= CONCAT('Purge Error: ',TO_STRING(step));
@@ -408,8 +414,12 @@ IF (NOT (fb_EM2K0_XGMD_PRT_50.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPu
 		step:=900;
 END_IF
 
+IF (NOT (fb_EM2K0_XGMD_PRT_100.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
+		step:=900;
+END_IF
+
 //Extra purge interlock
-IF (VVC_83.M_IsOpen()) OR  (VVC_84.M_IsOpen()) OR (VVC_85.M_IsOpen()) OR  (VVC_86.M_IsOpen()) THEN
+IF (VVC_83.M_IsOpen()) OR  (VVC_84.M_IsOpen()) OR (VVC_85.M_IsOpen()) OR  (VVC_86.M_IsOpen()) OR  (VVC_87.M_IsOpen()) THEN
 	VCN_50.i_xPurge := FALSE;
 END_IF]]></ST>
     </Implementation>
