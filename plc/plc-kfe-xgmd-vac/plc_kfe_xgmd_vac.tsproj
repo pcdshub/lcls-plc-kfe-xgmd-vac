@@ -1797,35 +1797,42 @@ External Setpoint Generation:
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.RTD_1.bError</Name>
-							<Type>BOOL</Type>
+							<Name>LCLS_Vacuum.PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.RTD_1.bUnderrange</Name>
-							<Type>BOOL</Type>
+							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
+							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.RTD_1.bOverrange</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.RTD_1.iRaw</Name>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.RTD_2.bError</Name>
-							<Type>BOOL</Type>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.RTD_2.bUnderrange</Name>
-							<Type>BOOL</Type>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_90.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.RTD_2.bOverrange</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.RTD_2.iRaw</Name>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_100.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -2043,6 +2050,69 @@ External Setpoint Generation:
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_20.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_30.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_40.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_60.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_70.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_80.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_90.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK</Name>
 							<Comment>
 								<![CDATA[ Normally closed Alarm bit]]>
@@ -2057,8 +2127,18 @@ External Setpoint Generation:
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
-							<Type>UINT</Type>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xAlarmOK</Name>
+							<Comment>
+								<![CDATA[ Normally closed Alarm bit]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xIsRun</Name>
+							<Comment>
+								<![CDATA[ Input status]]>
+							</Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GHC_50.i_iPRESS_R</Name>
@@ -2128,157 +2208,40 @@ External Setpoint Generation:
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
+							<Name>GVL_Devices.RTD_1.bError</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.RTD_1.bUnderrange</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.RTD_1.bOverrange</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.RTD_1.iRaw</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_50.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
+							<Name>GVL_Devices.RTD_2.bError</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GPI_90.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ input Pressure // Link to analog Input]]>
-							</Comment>
-							<Type>INT</Type>
+							<Name>GVL_Devices.RTD_2.bUnderrange</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
+							<Name>GVL_Devices.RTD_2.bOverrange</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_20.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_30.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_40.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_50.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_60.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_70.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_80.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_90.i_iPRESS_R</Name>
-							<Comment>
-								<![CDATA[ Controls and I/Os]]>
-							</Comment>
+							<Name>GVL_Devices.RTD_2.iRaw</Name>
 							<Type>INT</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
-						<Var>
-							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
-							<Comment>
-								<![CDATA[iResolution: INT :=16;
- 
-IO]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_80.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_81.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_82.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_83.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_84.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_85.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VVC_86.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.hv1.q_HV_DO</Name>
-							<Comment>
-								<![CDATA[outputs]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
 						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_PTM_10.q_RunDO</Name>
 							<Comment>
@@ -2375,45 +2338,6 @@ IO]]>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo</Name>
-							<Comment>
-								<![CDATA[ Output signal]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote</Name>
-							<Comment>
-								<![CDATA[ Remote/Local Control]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
-							<Comment>
-								<![CDATA[ Remote/Local Control]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GMD.fb_EM1K0_GMD_VRO_50.q_xOPN_DO</Name>
-							<Comment>
-								<![CDATA[IO]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.VGP_50.Axis.PlcToNc</Name>
-							<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
-						</Var>
-						<Var>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_10.q_xHV_DIS</Name>
 							<Comment>
 								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
@@ -2473,6 +2397,145 @@ IO]]>
 							<Name>GVL_GMD.fb_EM2K0_XGMD_GCC_90.q_xHV_DIS</Name>
 							<Comment>
 								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[ Output signal]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xRunDo</Name>
+							<Comment>
+								<![CDATA[ Output signal]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xRemote</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xResetAlarm</Name>
+							<Comment>
+								<![CDATA[ Remote/Local Control]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM1K0_GMD_VRO_50.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GMD.fb_EM1K0_GMD_VRO_100.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VCN_50.q_iRawPosition</Name>
+							<Comment>
+								<![CDATA[iResolution: INT :=16;
+ 
+IO]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VGP_50.Axis.PlcToNc</Name>
+							<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_80.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_81.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_82.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_83.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_84.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_85.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_86.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.VVC_87.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.hv1.q_HV_DO</Name>
+							<Comment>
+								<![CDATA[outputs]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -8562,10 +8625,13 @@ Bit1: Value bigger/equal Limit2]]>
 							</Pdo>
 						</EtherCAT>
 					</Box>
+					<Box File="EL1004_02_24.xti" Id="108">
+						<EtherCAT PortABoxInfo="#x01000042"/>
+					</Box>
 					<Box BoxType="9099" Id="67">
-						<Name>EL2794_02_24</Name>
+						<Name>EL2794_02_25</Name>
 						<ImageId>1001</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0aea3052" RevisionNo="#x00100000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof" Desc="EL2794" PortABoxInfo="#x01000042">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0aea3052" RevisionNo="#x00100000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof" Desc="EL2794" PortABoxInfo="#x0100006c">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
@@ -8590,10 +8656,13 @@ Bit1: Value bigger/equal Limit2]]>
 							</Pdo>
 						</EtherCAT>
 					</Box>
+					<Box File="EL2794_02_26.xti" Id="110">
+						<EtherCAT PortABoxInfo="#x01000043"/>
+					</Box>
 					<Box BoxType="9099" Id="68">
-						<Name>EL1004_02_25</Name>
+						<Name>EL1004_02_27</Name>
 						<ImageId>7</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x01000043">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x0100006e">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
@@ -8618,38 +8687,10 @@ Bit1: Value bigger/equal Limit2]]>
 							</Pdo>
 						</EtherCAT>
 					</Box>
-					<Box BoxType="9099" Id="69">
-						<Name>EL2794_02_26</Name>
-						<ImageId>1001</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0aea3052" RevisionNo="#x00100000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof" Desc="EL2794" PortABoxInfo="#x01000044">
-							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
-							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
-							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="Output" Index="#x7000" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-							</Pdo>
-							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="Output" Index="#x7010" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-							</Pdo>
-							<Pdo Name="Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="Output" Index="#x7020" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-							</Pdo>
-							<Pdo Name="Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="0">
-								<Entry Name="Output" Index="#x7030" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-							</Pdo>
-						</EtherCAT>
-					</Box>
 					<Box BoxType="9099" Id="70">
 						<Name>EL9011_02_27</Name>
 						<ImageId>1008</ImageId>
-						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x01000045"/>
+						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x01000044"/>
 					</Box>
 				</Box>
 				<Box BoxType="9099" Id="1">
@@ -9870,10 +9911,13 @@ Bit1: Value smaller than Limit2]]>
 							<CoeProfile ProfileNo="19665801"/>
 						</EtherCAT>
 					</Box>
+					<Box File="EL2212_03_13.xti" Id="122">
+						<EtherCAT PortABoxInfo="#x0100000a"/>
+					</Box>
 					<Box BoxType="9099" Id="17">
-						<Name>EL9011_03_10</Name>
+						<Name>EL9011_03_11</Name>
 						<ImageId>1008</ImageId>
-						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100000a"/>
+						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100007a"/>
 					</Box>
 				</Box>
 				<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="3" MaxSwitchFrames="140"/>
@@ -9994,7 +10038,13 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xClsLS" VarB="Channel 4^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xOpnLS" VarB="Channel 3^Input"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_25">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_24">
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_27">
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xAlarmOK" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun" VarB="Channel 1^Input"/>
 			</OwnerB>
@@ -10061,9 +10111,15 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM1K0_GMD_VRO_50.q_xOPN_DO" VarB="DOX Control Channel 2^Control^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_VVC_50.q_xOPN_DO" VarB="DOX Control Channel 1^Control^Output"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_25">
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo" VarB="Channel 1^Output" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26">
-				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote" VarB="Channel 2^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xRemote" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xResetAlarm" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xRunDo" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2004_03_06">
 				<Link VarA="PlcTask Outputs^GVL_Devices.VVC_80.q_xOPN_DO" VarB="Channel 1^Output"/>
@@ -10076,9 +10132,13 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Outputs^GVL_Devices.VVC_85.q_xOPN_DO" VarB="Channel 2^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.VVC_86.q_xOPN_DO" VarB="Channel 3^Output"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2212_03_13">
+				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM1K0_GMD_VRO_100.q_xOPN_DO" VarB="DOX Control Channel 1^Control^Output" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_09">
 				<Link VarA="PlcTask Inputs^GVL_Devices.GCM_80.i_iPRESS_R" VarB="AI Standard Channel 1^Value"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GHC_50.i_iPRESS_R" VarB="AI Standard Channel 2^Value"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GPI_100.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3202_03_08">
 				<Link VarA="PlcTask Inputs^GVL_Devices.RTD_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true"/>

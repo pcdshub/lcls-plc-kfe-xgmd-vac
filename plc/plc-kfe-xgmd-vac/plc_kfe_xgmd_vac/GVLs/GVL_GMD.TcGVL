@@ -17,8 +17,8 @@ fb_EM2K0_XGMD_GPI_90 : FB_MKS317;
 //EL3174_03_12, pin: 3=AOUT?,7=SGND?
 //EL9070_03_11, pin: 5=SHD
 //EL9184_03_10, pin: 4= +24V DC, 9=GND 
-{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL3174_03_12]^AI Standard Channel 3^Value'}
-{attribute 'pytmc' := '+ pv: EM2K0:XGMD:GPI:100 '}
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL3174_03_09]^AI Standard Channel 3^Value'}
+{attribute 'pytmc' := ' pv: EM2K0:XGMD:GPI:100 '}
 fb_EM2K0_XGMD_GPI_100 : FB_MKS275;
 // FB_PTM_TwisTorr
 
@@ -85,6 +85,11 @@ fb_EM2K0_XGMD_GCC_90 : FB_MKS422;
 // FB_EbaraEVA
 
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:50 '}
+{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[EL2794_02_25]^Channel 1^Output;
+    .q_xRemote	:=	TIIB[EL2794_02_25]^Channel 2^Output;
+    .q_xResetAlarm	:=	TIIB[EL2794_02_25]^Channel 3^Output;
+    .i_xAlarmOK	:=	TIIB[EL1004_02_24]^Channel 3^Input;
+    .i_xIsRun	:=	TIIB[EL1004_02_24]^Channel 1^Input'}
 fb_EM2K0_XGMD_PRT_50 : FB_EbaraEVA;
 
 //update these links when final placement is updated in EPLAN link all of these
@@ -95,11 +100,11 @@ fb_EM2K0_XGMD_PRT_50 : FB_EbaraEVA;
 //switch to channel 3 of EL1004_02_25 for status of PRT:100
 //switch to channel 4 of " "" for alarm of PRT:100
 
-{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[EL2794_02_24]^Channel 3^Output;
-    .q_xRemote	:=	TIIB[EL2794_02_24]^Channel 1^Output;
-    .q_xResetAlarm	:=	TIIB[EL2794_02_24]^Channel 2^Output;
-    .i_xAlarmOK	:=	TIIB[EL2794_02_25]^Channel 4^Input;
-    .i_xIsRun	:=	TIIB[EL1004_02_25]^Channel 3^Input'}
+{attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[EL2794_02_26]^Channel 1^Output;
+    .q_xRemote	:=	TIIB[EL2794_02_26]^Channel 2^Output;
+    .q_xResetAlarm	:=	TIIB[EL2794_02_26]^Channel 3^Output;
+    .i_xAlarmOK	:=	TIIB[EL1004_02_27]^Channel 3^Input;
+    .i_xIsRun	:=	TIIB[EL1004_02_27]^Channel 1^Input'}
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:100 '}
 fb_EM2K0_XGMD_PRT_100 : FB_EbaraEVA;
 
