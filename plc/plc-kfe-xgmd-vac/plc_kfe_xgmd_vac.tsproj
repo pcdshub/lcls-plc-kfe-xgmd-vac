@@ -10032,11 +10032,11 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_VRC_90.i_xOpnLS" VarB="Channel 3^Input"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_24">
-				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_27">
-				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xAlarmOK" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xAlarmOK" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xIsRun" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_04">
