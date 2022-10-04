@@ -17,7 +17,7 @@ fb_EM2K0_XGMD_GPI_90 : FB_MKS317;
 //EL3174_03_12, pin: 3=AOUT?,7=SGND?
 //EL9070_03_11, pin: 5=SHD
 //EL9184_03_10, pin: 4= +24V DC, 9=GND 
-{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL3174_03_09]^AI Standard Channel 3^Value'}
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL3174_03_10]^AI Standard Channel 3^Value'}
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:GPI:100 '}
 fb_EM2K0_XGMD_GPI_100 : FB_MKS275;
 // FB_PTM_TwisTorr
@@ -120,7 +120,7 @@ fb_EM1K0_GMD_VRO_50 : FB_VVC;
 //KOS2_DRL-02
 //EL2212_03_13 pin: 1 = +?, 2= -? 
 {attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:100 '}
-{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_13]^DOX Control Channel 1^Control^Output'}
+{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_09]^DOX Control Channel 1^Control^Output'}
 fb_EM1K0_GMD_VRO_100 : FB_VVC;
 
 END_VAR]]></Declaration>

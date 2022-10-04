@@ -9649,10 +9649,13 @@ Bit1: Value bigger/equal Limit2]]>
 							<CoeProfile ProfileNo="20976521"/>
 						</EtherCAT>
 					</Box>
+					<Box File="EL2212_03_09.xti" Id="123">
+						<EtherCAT PortABoxInfo="#x01000009"/>
+					</Box>
 					<Box BoxType="9099" BoxFlags="#x00000020" Id="10">
-						<Name>EL3174_03_09</Name>
+						<Name>EL3174_03_10</Name>
 						<ImageId>1002</ImageId>
-						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0c663052" RevisionNo="#x00110002" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3174-0002 4Ch. Ana. Input +/-10V, +/-20mA 16 Bit, Isolated Channels" Desc="EL3174-0002" PortABoxInfo="#x01000009">
+						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0c663052" RevisionNo="#x00110002" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3174-0002 4Ch. Ana. Input +/-10V, +/-20mA 16 Bit, Isolated Channels" Desc="EL3174-0002" PortABoxInfo="#x0100007b">
 							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
 							<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -9904,13 +9907,10 @@ Bit1: Value smaller than Limit2]]>
 							<CoeProfile ProfileNo="19665801"/>
 						</EtherCAT>
 					</Box>
-					<Box File="EL2212_03_13.xti" Id="122">
-						<EtherCAT PortABoxInfo="#x0100000a"/>
-					</Box>
 					<Box BoxType="9099" Id="17">
 						<Name>EL9011_03_11</Name>
 						<ImageId>1008</ImageId>
-						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100007a"/>
+						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x0100000a"/>
 					</Box>
 				</Box>
 				<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="3" MaxSwitchFrames="140"/>
@@ -10124,10 +10124,10 @@ Bit1: Value smaller than Limit2]]>
 				<Link VarA="PlcTask Outputs^GVL_Devices.VVC_86.q_xOPN_DO" VarB="Channel 3^Output"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.VVC_87.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2212_03_13">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2212_03_09">
 				<Link VarA="PlcTask Outputs^GVL_GMD.fb_EM1K0_GMD_VRO_100.q_xOPN_DO" VarB="DOX Control Channel 1^Control^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_09">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_10">
 				<Link VarA="PlcTask Inputs^GVL_Devices.GCM_80.i_iPRESS_R" VarB="AI Standard Channel 1^Value"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.GHC_50.i_iPRESS_R" VarB="AI Standard Channel 2^Value"/>
 				<Link VarA="PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GPI_100.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
