@@ -7,6 +7,7 @@ plc
 
     plc_kfe_xgmd_vac_pragmas
     plc_kfe_xgmd_vac_nc
+    plc_kfe_xgmd_vac_ethercat
     plc_kfe_xgmd_vac_boxes
     plc_kfe_xgmd_vac_links
 

@@ -48,8 +48,8 @@ Links
         TINC^NC-Task 1 SAF^Axes^VGP_50, Enc^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL5101_03_03, ENC Control compact^Control^Enable latch extern on positive edge
         TINC^NC-Task 1 SAF^Axes^VGP_50, Enc^Outputs^Out^nCtrl1, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL5101_03_03, ENC Control compact^Control^Set counter
         TINC^NC-Task 1 SAF^Axes^VGP_50, Enc^Outputs^Out^nDataOut1[0], TIID^Device 1 (EtherCAT)^EK1100_03_00^EL5101_03_03, ENC Control compact^Set counter value
-        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_Devices.GCM_80.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_09, AI Standard Channel 1^Value
-        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_Devices.GHC_50.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_09, AI Standard Channel 2^Value
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_Devices.GCM_80.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_10, AI Standard Channel 1^Value
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_Devices.GHC_50.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_10, AI Standard Channel 2^Value
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_Devices.RTD_1.bError, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3202_03_08, RTD Inputs Channel 1^Status^Error
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_Devices.RTD_1.bOverrange, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3202_03_08, RTD Inputs Channel 1^Status^Overrange
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_Devices.RTD_1.bUnderrange, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3202_03_08, RTD Inputs Channel 1^Status^Underrange
@@ -69,10 +69,13 @@ Links
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GCC_80.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL3068_01_06, AI Standard Channel 5^Value
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GCC_90.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL3068_01_10, AI Standard Channel 1^Value
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GPI_10.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL3068_01_05, AI Standard Channel 5^Value
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GPI_100.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL3174_03_10, AI Standard Channel 3^Value
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GPI_50.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL3068_01_10, AI Standard Channel 5^Value
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_GPI_90.i_iPRESS_R, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL3068_01_05, AI Standard Channel 6^Value
-        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_25, Channel 2^Input
-        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_25, Channel 1^Input
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xAlarmOK, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_27, Channel 2^Input
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.i_xIsRun, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_27, Channel 1^Input
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xAlarmOK, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_24, Channel 2^Input
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.i_xIsRun, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1004_02_24, Channel 1^Input
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xAtSpd, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_04, Channel 1^Input
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_10.i_xFault, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_04, Channel 2^Input
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Inputs^GVL_GMD.fb_EM2K0_XGMD_PTM_20.i_xAtSpd, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL1088_02_04, Channel 3^Input
@@ -116,7 +119,9 @@ Links
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_Devices.VVC_84.q_xOPN_DO, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2004_03_07, Channel 1^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_Devices.VVC_85.q_xOPN_DO, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2004_03_07, Channel 2^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_Devices.VVC_86.q_xOPN_DO, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2004_03_07, Channel 3^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_Devices.VVC_87.q_xOPN_DO, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2004_03_07, Channel 4^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_Devices.hv1.q_HV_DO, TIID^Device 1 (EtherCAT)^EK1200_00_00^EL2794_00_07, Channel 1^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM1K0_GMD_VRO_100.q_xOPN_DO, TIID^Device 1 (EtherCAT)^EK1100_03_00^EL2212_03_09, DOX Control Channel 1^Control^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM1K0_GMD_VRO_50.q_xOPN_DO, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2212_02_19, DOX Control Channel 2^Control^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_GCC_10.q_xHV_DIS, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL2794_01_02, Channel 1^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_GCC_20.q_xHV_DIS, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL2794_01_02, Channel 2^Output
@@ -127,8 +132,12 @@ Links
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_GCC_70.q_xHV_DIS, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL2794_01_07, Channel 2^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_GCC_80.q_xHV_DIS, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL2794_01_07, Channel 3^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_GCC_90.q_xHV_DIS, TIID^Device 1 (EtherCAT)^EK1100_01_00^EL2794_01_09, Channel 1^Output
-        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26, Channel 2^Output
-        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26, Channel 1^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xRemote, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26, Channel 2^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xResetAlarm, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26, Channel 3^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_100.q_xRunDo, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_26, Channel 1^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRemote, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_25, Channel 2^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xResetAlarm, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_25, Channel 3^Output
+        TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PRT_50.q_xRunDo, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2794_02_25, Channel 1^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PTM_10.q_RunDO, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_03, Channel 1^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PTM_20.q_RunDO, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_03, Channel 2^Output
         TIPC^plc_kfe_xgmd_vac^plc_kfe_xgmd_vac Instance, PlcTask Outputs^GVL_GMD.fb_EM2K0_XGMD_PTM_30.q_RunDO, TIID^Device 1 (EtherCAT)^EK1100_02_00^EL2004_02_05, Channel 1^Output

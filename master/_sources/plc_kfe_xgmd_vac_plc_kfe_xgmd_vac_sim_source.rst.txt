@@ -31,12 +31,16 @@ GVL_GMD
     st_EM1K0_GMD_GPI_10 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
     st_EM1K0_GMD_GPI_40 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
     st_EM1K0_GMD_GPI_70 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+    st_EM1K0_GMD_GPI_80 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
 
     // FB_MKS_275
 
     fb_EM1K0_GMD_GPI_10 : FB_MKS_275;
     fb_EM1K0_GMD_GPI_40 : FB_MKS_275;
     fb_EM1K0_GMD_GPI_70 : FB_MKS_275;
+    //update 
+    {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_XX]^DOX Control Channel 1^Control^Output'}
+    fb_EM1K0_GMD_GPI_80 : FB_MKS_275;
 
     // ST_MechPump
 
@@ -196,6 +200,7 @@ PRG_GMD
     fb_EM1K0_GMD_GPI_10(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_10);
     fb_EM1K0_GMD_GPI_40(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_40);
     fb_EM1K0_GMD_GPI_70(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_70);
+    fb_EM1K0_GMD_GPI_80(stVolume := st_GMD, stGauge := st_EM1K0_GMD_GPI_80);
 
     // FB_TurboPump
 

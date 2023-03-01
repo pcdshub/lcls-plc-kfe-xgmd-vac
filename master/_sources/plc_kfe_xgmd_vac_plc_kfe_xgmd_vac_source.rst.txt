@@ -16,7 +16,8 @@ E_GasType
     	Neon,
     	Argon,
     	Krypton,
-    	Xenon
+    	Xenon,
+        Nitrogen
 
     );
     END_TYPE
@@ -297,7 +298,11 @@ GVL_Devices
     	VVC_85 : FB_VVC;
     	{attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:86 '}
     	VVC_86 : FB_VVC;
-    	
+        {attribute 'pytmc' :=' pv: EM2K0:XGMD:VVC:87 '}
+        {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2004_03_07]^Channel 4^Output'}
+    	VVC_87 : FB_VVC;
+    //VVC87 KOS-DRL-02
+    // ES2004_03_08, pin: 8= 24V, 7=RTN
     	
     	(* Pressure Control*)
     	{attribute 'pytmc' := ' pv: EM2K0:XGMD:GCP:50 '}
@@ -388,7 +393,15 @@ GVL_GMD
     fb_EM2K0_XGMD_GPI_50 : FB_MKS317;
     {attribute 'pytmc' := ' pv: EM2K0:XGMD:GPI:90 '}
     fb_EM2K0_XGMD_GPI_90 : FB_MKS317;
-
+    //change these TcLinkTo parameters when the Eplan is returned with final terminal placement
+    //for GPI 91, mks 275 convectron gauge, is this approrpriate naming convention.
+    //K0S2-DRL-02
+    //EL3174_03_12, pin: 3=AOUT?,7=SGND?
+    //EL9070_03_11, pin: 5=SHD
+    //EL9184_03_10, pin: 4= +24V DC, 9=GND 
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[EL3174_03_10]^AI Standard Channel 3^Value'}
+    {attribute 'pytmc' := ' pv: EM2K0:XGMD:GPI:100 '}
+    fb_EM2K0_XGMD_GPI_100 : FB_MKS275;
     // FB_PTM_TwisTorr
 
     {attribute 'pytmc' := ' pv: EM2K0:XGMD:PTM:10 '}
@@ -454,16 +467,43 @@ GVL_GMD
     // FB_EbaraEVA
 
     {attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:50 '}
+    {attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[EL2794_02_25]^Channel 1^Output;
+        .q_xRemote	:=	TIIB[EL2794_02_25]^Channel 2^Output;
+        .q_xResetAlarm	:=	TIIB[EL2794_02_25]^Channel 3^Output;
+        .i_xAlarmOK	:=	TIIB[EL1004_02_24]^Channel 2^Input;
+        .i_xIsRun	:=	TIIB[EL1004_02_24]^Channel 1^Input'}
     fb_EM2K0_XGMD_PRT_50 : FB_EbaraEVA;
+
+    //update these links when final placement is updated in EPLAN link all of these
+    //for GPI
+    //K0S2-DRL-01
+    //EL2794_02_24, pin: 1=REMOT+,2=REMOT- ,5=RSET+, 6=RSET-,4=RUN+,3=RUN-
+    //EL1004_02_25, pin: 1=STAT+, 2=STAT-, 5=ALRMNC+, 6 = ALRMNC-
+    //switch to channel 3 of EL1004_02_25 for status of PRT:100
+    //switch to channel 4 of " "" for alarm of PRT:100
+
+    {attribute 'TcLinkTo' := 	'.q_xRunDo	:=	TIIB[EL2794_02_26]^Channel 1^Output;
+        .q_xRemote	:=	TIIB[EL2794_02_26]^Channel 2^Output;
+        .q_xResetAlarm	:=	TIIB[EL2794_02_26]^Channel 3^Output;
+        .i_xAlarmOK	:=	TIIB[EL1004_02_27]^Channel 2^Input;
+        .i_xIsRun	:=	TIIB[EL1004_02_27]^Channel 1^Input'}
+    {attribute 'pytmc' := ' pv: EM2K0:XGMD:PRT:100 '}
+    fb_EM2K0_XGMD_PRT_100 : FB_EbaraEVA;
 
     // FB_VVC
     {attribute 'pytmc' := ' pv: EM2K0:XGMD:VVC:50 '}
     fb_EM2K0_XGMD_VVC_50 : FB_VVC;
-
     //Roughing DC Valves
     {attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:50 '}
     {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_02_19]^DOX Control Channel 2^Control^Output'}
     fb_EM1K0_GMD_VRO_50 : FB_VVC;
+    //update with DRL position of EL2212?
+    //peterpaul 51z0158TCCM
+    //KOS2_DRL-02
+    //EL2212_03_13 pin: 1 = +?, 2= -? 
+    {attribute 'pytmc' := ' pv: EM2K0:XGMD:VRO:100 '}
+    {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[EL2212_03_09]^DOX Control Channel 1^Control^Output'}
+    fb_EM1K0_GMD_VRO_100 : FB_VVC;
 
     END_VAR
 
@@ -796,6 +836,7 @@ FB_VGP
     ACT_MONITOR();
 
     END_FUNCTION_BLOCK
+
     ACTION ACT_AXIS:
     //update the axis status
     AXIS();
@@ -1026,6 +1067,7 @@ FB_VGP
 
     This^.q_stVGP.xBusy := (NOT(q_stVGP.eState = READY) AND (HomeState = H_READY));
     END_ACTION
+
     ACTION ACT_HOME:
     CASE HomeState OF
     	H_READY:
@@ -1193,6 +1235,7 @@ FB_VGP
     	q_stVGP.eState := ERROR;
     END_IF
     END_ACTION
+
     ACTION ACT_INIT:
     {attribute no_check}
     IF bInit THEN
@@ -1266,6 +1309,7 @@ FB_VGP
     	
     END_IF;
     END_ACTION
+
     ACTION ACT_LIN_INTERPOLATION:
     {attribute 'no_check'}
     fbCTRL_LIN_INTERPOLATION(
@@ -1299,6 +1343,7 @@ FB_VGP
     	stParams:= stCTRL_LIN_INTERPOLATION_PARAMS_ENC );
     q_stVGP.i_iPosition := LREAL_TO_REAL(fbCTRL_LIN_INTERPOLATION_ENC.fOut);
     END_ACTION
+
     ACTION ACT_MONITOR:
     IF (This^.q_stVGP.xBusy) THEN
     	rPrevEncoderPosition:= This^.q_stVGP.rEnoder_Position;
@@ -1333,6 +1378,121 @@ FB_VGP
     	  ePrevState := q_stVGP.eValveControl;  
       END_IF
     END_ACTION
+
+    METHOD ConfigEncoder : BOOL
+    VAR_INPUT
+    	EncoderMax: REAl; // Maximum encoder reading from fully closed to fully open
+    	invert: Bool; // Invert Encoder Counting Direction
+    END_VAR
+    VAR
+    	fbWriteParameter1: MC_WriteBoolParameter;
+    END_VAR
+    rOpenPosition := EncoderMax;
+
+    // fEncScaleFactor  -  AxisEncoderScalingFactor
+     
+    // bEncIsInverse  -              
+    if (invert) THEN
+    	fbWriteParameter1.ParameterNumber :=  MC_AxisParameter.AxisEncoderDirectionInverse;
+    	fbWriteParameter1.Value := True;
+    END_IF
+
+    // Write Parameters
+    fbWriteParameter1(
+    	Axis:= Axis , 
+    	Execute:= , 
+    	ParameterNumber:= , 
+    	Value:= , 
+    	Done=> , 
+    	Busy=> , 
+    	Error=> , 
+    	ErrorID=> );
+    END_METHOD
+
+    METHOD M_INIT : BOOL
+    VAR_INPUT
+    	arrTable	: ARRAY[1..14,1..2] OF FLOAT;
+    	arrTable_ENC : ARRAY[1..14,1..2] OF FLOAT;
+    END_VAR
+    (* init array with the interpolation points  *)
+    	(* 	fIn					 |		fOut		*)
+    	arrTable[1,1] := 0;			arrTable[1,2] := 0;
+    	arrTable[2,1] := 5;		    arrTable[2,2] := 135;
+    	arrTable[3,1] := 10;		arrTable[3,2] := 245;
+    	arrTable[4,1] :=  20;	    arrTable[4,2] := 405;
+    	arrTable[5,1] :=  30;	    arrTable[5,2] := 535;
+    	arrTable[6,1] := 40;		arrTable[6,2] := 689;
+    	arrTable[7,1] := 50;		arrTable[7,2] := 830;
+    	arrTable[8,1] := 60;	    arrTable[8,2] := 960;
+    	arrTable[9,1] := 70;	    arrTable[9,2] := 1095;
+    	arrTable[10,1] := 80;		arrTable[10,2] := 1225;
+    	arrTable[11,1] := 90;		arrTable[11,2] := 1415;
+    	arrTable[12,1] := 95;		arrTable[12,2] := 1495;
+    	arrTable[13,1] := 98;		arrTable[13,2] := 1559;
+    	arrTable[14,1] := 100;		arrTable[14,2] := 1645;
+    	
+    	
+    	(* init parameter struct *)
+    	stCTRL_LIN_INTERPOLATION_PARAMS.tCtrlCycleTime					:= T#10ms;
+    	stCTRL_LIN_INTERPOLATION_PARAMS.tTaskCycleTime					:= T#10ms;
+    	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_NumberOfRows		:= INT_TO_UINT(14);
+
+    	(* set the addresses *)
+    	stCTRL_LIN_INTERPOLATION_PARAMS.pDataTable_ADR			:= ADR(arrTable);
+    	stCTRL_LIN_INTERPOLATION_PARAMS.nDataTable_SIZEOF		:= SIZEOF(arrTable);
+
+    	(* set the mode to ACTIVE --> normal operation *)
+    	eMode							:= eCTRL_MODE_ACTIVE;
+    	
+    	
+    	(* init array with the interpolation points  *)
+    	(* 	fIn					 |		fOut		*)
+    	arrTable_ENC[1,1] := 0;			arrTable_ENC[1,2] := 0;
+    	arrTable_ENC[2,1] := 135;		    arrTable_ENC[2,2] := 5;
+    	arrTable_ENC[3,1] := 245;		arrTable_ENC[3,2] := 10;
+    	arrTable_ENC[4,1] :=  405;	    arrTable_ENC[4,2] := 20;
+    	arrTable_ENC[5,1] :=  535;	    arrTable_ENC[5,2] := 30;
+    	arrTable_ENC[6,1] := 689;		arrTable_ENC[6,2] := 40;
+    	arrTable_ENC[7,1] := 830;		arrTable_ENC[7,2] := 50;
+    	arrTable_ENC[8,1] := 960;	    arrTable_ENC[8,2] := 60;
+    	arrTable_ENC[9,1] := 1095;	    arrTable_ENC[9,2] := 70;
+    	arrTable_ENC[10,1] := 1225;		arrTable_ENC[10,2] := 80;
+    	arrTable_ENC[11,1] := 1415;		arrTable_ENC[11,2] := 90;
+    	arrTable_ENC[12,1] := 1495;		arrTable_ENC[12,2] := 95;
+    	arrTable_ENC[13,1] := 1559;		arrTable_ENC[13,2] := 98;
+    	arrTable_ENC[14,1] := 1645;		arrTable_ENC[14,2] := 100;
+    	
+    	
+    	(* init parameter struct *)
+    	stCTRL_LIN_INTERPOLATION_PARAMS_ENC.tCtrlCycleTime					:= T#10ms;
+    	stCTRL_LIN_INTERPOLATION_PARAMS_ENC.tTaskCycleTime					:= T#10ms;
+    	stCTRL_LIN_INTERPOLATION_PARAMS_ENC.nDataTable_NumberOfRows		:= INT_TO_UINT(14);
+
+    	(* set the addresses *)
+    	stCTRL_LIN_INTERPOLATION_PARAMS_ENC.pDataTable_ADR			:= ADR(arrTable_ENC);
+    	stCTRL_LIN_INTERPOLATION_PARAMS_ENC.nDataTable_SIZEOF		:= SIZEOF(arrTable_ENC);
+    END_METHOD
+
+    METHOD M_SetGoSw : BOOL
+    VAR_INPUT
+    	bGo:BOOL;
+    END_VAR
+    q_stVGP.pv_xGo_SW:=bGo;
+    END_METHOD
+
+    METHOD M_ValveControl : BOOL
+    VAR_INPUT
+    	state:E_VCN; // Close, Open, Pressure, Manual
+    END_VAR
+    q_stVGP.eValveControl := state;
+    END_METHOD
+
+    METHOD PUBLIC SetEncoderMax : BOOL
+    VAR_INPUT
+    	EncoderMax: REAl;
+    END_VAR
+    rOpenPosition := EncoderMax;
+    END_METHOD
 
 
 Related:
@@ -1457,6 +1617,8 @@ PRG_Gas_Selection
     		SelectedGas := E_GasType.Krypton;
     			elsif ( VVC_86.iq_stValve.q_xOPN_DO) then
     			SelectedGas := E_GasType.Xenon;
+                    elsif ( VVC_87.iq_stValve.q_xOPN_DO) then
+    			    SelectedGas := E_GasType.Nitrogen;
     				//else SelectedGas := E_GasType.none;
     END_IF
 
@@ -1513,11 +1675,16 @@ PRG_GMD
     PROGRAM PRG_GMD
     VAR
     END_VAR
+    //How to add the new roughing pump here?
     // FB_MKS317
 
     fb_EM2K0_XGMD_GPI_10(PG=>);
     fb_EM2K0_XGMD_GPI_50(PG=>);
     fb_EM2K0_XGMD_GPI_90(PG=>);
+
+    //FB MKS275
+
+    fb_EM2K0_XGMD_GPI_100(PG=>);
 
     // FB_PTM_TwisTorr
 
@@ -1665,6 +1832,8 @@ PRG_GMD
 
     // FB_EbaraEVA
     fb_EM2K0_XGMD_PRT_50(i_xExtIlkOK := TRUE);
+    fb_EM2K0_XGMD_PRT_100(i_xExtIlkOK := TRUE);
+
 
     // FB_VVC
     IF bAutoVVC50 THEN
@@ -1685,11 +1854,12 @@ PRG_GMD
     	i_xOverrideMode := xSystemOverrideMode,
     );
 
-
-
-    // Roughing valve
+    // Roughing valves
     IF( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ) OR ( fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING ) THEN fb_EM1K0_GMD_VRO_50.M_Open(TRUE); END_IF
     fb_EM1K0_GMD_VRO_50(i_xExtILK_OK:= (fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpRUNNING  OR  fb_EM2K0_XGMD_PRT_50.stPump.eState = pumpSTARTING ), i_xOverrideMode:= , iq_stValve=> );
+
+    IF( fb_EM2K0_XGMD_PRT_100.stPump.eState = pumpSTARTING ) OR ( fb_EM2K0_XGMD_PRT_100.stPump.eState = pumpRUNNING ) THEN fb_EM1K0_GMD_VRO_100.M_Open(TRUE); END_IF
+    fb_EM1K0_GMD_VRO_100(i_xExtILK_OK:= (fb_EM2K0_XGMD_PRT_100.stPump.eState = pumpRUNNING  OR  fb_EM2K0_XGMD_PRT_100.stPump.eState = pumpSTARTING ), i_xOverrideMode:= , iq_stValve=> );
 
     END_PROGRAM
 
@@ -1747,12 +1917,11 @@ PRG_INJ
 
     // Vent Valves
     // interlock evaluation
-
     VVC_80.i_xExtILK_OK := (VCN_50.iq_stVCN.eValveControl = E_VCN.CloseValve) OR( (NOT VVC_81.iq_stValve.q_xOPN_DO) AND(NOT VVC_82.iq_stValve.q_xOPN_DO)); // we need to purge all the way up to the VCN
     VVC_81.i_xExtILK_OK :=  (VVC_82.iq_stValve.q_xOPN_DO) AND(NOT VVC_83.iq_stValve.q_xOPN_DO) AND(NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO);// AND (NOT VVC_80.iq_stValve.q_xOPN_DO);
     VVC_82.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND(NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO);// AND (NOT VVC_80.iq_stValve.q_xOPN_DO);
 
-    // instanitation
+    // instantiation
     VVC_80(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
     VVC_81(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
     VVC_82(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
@@ -1762,16 +1931,18 @@ PRG_INJ
     // Gas panel
 
     // Interlock evaluation
-    VVC_83.i_xExtILK_OK := (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;  
-    VVC_84.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive  ;
-    VVC_85.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;  
-    VVC_86.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive ;
+    VVC_83.i_xExtILK_OK := (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND (NOT VVC_87.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;  
+    VVC_84.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND (NOT VVC_87.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;
+    VVC_85.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND (NOT VVC_87.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;  
+    VVC_86.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND (NOT VVC_87.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;
+    VVC_87.i_xExtILK_OK := (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO) AND (NOT VVC_82.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND NOT bPurgeActive;
 
     //Gas Panel
     VVC_83(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
     VVC_84(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
     VVC_85(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
     VVC_86(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
+    VVC_87(i_xExtILK_OK:= , i_xOverrideMode:= xOverrideMode, iq_stValve=> );
 
     END_PROGRAM
 
@@ -2063,7 +2234,7 @@ PRG_Purge
     (* 
     PURGE CYCLE
     The purge cycle consists of the following steps;
-    1. Close all gas valves 83-86 and Close Needle valve and switch off PID control
+    1. Close all gas valves 83-87 and Close Needle valve and switch off PID control
     2. Wait till needle valve closes
     3. Close VGP, to protect the Detector chamber in case a pressure spike on the roughing line stops the turbo.
     4. PUMP DOWN MANIFOLD: Open VVC-80  then Open VVC82 for certain pressure on the baratron
@@ -2073,7 +2244,7 @@ PRG_Purge
     - this step is done gradually to avoid sending pressure spike into the detector
     7. Close needle valve
     8. Release VGP:40
-
+    Q: adding vvc 87 shouldn't add a new case, correct?
     *)
 
 
@@ -2100,9 +2271,10 @@ PRG_Purge
     	VVC_84.M_Set_OPN_SW(FALSE);
     	VVC_85.M_Set_OPN_SW(FALSE);
     	VVC_86.M_Set_OPN_SW(FALSE);
+        VVC_87.M_Set_OPN_SW(FALSE);
     	VCN_50.M_ValveControl(E_VCN.CloseValve);
     	IF   (NOT VVC_80.iq_stValve.q_xOPN_DO) AND (NOT VVC_81.iq_stValve.q_xOPN_DO)  AND (NOT VVC_82.iq_stValve.q_xOPN_DO)
-    			AND (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) THEN
+    			AND (NOT VVC_83.iq_stValve.q_xOPN_DO) AND (NOT VVC_84.iq_stValve.q_xOPN_DO) AND (NOT VVC_85.iq_stValve.q_xOPN_DO) AND (NOT VVC_86.iq_stValve.q_xOPN_DO) AND (NOT VVC_87.iq_stValve.q_xOPN_DO) THEN
     		step:= 20;
     		sMessage:= 'Prep: All valves are closed';
     	END_IF
@@ -2135,14 +2307,16 @@ PRG_Purge
     	if (VGP_50.q_stVGP.pv_xError )then
     		step:=900+step;
     	END_IF
+
     	
-    40: // open vavle 80 to pump down all the way to the needle valve
-    	//VVC_80.M_Set_OPN_SW(TRUE);
-    	//if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
-    	step:=41;
-    	//END_IF
+    40: // Run roughing pump
+    	IF (FB_EM2K0_XGMD_PRT_100.stPump.eState = pumpRUNNING)
+        THEN step:=41;
+        ELSE step:=900+step;
+             sMessage:= 'roughing pump is not running';
+    	END_IF
     	
-    41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain peroid of time or till certain pressure
+    41: //PUMP DOWN MANIFOLD: Open VIC82 for a certain period of time or till certain pressure
     	VVC_82.M_Set_OPN_SW(TRUE);
     	sMessage:= 'Pumping down: VVC82 is open';
     	if (VVC_82.iq_stValve.q_xOPN_DO) AND (VVC_82_Timer.Q) AND (GCM_80.PG.rPRESS <= rPurge_SP1) THEN
@@ -2156,7 +2330,7 @@ PRG_Purge
     		step:=51;
     	END_IF
     	
-    51: // open vavle 80 to pump down all the way to the needle valve
+    51: // open valve 80 to pump down all the way to the needle valve
     	VVC_80.M_Set_OPN_SW(TRUE);
     	if (VVC_80.iq_stValve.q_xOPN_DO ) THEN
     	step:=52;
@@ -2325,6 +2499,7 @@ PRG_Purge
     	VVC_84.M_Set_OPN_SW(false);
     	VVC_85.M_Set_OPN_SW(false);
     	VVC_86.M_Set_OPN_SW(false);
+        VVC_87.M_Set_OPN_SW(false);
     	VCN_50.M_ValveControl(E_VCN.CloseValve);
     	VCN_50.i_xPurge := FALSE;
     	VGP_50.M_ValveControl(E_VCN.ManualControl); 
@@ -2344,6 +2519,7 @@ PRG_Purge
     	VVC_84.M_Set_OPN_SW(false);
     	VVC_85.M_Set_OPN_SW(false);
     	VVC_86.M_Set_OPN_SW(false);
+        VVC_87.M_Set_OPN_SW(false);
     	VCN_50.M_ValveControl(E_VCN.CloseValve);
     	VCN_50.i_xPurge := FALSE;
     	VGP_50.M_ValveControl(E_VCN.ManualControl); // CLOSE or OPEN to pump down
@@ -2372,6 +2548,7 @@ PRG_Purge
     	VVC_84.M_Set_OPN_SW(false);
     	VVC_85.M_Set_OPN_SW(false);
     	VVC_86.M_Set_OPN_SW(false);
+        VVC_87.M_Set_OPN_SW(false);
     	VCN_50.M_ValveControl(E_VCN.CloseValve);
     	VGP_50.M_ValveControl(E_VCN.ManualControl);
     	sMessage:= CONCAT('Purge Error: ',TO_STRING(step));
@@ -2402,8 +2579,12 @@ PRG_Purge
     		step:=900;
     END_IF
 
+    IF (NOT (fb_EM2K0_XGMD_PRT_100.stPump.eState = E_PumpState.pumpRUNNING)) AND (bPurgeActive) THEN
+    		step:=900;
+    END_IF
+
     //Extra purge interlock
-    IF (VVC_83.M_IsOpen()) OR  (VVC_84.M_IsOpen()) OR (VVC_85.M_IsOpen()) OR  (VVC_86.M_IsOpen()) THEN
+    IF (VVC_83.M_IsOpen()) OR  (VVC_84.M_IsOpen()) OR (VVC_85.M_IsOpen()) OR  (VVC_86.M_IsOpen()) OR  (VVC_87.M_IsOpen()) THEN
     	VCN_50.i_xPurge := FALSE;
     END_IF
 
